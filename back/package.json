@@ -1,0 +1,23 @@
+{
+  "name": "code-elevate-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts"
+  },
+  "keywords": [],
+  "author": "Igor Dos Santos Cabral",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "3.1.7",
+    "rimraf": "6.0.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.7.2"
+  },
+  "dependencies": {
+    "fastify": "5.1.0"
+  }
+}

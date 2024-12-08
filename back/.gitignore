@@ -1,0 +1,12 @@
+node_modules/
+logs
+*.log
+npm-debug.log*
+dist/
+build/
+.vscode/
+.DS_Store
+Thumbs.db
+docker-compose.override.yml
+Dockerfile
+.env
