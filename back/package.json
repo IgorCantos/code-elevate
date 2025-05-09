@@ -5,8 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "build": "rimraf dist && tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon src/server.ts"
+    "start": "node -r module-alias/register dist/server.js",
+    "dev": "nodemon -r tsconfig-paths/register --exec ts-node src/server.ts"
   },
   "keywords": [],
   "author": "Igor Dos Santos Cabral",
@@ -18,6 +18,16 @@
     "typescript": "5.7.2"
   },
   "dependencies": {
-    "fastify": "5.1.0"
+    "axios": "^1.9.0",
+    "csv-writer": "^1.6.0",
+    "fastify": "5.1.0",
+    "module-alias": "^2.2.3",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "_moduleAliases": {
+    "@": "./dist",
+    "@controllers": "./dist/application/controllers/*",
+    "@services": "./dist/application/services/index.ts",
+    "@infraestructure/*": "./dist/infraestructure/*"
   }
 }
