@@ -3,6 +3,8 @@ import GetBookByIdUseCase from "./get-book-by-id-usecase";
 import { GetBookByPropertyService } from "@/application/services";
 
 describe("BooksListUseCase", () => {
+  const bookId = "1234567890";
+
   it("return a book list with pagination", async () => {
     const expectedResponse = {
       actualPage: 1,
@@ -20,7 +22,7 @@ describe("BooksListUseCase", () => {
 
     const response = await new GetBookByIdUseCase(
       getAllBooksServiceMock
-    ).execute();
+    ).execute({ id: bookId });
 
     expect(response).toBe(expectedResponse);
   });
@@ -34,7 +36,7 @@ describe("BooksListUseCase", () => {
 
     const response = await new GetBookByIdUseCase(
       getAllBooksServiceMock
-    ).execute();
+    ).execute({ id: bookId });
 
     expect(response).toStrictEqual({
       message: "No book found.",

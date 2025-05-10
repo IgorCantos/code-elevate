@@ -8,8 +8,8 @@ class GetBookByPropertyService {
     this.booksRepository = booksRepository;
   }
 
-  async execute(): Promise<Book | null> {
-    const booksList = await this.booksRepository.getBookById();
+  async execute({ id }: { id: string }): Promise<Book | null> {
+    const booksList = await this.booksRepository.getBookById({ id });
     return booksList;
   }
 }

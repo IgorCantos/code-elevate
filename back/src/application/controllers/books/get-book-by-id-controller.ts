@@ -10,11 +10,13 @@ class GetBookByIdController {
   }
 
   async execute(
-    _req: FastifyRequest,
+    req: FastifyRequest,
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const response = await this.getBookByIdUseCase.execute();
+      const { bookId } = req.params as { bookId: string };
+
+      const response = await this.getBookByIdUseCase.execute({ id: bookId });
       return res.status(HttpStatus.SUCCESS).send(response);
     } catch (error: any) {
       console.error("Error fetching books list:", error);

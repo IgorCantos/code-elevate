@@ -20,7 +20,7 @@ async function routes(fastify: FastifyInstance) {
     getAllBooksController.execute(req, res)
   );
 
-  fastify.get("/v1/books/:id", (req, res) =>
+  fastify.get("/v1/books/:bookId", (req, res) =>
     getBookByIdController.execute(req, res)
   );
 }

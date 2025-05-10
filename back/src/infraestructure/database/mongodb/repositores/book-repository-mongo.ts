@@ -35,15 +35,14 @@ class BookRepositoryMongo implements IBookRepository {
     return response;
   }
 
-  async getBookById(): Promise<Book | null> {
+  async getBookById({ id }: { id: string }): Promise<Book | null> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
-    const bookId = "681f9fab48212582f0d861e0";
     const book = await db
       .collection<WithId<Book>>("books")
       //@ts-ignore
-      .findOne({ _id: new ObjectId(bookId) });
+      .findOne({ _id: new ObjectId(id) });
 
     if (!book) {
       return null;

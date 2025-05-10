@@ -21,7 +21,7 @@ describe("BooksListService", () => {
     };
 
     const service = new GetBookByPropertyService(mockBooksRepository);
-    const response = await service.execute();
+    const response = await service.execute({ id: bookMock._id });
 
     expect(response).toBe(bookMock);
   });

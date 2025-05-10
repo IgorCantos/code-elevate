@@ -17,7 +17,11 @@ describe("GetBookByIdController", () => {
 
     booksController = new GetBookByIdController(getBookByIdUseCase);
 
-    mockRequest = {} as FastifyRequest;
+    mockRequest = {
+      params: {
+        bookId: "1234567890",
+      },
+    } as FastifyRequest;
     mockReply = {
       status: jest.fn().mockReturnThis(),
       send: jest.fn(),

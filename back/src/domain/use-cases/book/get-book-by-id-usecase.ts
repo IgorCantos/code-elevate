@@ -8,8 +8,8 @@ class GetBookByIdUseCase {
     this.getBookByPropertyService = getBookByPropertyService;
   }
 
-  async execute(): Promise<Book | { message: string }> {
-    const response = await this.getBookByPropertyService.execute();
+  async execute({ id }: { id: string }): Promise<Book | { message: string }> {
+    const response = await this.getBookByPropertyService.execute({ id });
 
     if (!response) {
       return {

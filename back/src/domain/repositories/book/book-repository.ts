@@ -12,7 +12,7 @@ interface IGetAllBooksResponse {
 
 interface IBookRepository {
   getAllBooks(): Promise<IGetAllBooksResponse>;
-  getBookById(): Promise<Book | null>;
+  getBookById({ id }: { id: string }): Promise<Book | null>;
 }
 
 export default IBookRepository;
