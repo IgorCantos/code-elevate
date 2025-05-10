@@ -1,1 +1,1 @@
-export { default as BooksController } from "./books/get-books.controller";
+export { default as BooksListController } from "./books/get-books-list";

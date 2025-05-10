@@ -1,19 +1,20 @@
-import { BooksListUseCase } from "@/application/use-cases";
-import { IBook } from "@/domain";
-import HttpStatus from "@/infraestructure/http-status";
+import { BooksListUseCase } from "@/domain/use-cases";
+import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyReply, FastifyRequest } from "fastify";
 
-class BooksController {
-  constructor() {}
+class BooksListController {
+  private readonly booksListUseCase: BooksListUseCase;
+
+  constructor(booksListUseCase: BooksListUseCase) {
+    this.booksListUseCase = booksListUseCase;
+  }
 
   async getBooksList(
     _req: FastifyRequest,
     res: FastifyReply
-  ): Promise<
-    IBook[] | [] | { message: string } | { message: string; error: string }
-  > {
+  ): Promise<Promise<FastifyReply>> {
     try {
-      const response = await new BooksListUseCase().execute();
+      const response = await this.booksListUseCase.execute();
       return res.status(HttpStatus.SUCCESS).send(response);
     } catch (error: any) {
       console.error("Error fetching books list:", error);
@@ -27,4 +28,4 @@ class BooksController {
   }
 }
 
-export default BooksController;
+export default BooksListController;
