@@ -4,7 +4,7 @@ import GetAllBooksController from "./get-all-books-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
 import { GetAllBooksUseCase } from "@/domain/use-cases";
 
-describe("booksController", () => {
+describe("GetAllBooksController", () => {
   let getAllBooksUseCase: GetAllBooksUseCase;
   let booksController: GetAllBooksController;
   let mockRequest: FastifyRequest;

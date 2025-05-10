@@ -1,5 +1,6 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
 import GetAllBooksUseCase from "./get-all-books-usecase";
+import { GetAllBooksService } from "@/application/services";
 
 describe("BooksListUseCase", () => {
   it("return a book list with pagination", async () => {
@@ -15,7 +16,7 @@ describe("BooksListUseCase", () => {
 
     const getAllBooksServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
-    };
+    } as unknown as GetAllBooksService;
 
     const response = await new GetAllBooksUseCase(
       getAllBooksServiceMock
@@ -37,7 +38,7 @@ describe("BooksListUseCase", () => {
 
     const getAllBooksServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
-    };
+    } as unknown as GetAllBooksService;
 
     const response = await new GetAllBooksUseCase(
       getAllBooksServiceMock

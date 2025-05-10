@@ -1,8 +1,7 @@
 import { IBookRepository } from "@/domain/repositories";
 import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
-import { IGetAllBooksService } from "@/domain/services";
 
-class GetAllBooksService implements IGetAllBooksService {
+class GetAllBooksService {
   booksRepository: IBookRepository;
 
   constructor(booksRepository: IBookRepository) {

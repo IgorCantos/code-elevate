@@ -2,6 +2,7 @@ import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 import MongoClientSingleton from "../connection/mongo-connection";
 import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { ObjectId, WithId } from "mongodb";
 
 class BookRepositoryMongo implements IBookRepository {
   async getAllBooks(): Promise<IGetAllBooksResponse> {
@@ -32,6 +33,23 @@ class BookRepositoryMongo implements IBookRepository {
     };
 
     return response;
+  }
+
+  async getBookById(): Promise<Book | null> {
+    const mongoClient = await MongoClientSingleton.getInstance();
+    const db = mongoClient.getDb();
+
+    const bookId = "681f9fab48212582f0d861e0";
+    const book = await db
+      .collection<WithId<Book>>("books")
+      //@ts-ignore
+      .findOne({ _id: new ObjectId(bookId) });
+
+    if (!book) {
+      return null;
+    }
+
+    return new Book(book);
   }
 }
 
