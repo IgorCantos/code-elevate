@@ -1,1 +1,1 @@
-export { default as BooksListUseCase } from "./book/books-list-usecase";
+export { default as GetAllBooksUseCase } from "./book/get-all-books/get-all-books-usecase";

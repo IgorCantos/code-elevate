@@ -1,1 +1,1 @@
-export { default as IBooksListService } from "./book/books-list-service";
+export { default as IGetAllBooksService } from "./book/get-all-books/get-all-books-service";

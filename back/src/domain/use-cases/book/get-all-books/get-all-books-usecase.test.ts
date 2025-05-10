@@ -1,5 +1,5 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import BooksListUseCase from "./books-list-usecase";
+import GetAllBooksUseCase from "./get-all-books-usecase";
 
 describe("BooksListUseCase", () => {
   it("return a book list with pagination", async () => {
@@ -13,11 +13,13 @@ describe("BooksListUseCase", () => {
       data: [makeBookMock()],
     };
 
-    const mockBooksListService = {
-      getBooksList: () => Promise.resolve(expectedResponse),
+    const getAllBooksServiceMock = {
+      execute: () => Promise.resolve(expectedResponse),
     };
 
-    const response = await new BooksListUseCase(mockBooksListService).execute();
+    const response = await new GetAllBooksUseCase(
+      getAllBooksServiceMock
+    ).execute();
 
     expect(response).toBe(expectedResponse);
   });
@@ -33,11 +35,13 @@ describe("BooksListUseCase", () => {
       data: [],
     };
 
-    const mockBooksListService = {
-      getBooksList: () => Promise.resolve(expectedResponse),
+    const getAllBooksServiceMock = {
+      execute: () => Promise.resolve(expectedResponse),
     };
 
-    const response = await new BooksListUseCase(mockBooksListService).execute();
+    const response = await new GetAllBooksUseCase(
+      getAllBooksServiceMock
+    ).execute();
 
     expect(response).toStrictEqual({
       message: "No books found.",

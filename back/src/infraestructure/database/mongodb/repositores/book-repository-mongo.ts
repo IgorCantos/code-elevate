@@ -1,10 +1,10 @@
 import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 import MongoClientSingleton from "../connection/mongo-connection";
-import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
+import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
 
 class BookRepositoryMongo implements IBookRepository {
-  async getBooksList(): Promise<IBooksListResponse> {
+  async getAllBooks(): Promise<IGetAllBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 

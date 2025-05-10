@@ -1,1 +1,1 @@
-export { default as BooksListService } from "./books/get-books-list.service";
+export { default as GetAllBooksService } from "./books/get-all-books-service";

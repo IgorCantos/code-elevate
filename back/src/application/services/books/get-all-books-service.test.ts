@@ -1,5 +1,5 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import BooksListService from "./get-books-list.service";
+import GetAllBooksService from "./get-all-books-service";
 import { IBookRepository } from "@/domain/repositories";
 
 describe("BooksListService", () => {
@@ -17,11 +17,11 @@ describe("BooksListService", () => {
     };
 
     const mockBooksRepository: IBookRepository = {
-      getBooksList: () => Promise.resolve(expectedResponse),
+      getAllBooks: () => Promise.resolve(expectedResponse),
     };
 
-    const service = new BooksListService(mockBooksRepository);
-    const response = await service.getBooksList();
+    const service = new GetAllBooksService(mockBooksRepository);
+    const response = await service.execute();
 
     expect(response).toBe(expectedResponse);
   });
