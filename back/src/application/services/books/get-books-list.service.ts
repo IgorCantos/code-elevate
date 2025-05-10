@@ -1,19 +1,17 @@
-import { Book, IBook } from "@/domain";
+import { Book } from "@/domain/entities";
+import { IBookRepository } from "@/domain/repositories";
+import { IBooksListService } from "@/domain/services";
 
-class BooksListService {
-  constructor() {}
+class BooksListService implements IBooksListService {
+  booksRepository: IBookRepository;
 
-  async get(): Promise<IBook[] | []> {
-    const book = [
-      new Book({
-        id: "1",
-        name: "teste",
-        weight: 54,
-        destination: "rfhdf",
-      }),
-    ];
+  constructor(booksRepository: IBookRepository) {
+    this.booksRepository = booksRepository;
+  }
 
-    return book;
+  async getBooksList(): Promise<Book[] | []> {
+    const booksList = await this.booksRepository.getBooksList();
+    return booksList;
   }
 }
 
