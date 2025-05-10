@@ -1,0 +1,38 @@
+import { Book } from "@/domain/entities";
+import { IBookRepository } from "@/domain/repositories";
+import MongoClientSingleton from "../connection/mongo-connection";
+import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
+
+class BookRepositoryMongo implements IBookRepository {
+  async getBooksList(): Promise<IBooksListResponse> {
+    const mongoClient = await MongoClientSingleton.getInstance();
+    const db = mongoClient.getDb();
+
+    const page = 1;
+    const limit = 20;
+    const skip = (page - 1) * limit;
+
+    const [dbResponse, totalDocuments] = await Promise.all([
+      db.collection<Book>("books").find().skip(skip).limit(limit).toArray(),
+      db.collection<Book>("books").countDocuments(),
+    ]);
+
+    const totalPages = Math.ceil(totalDocuments / limit);
+    const hasNextPage = page < totalPages;
+    const booksList = dbResponse.map((book) => new Book(book));
+
+    const response = {
+      actualPage: page,
+      limitePerPage: limit,
+      totalDocuments,
+      totalPages,
+      hasNextPage,
+      hasPreviousPage: page > 1,
+      data: booksList,
+    };
+
+    return response;
+  }
+}
+
+export default BookRepositoryMongo;
