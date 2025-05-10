@@ -1,21 +1,21 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { BooksListUseCase } from "@/domain/use-cases";
 import HttpStatus from "@/infraestructure/utils/http-status";
-import BooksListController from "./get-books-list";
+import GetAllBooksController from "./get-all-books-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
+import { GetAllBooksUseCase } from "@/domain/use-cases";
 
-describe("BooksListController", () => {
-  let booksListUseCase: BooksListUseCase;
-  let booksListController: BooksListController;
+describe("GetAllBooksController", () => {
+  let getAllBooksUseCase: GetAllBooksUseCase;
+  let booksController: GetAllBooksController;
   let mockRequest: FastifyRequest;
   let mockReply: FastifyReply;
 
   beforeEach(() => {
-    booksListUseCase = {
+    getAllBooksUseCase = {
       execute: jest.fn(),
-    } as unknown as BooksListUseCase;
+    } as unknown as GetAllBooksUseCase;
 
-    booksListController = new BooksListController(booksListUseCase);
+    booksController = new GetAllBooksController(getAllBooksUseCase);
 
     mockRequest = {} as FastifyRequest;
     mockReply = {
@@ -24,24 +24,24 @@ describe("BooksListController", () => {
     } as unknown as FastifyReply;
   });
 
-  it("return a successful response when booksListUseCase resolves", async () => {
+  it("return a successful response when getAllBooksUseCase resolves", async () => {
     const mockResponse = [makeBookMock()];
-    (booksListUseCase.execute as jest.Mock).mockResolvedValue(mockResponse);
+    (getAllBooksUseCase.execute as jest.Mock).mockResolvedValue(mockResponse);
 
-    await booksListController.getBooksList(mockRequest, mockReply);
+    await booksController.execute(mockRequest, mockReply);
 
-    expect(booksListUseCase.execute).toHaveBeenCalledTimes(1);
+    expect(getAllBooksUseCase.execute).toHaveBeenCalledTimes(1);
     expect(mockReply.status).toHaveBeenCalledWith(HttpStatus.SUCCESS);
     expect(mockReply.send).toHaveBeenCalledWith(mockResponse);
   });
 
-  it("return an error response when booksListUseCase rejects", async () => {
+  it("return an error response when getAllBooksUseCase rejects", async () => {
     const mockError = new Error("Database error");
-    (booksListUseCase.execute as jest.Mock).mockRejectedValue(mockError);
+    (getAllBooksUseCase.execute as jest.Mock).mockRejectedValue(mockError);
 
-    await booksListController.getBooksList(mockRequest, mockReply);
+    await booksController.execute(mockRequest, mockReply);
 
-    expect(booksListUseCase.execute).toHaveBeenCalledTimes(1);
+    expect(getAllBooksUseCase.execute).toHaveBeenCalledTimes(1);
     expect(mockReply.status).toHaveBeenCalledWith(
       HttpStatus.INTERNAL_SERVER_ERROR
     );

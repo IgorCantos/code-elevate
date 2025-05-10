@@ -1,9 +1,13 @@
-import BooksControllerFactory from "@/facotries/controllers/books/make-get-books-list-controller";
+import {
+  GetAllBooksControllerFactory,
+  GetBookByIdControllerFactory,
+} from "@/facotries";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyInstance } from "fastify";
 
 async function routes(fastify: FastifyInstance) {
-  const booksListController = new BooksControllerFactory().create();
+  const getAllBooksController = new GetAllBooksControllerFactory().create();
+  const getBookByIdController = new GetBookByIdControllerFactory().create();
 
   fastify.get("/health", async (_req, res) => {
     return res.status(HttpStatus.SUCCESS).send({ hello: "Ok." });
@@ -13,7 +17,11 @@ async function routes(fastify: FastifyInstance) {
    * Books
    */
   fastify.get("/v1/books", (req, res) =>
-    booksListController.getBooksList(req, res)
+    getAllBooksController.execute(req, res)
+  );
+
+  fastify.get("/v1/books/:bookId", (req, res) =>
+    getBookByIdController.execute(req, res)
   );
 }
 

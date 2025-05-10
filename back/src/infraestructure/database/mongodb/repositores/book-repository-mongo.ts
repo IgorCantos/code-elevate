@@ -1,10 +1,11 @@
 import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 import MongoClientSingleton from "../connection/mongo-connection";
-import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
+import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { ObjectId, WithId } from "mongodb";
 
 class BookRepositoryMongo implements IBookRepository {
-  async getBooksList(): Promise<IBooksListResponse> {
+  async getAllBooks(): Promise<IGetAllBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
@@ -32,6 +33,22 @@ class BookRepositoryMongo implements IBookRepository {
     };
 
     return response;
+  }
+
+  async getBookById({ id }: { id: string }): Promise<Book | null> {
+    const mongoClient = await MongoClientSingleton.getInstance();
+    const db = mongoClient.getDb();
+
+    const book = await db
+      .collection<WithId<Book>>("books")
+      //@ts-ignore
+      .findOne({ _id: new ObjectId(id) });
+
+    if (!book) {
+      return null;
+    }
+
+    return new Book(book);
   }
 }
 
