@@ -11,4 +11,7 @@ const baseUrl = path.resolve(
 
 const paths = compilerOptions.paths || {};
 
+/**
+ * It allows TypeScript to resolve modules correctly when using aliases, like '@domain','@entities', etc.
+ */
 register({ baseUrl, paths });
