@@ -1,7 +1,7 @@
 class Book {
   _id: string;
   title: string;
-  author: number;
+  author: string;
   publishedDate: string;
   description: string;
   genre: string;

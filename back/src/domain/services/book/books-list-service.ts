@@ -1,7 +1,7 @@
-import { Book } from "@/domain/entities";
+import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
 
 interface IBooksListService {
-  getBooksList(): Promise<Book[]>;
+  getBooksList(): Promise<IBooksListResponse>;
 }
 
 export default IBooksListService;

@@ -1,1 +1,1 @@
-export { default as routes } from "./books/books.routes";
+export { default as routes } from "./books/books-routes";

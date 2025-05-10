@@ -1,4 +1,5 @@
 import { Book } from "@/domain/entities";
+import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
 import { IBooksListService } from "@/domain/services";
 
 class BooksListUseCase {
@@ -8,16 +9,16 @@ class BooksListUseCase {
     this.booksListService = booksListService;
   }
 
-  async execute(): Promise<Book[] | { message: string }> {
-    const booksList = await this.booksListService.getBooksList();
+  async execute(): Promise<IBooksListResponse | { message: string }> {
+    const response = await this.booksListService.getBooksList();
 
-    if (!booksList || booksList.length === 0) {
+    if (!response || response.data.length === 0) {
       return {
         message: "No books found.",
       };
     }
 
-    return booksList;
+    return response;
   }
 }
 

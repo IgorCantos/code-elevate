@@ -1,5 +1,6 @@
 import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
+import { IBooksListResponse } from "@/domain/repositories/book/book-repository";
 import { IBooksListService } from "@/domain/services";
 
 class BooksListService implements IBooksListService {
@@ -9,7 +10,7 @@ class BooksListService implements IBooksListService {
     this.booksRepository = booksRepository;
   }
 
-  async getBooksList(): Promise<Book[] | []> {
+  async getBooksList(): Promise<IBooksListResponse> {
     const booksList = await this.booksRepository.getBooksList();
     return booksList;
   }
