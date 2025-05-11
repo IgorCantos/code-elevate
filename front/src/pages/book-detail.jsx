@@ -1,15 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 
-import BookStoreView from 'src/views/book-store/book-store-view';
+import BookDetailView from 'src/views/book-detail/book-detail-view';
 
-export default function StorePage() {
+export default function StoreItemDetailPage() {
   return (
     <>
       <Helmet>
         <title> Code Elevate </title>
       </Helmet>
 
-      <BookStoreView />
+      <BookDetailView />
     </>
   );
 }
