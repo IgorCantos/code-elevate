@@ -1,5 +1,5 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import GetBookByIdService from "./get-book-by-id-service";
+import GetBookByPropertyService from "./get-book-by-property-service";
 
 describe("GetBookByPropertyService", () => {
   it("succesfully retries a books list with pagination", async () => {
@@ -20,9 +20,9 @@ describe("GetBookByPropertyService", () => {
       getBookByProperty: () => Promise.resolve(paginatedBooksMocks),
     };
 
-    const service = new GetBookByIdService(mockBooksRepository);
-    const response = await service.execute({ id: bookMock._id });
+    const service = new GetBookByPropertyService(mockBooksRepository);
+    const response = await service.execute({ genre: bookMock.genre });
 
-    expect(response).toBe(bookMock);
+    expect(response).toBe(paginatedBooksMocks);
   });
 });
