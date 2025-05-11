@@ -1,5 +1,6 @@
 import "dotenv/config";
 import Fastify from "fastify";
+import cors from "@fastify/cors";
 import { routes } from "./infraestructure/webserver/routes";
 
 const fastify = Fastify({
@@ -9,6 +10,10 @@ const fastify = Fastify({
 
 const startServer = async () => {
   try {
+    await fastify.register(cors, {
+      origin: "*",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+    });
     await fastify.register(routes);
     await fastify.listen({ port: 8080, host: "0.0.0.0" });
 
