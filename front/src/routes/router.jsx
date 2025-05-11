@@ -4,7 +4,7 @@ import { Outlet, Navigate, useRoutes } from 'react-router-dom';
 import AppLayout from 'src/layouts';
 import LoginView from 'src/views/login/login-view';
 
-const StoreView = lazy(() => import('src/pages/store'));
+const StorePage = lazy(() => import('src/pages/store'));
 
 export default function Router() {
   const routes = useRoutes([
@@ -17,7 +17,7 @@ export default function Router() {
         </AppLayout>
       ),
       children: [
-        { element: <StoreView />, index: true },
+        { element: <StorePage />, index: true },
         { path: 'login', element: <LoginView /> },
       ],
     },
