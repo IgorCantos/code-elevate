@@ -2,7 +2,7 @@ import { GetBookByPropertyUseCase } from "@/domain/use-cases";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyReply, FastifyRequest } from "fastify";
 
-class GetBookByGenreController {
+class GetBookByAuthorController {
   private readonly getBookByPropertyUseCase: GetBookByPropertyUseCase;
 
   constructor(getBookByPropertyUseCase: GetBookByPropertyUseCase) {
@@ -14,12 +14,12 @@ class GetBookByGenreController {
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const { genre } = req.params as {
-        genre: string;
+      const { author: authors } = req.params as {
+        author: string;
       };
 
       const response = await this.getBookByPropertyUseCase.execute({
-        genre,
+        authors,
       });
 
       return res.status(HttpStatus.SUCCESS).send(response);
@@ -35,4 +35,4 @@ class GetBookByGenreController {
   }
 }
 
-export default GetBookByGenreController;
+export default GetBookByAuthorController;
