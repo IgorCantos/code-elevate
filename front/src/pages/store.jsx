@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-import StoreView from 'src/views/store/store-view';
+import BookStoreView from 'src/views/book-store/book-store-view';
 
 export default function StorePage() {
   return (
@@ -9,7 +9,7 @@ export default function StorePage() {
         <title> Code Elevate </title>
       </Helmet>
 
-      <StoreView />
+      <BookStoreView />
     </>
   );
 }
