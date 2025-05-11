@@ -1,7 +1,7 @@
 import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 
-class GetBookByPropertyService {
+class GetBookByIdService {
   booksRepository: IBookRepository;
 
   constructor(booksRepository: IBookRepository) {
@@ -14,4 +14,4 @@ class GetBookByPropertyService {
   }
 }
 
-export default GetBookByPropertyService;
+export default GetBookByIdService;

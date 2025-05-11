@@ -1,6 +1,6 @@
 import GetBookByIdControllerFactory from "./get-book-by-id-controller-factory";
 import { GetBookByIdController } from "@/application/controllers";
-import { GetBookByPropertyService } from "@/application/services";
+import { GetBookByIdService } from "@/application/services";
 import { GetBookByIdUseCase } from "@/domain/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 
@@ -16,13 +16,13 @@ describe("BooksControllerFactory", () => {
 
     expect(BookRepositoryMongo).toHaveBeenCalledTimes(1);
 
-    expect(GetBookByPropertyService).toHaveBeenCalledWith(
+    expect(GetBookByIdService).toHaveBeenCalledWith(
       expect.any(BookRepositoryMongo)
     );
-    expect(GetBookByPropertyService).toHaveBeenCalledTimes(1);
+    expect(GetBookByIdService).toHaveBeenCalledTimes(1);
 
     expect(GetBookByIdUseCase).toHaveBeenCalledWith(
-      expect.any(GetBookByPropertyService)
+      expect.any(GetBookByIdService)
     );
     expect(GetBookByIdUseCase).toHaveBeenCalledTimes(1);
 

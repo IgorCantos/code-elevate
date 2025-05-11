@@ -1,9 +1,9 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import GetBookByIdUseCase from "./get-book-by-id-usecase";
-import { GetBookByIdService } from "@/application/services";
+import { GetBookByPropertyService } from "@/application/services";
+import GetBookByPropertyUseCase from "./get-book-by-property-usecase";
 
 describe("BooksListUseCase", () => {
-  const bookId = "1234567890";
+  const bookMock = makeBookMock();
 
   it("return a book list with pagination", async () => {
     const expectedResponse = {
@@ -13,16 +13,16 @@ describe("BooksListUseCase", () => {
       totalPages: 20,
       hasNextPage: true,
       hasPreviousPage: false,
-      data: [makeBookMock()],
+      data: [bookMock],
     };
 
     const getAllBooksServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetBookByIdService;
+    } as unknown as GetBookByPropertyService;
 
-    const response = await new GetBookByIdUseCase(
+    const response = await new GetBookByPropertyUseCase(
       getAllBooksServiceMock
-    ).execute({ id: bookId });
+    ).execute({ genre: bookMock.genre });
 
     expect(response).toBe(expectedResponse);
   });
@@ -32,11 +32,11 @@ describe("BooksListUseCase", () => {
 
     const getAllBooksServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetBookByIdService;
+    } as unknown as GetBookByPropertyService;
 
-    const response = await new GetBookByIdUseCase(
+    const response = await new GetBookByPropertyUseCase(
       getAllBooksServiceMock
-    ).execute({ id: bookId });
+    ).execute({ genre: bookMock.genre });
 
     expect(response).toStrictEqual({
       message: "No book found.",
