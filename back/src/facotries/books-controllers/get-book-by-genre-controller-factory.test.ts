@@ -9,7 +9,7 @@ jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
 jest.mock("@/infraestructure/database/mongodb");
 
-describe("GetBookByGenreControllerFactory", () => {
+describe.only("GetBookByGenreControllerFactory", () => {
   it("should create an instance of GetBookByGenreControllerFactory", () => {
     const factory = new GetBookByGenreControllerFactory();
     const controller = factory.create();
