@@ -7,7 +7,7 @@ import {
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyInstance } from "fastify";
 
-async function routes(fastify: FastifyInstance) {
+async function booksRoutes(fastify: FastifyInstance) {
   const getAllBooksController = new GetAllBooksControllerFactory().create();
   const getBookByIdController = new GetBookByIdControllerFactory().create();
   const getBookByGenreControllerFactory =
@@ -39,4 +39,4 @@ async function routes(fastify: FastifyInstance) {
   );
 }
 
-export default routes;
+export default booksRoutes;
