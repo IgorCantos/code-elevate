@@ -1,7 +1,7 @@
 import "dotenv/config";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import { routes } from "./infraestructure/webserver/routes";
+import { booksRoutes, usersRoutes } from "./infraestructure/webserver/routes";
 
 const fastify = Fastify({
   connectionTimeout: 10000,
@@ -14,7 +14,8 @@ const startServer = async () => {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE"],
     });
-    await fastify.register(routes);
+    await fastify.register(booksRoutes);
+    await fastify.register(usersRoutes);
     await fastify.listen({ port: 8080, host: "0.0.0.0" });
 
     console.log("Server escutando na porta 8080.");
