@@ -1,8 +1,7 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import { IBookRepository } from "@/domain/repositories";
 import GetBookByIdService from "./get-book-by-id-service";
 
-describe("GetBookByIdService", () => {
+describe("GetBookByPropertyService", () => {
   it("succesfully retries a books list with pagination", async () => {
     const bookMock = makeBookMock();
     const paginatedBooksMocks = {
@@ -15,7 +14,7 @@ describe("GetBookByIdService", () => {
       data: [bookMock],
     };
 
-    const mockBooksRepository: IBookRepository = {
+    const mockBooksRepository = {
       getAllBooks: () => Promise.resolve(paginatedBooksMocks),
       getBookById: () => Promise.resolve(bookMock),
       getBookByProperty: () => Promise.resolve(paginatedBooksMocks),

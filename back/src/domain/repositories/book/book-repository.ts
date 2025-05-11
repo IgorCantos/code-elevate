@@ -1,6 +1,6 @@
 import { Book } from "@/domain/entities";
 
-interface IGetAllBooksResponse {
+interface IGetPaginatedBooksResponse {
   actualPage: number;
   limitePerPage: number;
   totalDocuments: number;
@@ -11,9 +11,10 @@ interface IGetAllBooksResponse {
 }
 
 interface IBookRepository {
-  getAllBooks(): Promise<IGetAllBooksResponse>;
+  getAllBooks(): Promise<IGetPaginatedBooksResponse>;
   getBookById({ id }: { id: string }): Promise<Book | null>;
+  getBookByProperty(filter: Book): Promise<IGetPaginatedBooksResponse>;
 }
 
 export default IBookRepository;
-export { IGetAllBooksResponse };
+export { IGetPaginatedBooksResponse as IGetAllBooksResponse };

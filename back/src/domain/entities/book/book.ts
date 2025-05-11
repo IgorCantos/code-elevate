@@ -1,11 +1,11 @@
 class Book {
   _id: string;
   title: string;
-  author: string;
+  authors: string;
   publishedDate: string;
   description: string;
   genre: string;
-  categorie: string;
+  categories: string;
   thumbnail: string;
   pageCount: number;
   averageRating: number;
@@ -15,11 +15,11 @@ class Book {
   constructor({
     _id,
     title,
-    author,
+    authors,
     publishedDate,
     description,
     genre,
-    categorie,
+    categories,
     thumbnail,
     pageCount,
     averageRating,
@@ -28,11 +28,11 @@ class Book {
   }: Book) {
     this._id = _id;
     this.title = title;
-    this.author = author;
+    this.authors = authors;
     this.publishedDate = publishedDate;
     this.description = description;
     this.genre = genre;
-    this.categorie = categorie;
+    this.categories = categories;
     this.thumbnail = thumbnail;
     this.pageCount = pageCount;
     this.averageRating = averageRating;

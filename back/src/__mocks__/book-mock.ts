@@ -4,11 +4,11 @@ import { faker } from "@faker-js/faker";
 const makeBookDataMock = () => ({
   _id: "1",
   title: "Test Book",
-  author: faker.person.fullName(),
+  authors: faker.person.fullName(),
   publishedDate: faker.date.past({ years: 20 }).toISOString().split("T")[0],
   description: "A test book description",
   genre: faker.commerce.department(),
-  categorie: "Novel",
+  categories: "Novel",
   thumbnail: faker.image.urlPicsumPhotos({ width: 200, height: 300 }),
   pageCount: 300,
   averageRating: 4.5,

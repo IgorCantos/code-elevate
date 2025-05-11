@@ -1,15 +1,15 @@
-import { GetBookByPropertyService } from "@/application/services";
+import { GetBookByIdService } from "@/application/services";
 import { Book } from "@/domain/entities";
 
 class GetBookByIdUseCase {
-  getBookByPropertyService: GetBookByPropertyService;
+  getBookByIdService: GetBookByIdService;
 
-  constructor(getBookByPropertyService: GetBookByPropertyService) {
-    this.getBookByPropertyService = getBookByPropertyService;
+  constructor(getBookByIdService: GetBookByIdService) {
+    this.getBookByIdService = getBookByIdService;
   }
 
   async execute({ id }: { id: string }): Promise<Book | { message: string }> {
-    const response = await this.getBookByPropertyService.execute({ id });
+    const response = await this.getBookByIdService.execute({ id });
 
     if (!response) {
       return {
