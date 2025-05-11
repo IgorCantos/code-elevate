@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AddShoppingCart, FavoriteBorder } from '@mui/icons-material/';
-// import Slider from 'react-slick';
+import Slider from 'react-slick';
 import {
   Box,
   Button,
@@ -14,36 +14,54 @@ import {
   Tooltip,
   Typography,
 } from '@mui/material';
-import { getAllBooks } from 'src/services/books/books-service';
+import { getAllBooks, getRecentlyViewedBooks } from 'src/services/books/books-service';
 import BookSkeletonList from './book-store-view-loading';
 
 const ITEMS_PER_PAGE = 12;
 
 export default function BookStoreView() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [booksList, setBooksList] = useState({});
   const navigate = useNavigate();
 
-  useEffect(() => {
-    async function fetchBooks() {
-      try {
-        setIsLoading(true);
-        const data = await getAllBooks();
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFetchingRecentlyViewedBooks, setIsFetchingRecentlyViewedBooks] = useState(true);
+  console.log(isFetchingRecentlyViewedBooks);
+  const [page, setPage] = useState(1);
+  const [booksList, setBooksList] = useState({});
+  const [recentlyViewedBooks, setRecentlyViewedBooks] = useState([]);
 
-        const { data: books, totalDocuments, totalPages } = data;
+  async function fetchBooks() {
+    try {
+      setIsLoading(true);
+      const data = await getAllBooks();
 
-        setBooksList({ books, totalDocuments, totalPages });
-      } catch (err) {
-        // setError(err.message || 'Erro ao carregar livros'); // FIX
-      } finally {
-        setIsLoading(false);
-      }
+      const { data: books, totalDocuments, totalPages } = data;
+
+      setBooksList({ books, totalDocuments, totalPages });
+    } catch (err) {
+      // setError(err.message || 'Erro ao carregar livros'); // FIX
+    } finally {
+      setIsLoading(false);
     }
+  }
 
-    setTimeout(() => {
-      fetchBooks();
-    }, 500);
+  async function fetchRecentlyViewedBooks() {
+    try {
+      setIsFetchingRecentlyViewedBooks(true);
+      const data = await getRecentlyViewedBooks();
+
+      setRecentlyViewedBooks(data);
+    } catch (err) {
+      // setError(err.message || 'Erro ao carregar livros'); // FIX
+    } finally {
+      setIsFetchingRecentlyViewedBooks(false);
+    }
+  }
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
+  useEffect(() => {
+    fetchRecentlyViewedBooks();
   }, []);
 
   const handlePageChange = (_event, value) => {
@@ -56,28 +74,28 @@ export default function BookStoreView() {
     page * ITEMS_PER_PAGE
   );
 
-  // const carouselSettings = {
-  //   dots: true,
-  //   infinite: false,
-  //   speed: 500,
-  //   arrows: true,
-  //   slidesToShow: 6,
-  //   slidesToScroll: 2,
-  //   responsive: [
-  //     {
-  //       breakpoint: 960,
-  //       settings: {
-  //         slidesToShow: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         slidesToShow: 2,
-  //       },
-  //     },
-  //   ],
-  // };
+  const carouselSettings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
 
   return (
     <Container sx={{ py: 4 }}>
@@ -85,29 +103,31 @@ export default function BookStoreView() {
         <BookSkeletonList />
       ) : (
         <>
-          {/* <Box mb={4}>
-            <Typography variant="subtitle1" fontWeight="bold" mb={2}>
-              Visualizados recentemente
-            </Typography>
-            <Slider {...carouselSettings}>
-              {books.slice(0, 8).map((book, index) => (
-                <Box key={index} px={1}>
-                  <Card sx={{ width: 120, border: 'none', boxShadow: 'none' }}>
-                    <CardMedia
-                      component="img"
-                      image={book.thumbnail}
-                      alt={book.title}
-                      sx={{
-                        maxWidth: 150,
-                        mx: 'auto',
-                        borderRadius: '20px',
-                      }}
-                    />
-                  </Card>
-                </Box>
-              ))}
-            </Slider>
-          </Box> */}
+          {recentlyViewedBooks.length && (
+            <Box mb={4}>
+              <Typography variant="subtitle1" fontWeight="bold" mb={2}>
+                Visualizados recentemente
+              </Typography>
+              <Slider {...carouselSettings}>
+                {recentlyViewedBooks.slice(0, 8).map((book, index) => (
+                  <Box key={index} px={1}>
+                    <Card sx={{ width: 120, border: 'none', boxShadow: 'none' }}>
+                      <CardMedia
+                        component="img"
+                        image={book.thumbnail}
+                        alt={book.title}
+                        sx={{
+                          maxWidth: 150,
+                          mx: 'auto',
+                          borderRadius: '20px',
+                        }}
+                      />
+                    </Card>
+                  </Box>
+                ))}
+              </Slider>
+            </Box>
+          )}
 
           <Typography variant="h6" fontWeight="bold" gutterBottom>
             Para você
@@ -125,23 +145,23 @@ export default function BookStoreView() {
                     cursor: 'pointer',
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    image={book.thumbnail}
-                    alt={book.title}
-                    sx={{
-                      maxWidth: 150,
-                      maxHeight: 210,
-                      mx: 'auto',
-                      borderRadius: '20px',
-                    }}
-                  />
                   <Box
                     px={3}
-                    mt={2}
                     textAlign="center"
                     onClick={() => navigate(`/books/${book._id}`, { state: book })}
                   >
+                    <CardMedia
+                      component="img"
+                      image={book.thumbnail}
+                      alt={book.title}
+                      sx={{
+                        maxWidth: 150,
+                        maxHeight: 210,
+                        mx: 'auto',
+                        borderRadius: '20px',
+                        mb: 2,
+                      }}
+                    />
                     <Typography
                       variant="body2"
                       fontWeight="bold"

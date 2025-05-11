@@ -1,10 +1,18 @@
 import { Box, Button, Container, Grid, Rating, Typography, Paper } from '@mui/material';
+import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { postRecentlyViewedBook } from 'src/services/books/books-service';
 
 export default function BookDetailPage() {
   const location = useLocation();
   const book = location.state;
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (book) {
+      postRecentlyViewedBook(book);
+    }
+  }, [book]);
 
   if (!book) {
     return <Typography>Livro não encontrado.</Typography>;
