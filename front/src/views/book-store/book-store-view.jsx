@@ -24,7 +24,6 @@ export default function BookStoreView() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isFetchingRecentlyViewedBooks, setIsFetchingRecentlyViewedBooks] = useState(true);
-  console.log(isFetchingRecentlyViewedBooks);
   const [page, setPage] = useState(1);
   const [booksList, setBooksList] = useState({});
   const [recentlyViewedBooks, setRecentlyViewedBooks] = useState([]);
