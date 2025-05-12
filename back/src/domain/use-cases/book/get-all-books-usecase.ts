@@ -15,7 +15,16 @@ class GetAllBooksUseCase {
     page: number;
     limit: number;
   }): Promise<IGetAllBooksResponse | { message: string }> {
-    const response = await this.getAllBooksService.execute({ page, limit });
+    const defaultPage = 1;
+    const defaultLimit = 15;
+
+    const actualPage = page || defaultPage;
+    const actualLimit = limit || defaultLimit;
+
+    const response = await this.getAllBooksService.execute({
+      page: actualPage,
+      limit: actualLimit,
+    });
 
     if (!response || response.data.length === 0) {
       return {
