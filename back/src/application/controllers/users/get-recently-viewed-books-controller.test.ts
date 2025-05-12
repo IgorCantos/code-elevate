@@ -1,52 +1,68 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import HttpStatus from "@/infraestructure/utils/http-status";
-import GetAllBooksController from "./update-recently-viewed-books-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
-import { GetAllBooksUseCase } from "@/domain/use-cases";
+import GetRecentlyViewedBooksController from "./get-recently-viewed-books-controller";
+import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
 
-describe("GetAllBooksController", () => {
-  let getAllBooksUseCase: GetAllBooksUseCase;
-  let booksController: GetAllBooksController;
+describe("GetRecentlyViewedBooksController", () => {
+  let getRecentlyViewedBooksUseCase: GetRecentlyViewedBooksUseCase;
+  let booksController: GetRecentlyViewedBooksController;
   let mockRequest: FastifyRequest;
   let mockReply: FastifyReply;
 
   beforeEach(() => {
-    getAllBooksUseCase = {
+    getRecentlyViewedBooksUseCase = {
       execute: jest.fn(),
-    } as unknown as GetAllBooksUseCase;
+    } as unknown as GetRecentlyViewedBooksUseCase;
 
-    booksController = new GetAllBooksController(getAllBooksUseCase);
+    booksController = new GetRecentlyViewedBooksController(
+      getRecentlyViewedBooksUseCase
+    );
 
-    mockRequest = {} as FastifyRequest;
+    mockRequest = {
+      params: { userId: "123" },
+    } as unknown as FastifyRequest;
+
     mockReply = {
       status: jest.fn().mockReturnThis(),
       send: jest.fn(),
     } as unknown as FastifyReply;
   });
 
-  it("return a successful response when getAllBooksUseCase resolves", async () => {
+  it("return a successful response when getRecentlyViewedBooksUseCase resolves", async () => {
     const mockResponse = [makeBookMock()];
-    (getAllBooksUseCase.execute as jest.Mock).mockResolvedValue(mockResponse);
+    (getRecentlyViewedBooksUseCase.execute as jest.Mock).mockResolvedValue(
+      mockResponse
+    );
 
     await booksController.execute(mockRequest, mockReply);
 
-    expect(getAllBooksUseCase.execute).toHaveBeenCalledTimes(1);
+    expect(getRecentlyViewedBooksUseCase.execute).toHaveBeenCalledWith({
+      userId: "123",
+    });
+    expect(getRecentlyViewedBooksUseCase.execute).toHaveBeenCalledTimes(1);
     expect(mockReply.status).toHaveBeenCalledWith(HttpStatus.SUCCESS);
     expect(mockReply.send).toHaveBeenCalledWith(mockResponse);
   });
 
-  it("return an error response when getAllBooksUseCase rejects", async () => {
+  it("return an error response when getRecentlyViewedBooksUseCase rejects", async () => {
     const mockError = new Error("Database error");
-    (getAllBooksUseCase.execute as jest.Mock).mockRejectedValue(mockError);
+    (getRecentlyViewedBooksUseCase.execute as jest.Mock).mockRejectedValue(
+      mockError
+    );
 
     await booksController.execute(mockRequest, mockReply);
 
-    expect(getAllBooksUseCase.execute).toHaveBeenCalledTimes(1);
+    expect(getRecentlyViewedBooksUseCase.execute).toHaveBeenCalledWith({
+      userId: "123",
+    });
+    expect(getRecentlyViewedBooksUseCase.execute).toHaveBeenCalledTimes(1);
     expect(mockReply.status).toHaveBeenCalledWith(
       HttpStatus.INTERNAL_SERVER_ERROR
     );
     expect(mockReply.send).toHaveBeenCalledWith({
-      message: "Something unexpected happened while retrieving the books list.",
+      message:
+        "Something unexpected happened while update the user recently viewed books.",
       error: mockError.message,
     });
   });
