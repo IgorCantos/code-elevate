@@ -10,11 +10,17 @@ class GetAllBooksController {
   }
 
   async execute(
-    _req: FastifyRequest,
+    req: FastifyRequest,
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const response = await this.getAllBooksUseCase.execute();
+      const page = req.headers["page"] as string;
+      const limit = req.headers["limit"] as string;
+
+      const response = await this.getAllBooksUseCase.execute({
+        page: Number(page),
+        limit: Number(limit),
+      });
       return res.status(HttpStatus.SUCCESS).send(response);
     } catch (error: any) {
       console.error("Error fetching books list:", error);

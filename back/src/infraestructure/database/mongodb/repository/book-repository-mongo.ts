@@ -5,12 +5,16 @@ import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository
 import { Filter, ObjectId, WithId } from "mongodb";
 
 class BookRepositoryMongo implements IBookRepository {
-  async getAllBooks(): Promise<IGetAllBooksResponse> {
+  async getAllBooks({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetAllBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
-    const page = 1;
-    const limit = 20;
     const skip = (page - 1) * limit;
 
     const [dbResponse, totalDocuments] = await Promise.all([
@@ -51,13 +55,26 @@ class BookRepositoryMongo implements IBookRepository {
     return new Book(book);
   }
 
-  async getBookByProperty(filter: Filter<Book>): Promise<IGetAllBooksResponse> {
+  async getBookByProperty({
+    page,
+    limit,
+    authors,
+    genre,
+  }: {
+    page: number;
+    limit: number;
+    authors?: string;
+    genre?: string;
+  }): Promise<IGetAllBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
-    const page = 1;
-    const limit = 20;
     const skip = (page - 1) * limit;
+
+    const filter = {
+      ...(authors && { authors }),
+      ...(genre && { genre }),
+    };
 
     const [dbResponse, totalDocuments] = await Promise.all([
       db

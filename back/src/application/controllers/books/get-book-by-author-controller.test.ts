@@ -18,10 +18,14 @@ describe("GetBookByAuthorController", () => {
     booksController = new GetBookByAuthorController(getBookByPropertyUseCase);
 
     mockRequest = {
+      headers: {
+        page: 1,
+        limit: 10,
+      },
       params: {
         bookId: "1234567890",
       },
-    } as FastifyRequest;
+    } as unknown as FastifyRequest;
     mockReply = {
       status: jest.fn().mockReturnThis(),
       send: jest.fn(),

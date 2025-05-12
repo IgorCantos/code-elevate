@@ -20,9 +20,12 @@ describe("BooksListUseCase", () => {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetBookByPropertyService;
 
+    const page = 1;
+    const limit = 10;
+
     const response = await new GetBookByPropertyUseCase(
       getAllBooksServiceMock
-    ).execute({ genre: bookMock.genre });
+    ).execute({ page, limit, genre: bookMock.genre });
 
     expect(response).toBe(expectedResponse);
   });
@@ -34,9 +37,12 @@ describe("BooksListUseCase", () => {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetBookByPropertyService;
 
+    const page = 1;
+    const limit = 10;
+
     const response = await new GetBookByPropertyUseCase(
       getAllBooksServiceMock
-    ).execute({ genre: bookMock.genre });
+    ).execute({ page, limit, genre: bookMock.genre });
 
     expect(response).toStrictEqual({
       message: "No book found.",

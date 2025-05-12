@@ -17,7 +17,13 @@ describe("GetAllBooksController", () => {
 
     booksController = new GetAllBooksController(getAllBooksUseCase);
 
-    mockRequest = {} as FastifyRequest;
+    mockRequest = {
+      headers: {
+        page: "1",
+        limit: "10",
+      },
+    } as unknown as FastifyRequest;
+
     mockReply = {
       status: jest.fn().mockReturnThis(),
       send: jest.fn(),

@@ -17,8 +17,12 @@ class GetBookByAuthorController {
       const { author: authors } = req.params as {
         author: string;
       };
+      const page = req.headers["page"] as string;
+      const limit = req.headers["limit"] as string;
 
       const response = await this.getBookByPropertyUseCase.execute({
+        page: Number(page),
+        limit: Number(limit),
         authors,
       });
 

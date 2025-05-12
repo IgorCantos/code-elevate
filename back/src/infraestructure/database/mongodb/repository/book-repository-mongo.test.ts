@@ -37,7 +37,9 @@ describe("BookRepositoryMongo", () => {
       mockDb.toArray.mockResolvedValue(mockBooks);
       mockDb.countDocuments.mockResolvedValue(40);
 
-      const result = await bookRepository.getAllBooks();
+      const page = 1;
+      const limit = 20;
+      const result = await bookRepository.getAllBooks({ page, limit });
 
       expect(mockDb.collection).toHaveBeenCalledWith("books");
       expect(mockDb.find).toHaveBeenCalled();
@@ -91,15 +93,21 @@ describe("BookRepositoryMongo", () => {
       mockDb.toArray.mockResolvedValue(mockBooks);
       mockDb.countDocuments.mockResolvedValue(10);
 
-      const filter = { title: "Book 1" };
-      const result = await bookRepository.getBookByProperty(filter);
+      const page = 1;
+      const limit = 20;
+      const genre = "Fiction";
+      const result = await bookRepository.getBookByProperty({
+        page,
+        limit,
+        genre,
+      });
 
       expect(mockDb.collection).toHaveBeenCalledWith("books");
-      expect(mockDb.find).toHaveBeenCalledWith(filter);
+      expect(mockDb.find).toHaveBeenCalledWith({ genre });
       expect(mockDb.skip).toHaveBeenCalledWith(0);
       expect(mockDb.limit).toHaveBeenCalledWith(20);
       expect(mockDb.toArray).toHaveBeenCalled();
-      expect(mockDb.countDocuments).toHaveBeenCalledWith(filter);
+      expect(mockDb.countDocuments).toHaveBeenCalledWith({ genre });
 
       expect(result).toEqual({
         actualPage: 1,

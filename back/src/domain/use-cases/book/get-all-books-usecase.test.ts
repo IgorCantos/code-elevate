@@ -18,9 +18,15 @@ describe("BooksListUseCase", () => {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetAllBooksService;
 
+    const page = 1;
+    const limit = 10;
+
     const response = await new GetAllBooksUseCase(
       getAllBooksServiceMock
-    ).execute();
+    ).execute({
+      page,
+      limit,
+    });
 
     expect(response).toBe(expectedResponse);
   });
@@ -40,9 +46,12 @@ describe("BooksListUseCase", () => {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetAllBooksService;
 
+    const page = 1;
+    const limit = 10;
+
     const response = await new GetAllBooksUseCase(
       getAllBooksServiceMock
-    ).execute();
+    ).execute({ page, limit });
 
     expect(response).toStrictEqual({
       message: "No books found.",

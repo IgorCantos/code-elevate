@@ -11,9 +11,25 @@ interface IGetPaginatedBooksResponse {
 }
 
 interface IBookRepository {
-  getAllBooks(): Promise<IGetPaginatedBooksResponse>;
+  getAllBooks({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetPaginatedBooksResponse>;
   getBookById({ id }: { id: string }): Promise<Book | null>;
-  getBookByProperty(filter: Book): Promise<IGetPaginatedBooksResponse>;
+  getBookByProperty({
+    page,
+    limit,
+    authors,
+    genre,
+  }: {
+    page: number;
+    limit: number;
+    authors?: string;
+    genre?: string;
+  }): Promise<IGetPaginatedBooksResponse>;
 }
 
 export default IBookRepository;
