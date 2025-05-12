@@ -88,7 +88,7 @@ describe("BookRepositoryMongo", () => {
   });
 
   describe("getBookByProperty", () => {
-    it("should return books matching the filter", async () => {
+    it("should return books matching the genre filter", async () => {
       const mockBooks = [{ title: "Book 1" }, { title: "Book 2" }];
       mockDb.toArray.mockResolvedValue(mockBooks);
       mockDb.countDocuments.mockResolvedValue(10);
@@ -108,6 +108,38 @@ describe("BookRepositoryMongo", () => {
       expect(mockDb.limit).toHaveBeenCalledWith(20);
       expect(mockDb.toArray).toHaveBeenCalled();
       expect(mockDb.countDocuments).toHaveBeenCalledWith({ genre });
+
+      expect(result).toEqual({
+        actualPage: 1,
+        limitePerPage: 20,
+        totalDocuments: 10,
+        totalPages: 1,
+        hasNextPage: false,
+        hasPreviousPage: false,
+        data: expect.any(Array),
+      });
+    });
+
+    it("should return books matching the author filter", async () => {
+      const mockBooks = [{ title: "Book 1" }, { title: "Book 2" }];
+      mockDb.toArray.mockResolvedValue(mockBooks);
+      mockDb.countDocuments.mockResolvedValue(10);
+
+      const page = 1;
+      const limit = 20;
+      const author = "Fiction";
+      const result = await bookRepository.getBookByProperty({
+        page,
+        limit,
+        authors: author,
+      });
+
+      expect(mockDb.collection).toHaveBeenCalledWith("books");
+      expect(mockDb.find).toHaveBeenCalledWith({ authors: author });
+      expect(mockDb.skip).toHaveBeenCalledWith(0);
+      expect(mockDb.limit).toHaveBeenCalledWith(20);
+      expect(mockDb.toArray).toHaveBeenCalled();
+      expect(mockDb.countDocuments).toHaveBeenCalledWith({ authors: author });
 
       expect(result).toEqual({
         actualPage: 1,

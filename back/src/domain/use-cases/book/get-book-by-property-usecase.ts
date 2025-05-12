@@ -19,9 +19,15 @@ class GetBookByPropertyUseCase {
     authors?: string;
     genre?: string;
   }): Promise<IGetAllBooksResponse | { message: string }> {
+    const defaultPage = 1;
+    const defaultLimit = 15;
+
+    const actualPage = page || defaultPage;
+    const actualLimit = limit || defaultLimit;
+
     const response = await this.getBookByPropertyService.execute({
-      page,
-      limit,
+      page: actualPage,
+      limit: actualLimit,
       authors,
       genre,
     });
