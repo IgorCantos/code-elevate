@@ -22,8 +22,14 @@ describe("BooksListService", () => {
       getBookByProperty: () => Promise.resolve(expectedResponse),
     };
 
+    const page = 1;
+    const limit = 10;
+
     const service = new GetAllBooksService(mockBooksRepository);
-    const response = await service.execute();
+    const response = await service.execute({
+      page,
+      limit,
+    });
 
     expect(response).toBe(expectedResponse);
   });

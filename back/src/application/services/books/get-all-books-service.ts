@@ -8,8 +8,14 @@ class GetAllBooksService {
     this.booksRepository = booksRepository;
   }
 
-  async execute(): Promise<IGetAllBooksResponse> {
-    const booksList = await this.booksRepository.getAllBooks();
+  async execute({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetAllBooksResponse> {
+    const booksList = await this.booksRepository.getAllBooks({ page, limit });
     return booksList;
   }
 }

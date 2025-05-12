@@ -10,16 +10,22 @@ class GetBookByPropertyService {
   }
 
   async execute({
+    page,
+    limit,
     authors,
     genre,
   }: {
+    page: number;
+    limit: number;
     authors?: string;
     genre?: string;
   }): Promise<IGetAllBooksResponse> {
     const filter = {
+      page,
+      limit,
       ...(authors && { authors }),
       ...(genre && { genre }),
-    } as unknown as Book;
+    };
 
     const booksList = await this.booksRepository.getBookByProperty(filter);
     return booksList;

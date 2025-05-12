@@ -20,8 +20,14 @@ describe("GetBookByPropertyService", () => {
       getBookByProperty: () => Promise.resolve(paginatedBooksMocks),
     };
 
+    const page = 1;
+    const limit = 10;
     const service = new GetBookByPropertyService(mockBooksRepository);
-    const response = await service.execute({ genre: bookMock.genre });
+    const response = await service.execute({
+      page,
+      limit,
+      genre: bookMock.genre,
+    });
 
     expect(response).toBe(paginatedBooksMocks);
   });
@@ -44,8 +50,15 @@ describe("GetBookByPropertyService", () => {
       getBookByProperty: () => Promise.resolve(paginatedBooksMocks),
     };
 
+    const page = 1;
+    const limit = 10;
+
     const service = new GetBookByPropertyService(mockBooksRepository);
-    const response = await service.execute({ authors: bookMock.authors });
+    const response = await service.execute({
+      page,
+      limit,
+      authors: bookMock.authors,
+    });
 
     expect(response).toBe(paginatedBooksMocks);
   });

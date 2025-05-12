@@ -8,9 +8,14 @@ class GetAllBooksUseCase {
     this.getAllBooksService = getAllBooksService;
   }
 
-  async execute(): Promise<IGetAllBooksResponse | { message: string }> {
-    // TODO pagination logic
-    const response = await this.getAllBooksService.execute();
+  async execute({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetAllBooksResponse | { message: string }> {
+    const response = await this.getAllBooksService.execute({ page, limit });
 
     if (!response || response.data.length === 0) {
       return {

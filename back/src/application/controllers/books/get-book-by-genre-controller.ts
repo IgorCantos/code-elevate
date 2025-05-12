@@ -18,7 +18,12 @@ class GetBookByGenreController {
         genre: string;
       };
 
+      const page = req.headers["page"] as string;
+      const limit = req.headers["limit"] as string;
+
       const response = await this.getBookByPropertyUseCase.execute({
+        page: Number(page),
+        limit: Number(limit),
         genre,
       });
 
