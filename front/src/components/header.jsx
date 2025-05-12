@@ -1,23 +1,20 @@
-import PropTypes from 'prop-types';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
+import { Box } from '@mui/material';
 import AccountPopover from './account-popover';
 
-export default function Header({ onOpenNav, children }) {
+export default function Header() {
   const theme = useTheme();
 
   return (
     <AppBar
       sx={{
+        backgroundColor: '#cc0000',
         boxShadow: 'none',
         height: 64,
         zIndex: theme.zIndex.appBar + 1,
-
-        transition: theme.transitions.create(['height'], {
-          duration: theme.transitions.duration.shorter,
-        }),
       }}
     >
       <Toolbar
@@ -28,7 +25,15 @@ export default function Header({ onOpenNav, children }) {
           justifyContent: 'space-between',
         }}
       >
-        {/* search aqui */}
+        {/* Search aqui. Ver se dará pra fazer. */}
+
+        <Box
+          component="img"
+          src="/assets/f1rst-books-logo.png"
+          alt="F1rst Books Logo"
+          sx={{ height: 40 }}
+        />
+
         <Stack direction="row" alignItems="center" spacing={1}>
           <AccountPopover />
         </Stack>
@@ -36,8 +41,3 @@ export default function Header({ onOpenNav, children }) {
     </AppBar>
   );
 }
-
-Header.propTypes = {
-  onOpenNav: PropTypes.func,
-  children: PropTypes.any,
-};
