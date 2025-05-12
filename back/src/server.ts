@@ -10,8 +10,6 @@ const fastify = Fastify({
 
 const startServer = async () => {
   try {
-    console.log("IGOR", fastify);
-
     await fastify.register(cors, {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE"],
