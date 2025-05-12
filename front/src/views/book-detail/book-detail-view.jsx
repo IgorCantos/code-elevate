@@ -23,7 +23,6 @@ export default function BookDetailPage() {
       <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
           <Box display="flex" flexDirection="column" gap={3}>
-            {/* Imagem */}
             <Paper
               elevation={3}
               sx={{
@@ -46,7 +45,6 @@ export default function BookDetailPage() {
               />
             </Paper>
 
-            {/* Preço + botões */}
             <Paper
               elevation={3}
               sx={{
@@ -69,8 +67,14 @@ export default function BookDetailPage() {
               <Button
                 variant="contained"
                 size="large"
-                sx={{ borderRadius: '12px', textTransform: 'none' }}
-                onClick={() => alert('Livro adicionado ao carrinho!')}
+                sx={{
+                  borderRadius: '12px',
+                  textTransform: 'none',
+                  backgroundColor: '#cc0000',
+                  '&:hover': {
+                    backgroundColor: '#900',
+                  },
+                }}
               >
                 Comprar agora
               </Button>
