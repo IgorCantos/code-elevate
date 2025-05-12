@@ -18,8 +18,11 @@ class MongoClientSingleton {
   }
 
   private async connect() {
+    const mongoUser = process.env.MONGO_USER || "adm";
+    const mongoPass = process.env.MONGO_PASS || "adm";
+
     this.client = new MongoClient(
-      "mongodb://adm:adm@localhost:27017/?authSource=admin"
+      `mongodb://${mongoUser}:${mongoPass}@mongodb:27017/?authSource=admin`
     );
 
     await this.client.connect();
