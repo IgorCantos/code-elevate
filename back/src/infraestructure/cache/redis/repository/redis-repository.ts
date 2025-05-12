@@ -16,7 +16,6 @@ class RedisRepository implements ICacheRepository {
   }
 
   async setCache(key: string, data: any): Promise<void> {
-    // await this.redis.del(key);
     const maxItemsToCache = 9;
 
     const currentCacheList = await this.redis.lrange(key, 0, -1);

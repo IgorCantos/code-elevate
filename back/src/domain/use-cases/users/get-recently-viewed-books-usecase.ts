@@ -16,7 +16,6 @@ class GetRecentlyViewedBooksUseCase {
     const cacheKey = `recently_viewed_books_${userId}`;
     const cachedValue = await this.cacheRepository.getCache(cacheKey);
 
-    console.log("cachedValue", cachedValue);
     const response = cachedValue.map((item: any) => new Book(JSON.parse(item)));
 
     return response;

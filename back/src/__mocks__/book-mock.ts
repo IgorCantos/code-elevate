@@ -16,6 +16,6 @@ const makeBookDataMock = () => ({
   currencyCode: "BRL",
 });
 
-const makeBookMock = () => new Book(makeBookDataMock());
+const makeBookMock = () => new Book(makeBookDataMock() as unknown as any);
 
 export { makeBookDataMock, makeBookMock };

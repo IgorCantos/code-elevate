@@ -1,35 +1,30 @@
-import GetAllBooksControllerFactory from "./update-recently-viewed-books-controller-factory";
-import { GetAllBooksController } from "@/application/controllers";
-import { GetAllBooksService } from "@/application/services";
-import { GetAllBooksUseCase } from "@/domain/use-cases";
-import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
+import GetRecentlyViewedBooksControllerFactory from "./get-recently-viewed-books-controller-factory";
+import { RedisRepository } from "@/infraestructure/cache";
+import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { GetRecentlyViewedBooksController } from "@/application/controllers";
 
 jest.mock("@/application/controllers");
 jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
-jest.mock("@/infraestructure/database/mongodb");
+jest.mock("@/infraestructure/cache");
+jest.mock("ioredis");
 
-describe("BooksControllerFactory", () => {
-  it("should create an instance of BooksListController", () => {
-    const factory = new GetAllBooksControllerFactory();
+describe("GetRecentlyViewedBooksControllerFactory", () => {
+  it("should create an instance of GetRecentlyViewedBooksControllerFactory", () => {
+    const factory = new GetRecentlyViewedBooksControllerFactory();
     const controller = factory.create();
 
-    expect(BookRepositoryMongo).toHaveBeenCalledTimes(1);
+    expect(RedisRepository).toHaveBeenCalledTimes(1);
 
-    expect(GetAllBooksService).toHaveBeenCalledWith(
-      expect.any(BookRepositoryMongo)
+    expect(GetRecentlyViewedBooksUseCase).toHaveBeenCalledWith(
+      expect.any(RedisRepository)
     );
-    expect(GetAllBooksService).toHaveBeenCalledTimes(1);
+    expect(GetRecentlyViewedBooksUseCase).toHaveBeenCalledTimes(1);
 
-    expect(GetAllBooksUseCase).toHaveBeenCalledWith(
-      expect.any(GetAllBooksService)
-    );
-    expect(GetAllBooksUseCase).toHaveBeenCalledTimes(1);
-
-    expect(GetAllBooksController).toHaveBeenCalledWith(
-      expect.any(GetAllBooksUseCase)
+    expect(GetRecentlyViewedBooksController).toHaveBeenCalledWith(
+      expect.any(GetRecentlyViewedBooksUseCase)
     );
 
-    expect(controller).toBeInstanceOf(GetAllBooksController);
+    expect(controller).toBeInstanceOf(GetRecentlyViewedBooksController);
   });
 });

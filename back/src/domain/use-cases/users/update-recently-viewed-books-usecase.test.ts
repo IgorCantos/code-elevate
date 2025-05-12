@@ -1,51 +1,51 @@
+import UpdateRecentlyViewedBooksUseCase from "./update-recently-viewed-books-usecase";
+import { ICacheRepository } from "@/domain/repositories";
+import { Book } from "@/domain/entities";
 import { makeBookMock } from "@/__mocks__/book-mock";
-import GetAllBooksUseCase from "./get-recently-viewed-books-usecase";
-import { GetAllBooksService } from "@/application/services";
 
-describe("BooksListUseCase", () => {
-  it("return a book list with pagination", async () => {
-    const expectedResponse = {
-      actualPage: 1,
-      limitePerPage: 10,
-      totalDocuments: 50,
-      totalPages: 20,
-      hasNextPage: true,
-      hasPreviousPage: false,
-      data: [makeBookMock()],
+describe("UpdateRecentlyViewedBooksUseCase", () => {
+  let updateRecentlyViewedBooksUseCase: UpdateRecentlyViewedBooksUseCase;
+  let mockCacheRepository: jest.Mocked<ICacheRepository>;
+
+  beforeEach(() => {
+    mockCacheRepository = {
+      setCache: jest.fn(),
+      getCache: jest.fn(),
     };
-
-    const getAllBooksServiceMock = {
-      execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetAllBooksService;
-
-    const response = await new GetAllBooksUseCase(
-      getAllBooksServiceMock
-    ).execute();
-
-    expect(response).toBe(expectedResponse);
+    updateRecentlyViewedBooksUseCase = new UpdateRecentlyViewedBooksUseCase(
+      mockCacheRepository
+    );
   });
 
-  it("returna error when no book list is empty", async () => {
-    const expectedResponse = {
-      actualPage: 1,
-      limitePerPage: 10,
-      totalDocuments: 50,
-      totalPages: 20,
-      hasNextPage: true,
-      hasPreviousPage: false,
-      data: [],
-    };
+  it("should throw an error if userId is not provided", async () => {
+    await expect(
+      updateRecentlyViewedBooksUseCase.execute({ userId: "", data: {} })
+    ).rejects.toThrow("User ID is required");
+  });
 
-    const getAllBooksServiceMock = {
-      execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetAllBooksService;
+  it("should throw an error if data is not provided", async () => {
+    await expect(
+      updateRecentlyViewedBooksUseCase.execute({ userId: "123", data: null })
+    ).rejects.toThrow("Data is required");
+  });
 
-    const response = await new GetAllBooksUseCase(
-      getAllBooksServiceMock
-    ).execute();
+  it("should validate the book and set it in the cache", async () => {
+    const mockData = makeBookMock();
+    const mockUserId = "123";
+    const mockBook = new Book(mockData);
+    jest.spyOn(Book.prototype, "validate").mockImplementation();
 
-    expect(response).toStrictEqual({
-      message: "No books found.",
+    const cacheKey = `recently_viewed_books_${mockUserId}`;
+
+    await updateRecentlyViewedBooksUseCase.execute({
+      userId: mockUserId,
+      data: mockData,
     });
+
+    expect(mockBook.validate).toHaveBeenCalled();
+    expect(mockCacheRepository.setCache).toHaveBeenCalledWith(
+      cacheKey,
+      mockBook
+    );
   });
 });
