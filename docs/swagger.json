@@ -18,7 +18,7 @@
         "parameters": [
           {
             "name": "page",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "1",
             "schema": {
@@ -27,7 +27,7 @@
           },
           {
             "name": "limit",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "20",
             "schema": {
@@ -136,7 +136,7 @@
           },
           {
             "name": "page",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "1",
             "schema": {
@@ -145,7 +145,7 @@
           },
           {
             "name": "limit",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "20",
             "schema": {
@@ -225,7 +225,7 @@
           },
           {
             "name": "page",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "1",
             "schema": {
@@ -234,7 +234,7 @@
           },
           {
             "name": "limit",
-            "in": "header",
+            "in": "query",
             "required": false,
             "example": "20",
             "schema": {
