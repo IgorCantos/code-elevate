@@ -143,3 +143,308 @@ Optei por também criar um front-end para o case, para ter algo mais visual do q
 A parte mais desafiadora ao longo do projeto foi tratar a questão do tempo, porque só tive o fim de semana e a segunda-feira (que pedi compensação de horas) para concluir toda a parte técnica. Todos os outros dias tive que conciliar com o horário de trabalho e os deveres do dia a dia. E não, não se faz esse case em "4-8 horas" como é dito no enunciado 😂. Pelo menos não se quiser entregar algo de qualidade e mostrar comprometimento.
 
 Outro ponto foi conseguir um dataset excelente de livros que serviria para o meu caso de uso. Confesso que gastei umas horas até encontrar a solução ideal e ter os dados em mãos. Se não tivesse front qualquer um serviria, mas com front era necessário ter as capas dos livros e essa foi a maior questão a ser resolvida, e foi. No final se provou uma decisão muito boa.
+
+```json
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Code elevate - Igor dos santos cabral",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "localhost"
+    }
+  ],
+  "paths": {
+    "/v1/books": {
+      "parameters": [],
+      "get": {
+        "summary": "Get All Books",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "header",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "header",
+            "required": false,
+            "example": "20",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/v1/books/:bookId": {
+      "get": {
+        "summary": "Get Book By Id",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Book found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Book"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/books/genre/:genre": {
+      "parameters": [],
+      "get": {
+        "summary": "Get Book By Genre",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "header",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "header",
+            "required": false,
+            "example": "20",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/v1/books/author/:author": {
+      "parameters": [],
+      "get": {
+        "summary": "Get Book By Author",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "header",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "header",
+            "required": false,
+            "example": "20",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/v1/users/123/recently-viewed": {
+      "parameters": [],
+      "post": {
+        "summary": "Update recently viewed books",
+        "parameters": [
+          {
+            "name": "user-id",
+            "in": "header",
+            "required": false,
+            "example": "123",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "example": "application/json",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "_id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "authors": {
+                    "type": "string"
+                  },
+                  "publishedDate": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "description": {
+                    "type": "string",
+                    "format": "style"
+                  },
+                  "genre": {
+                    "type": "string"
+                  },
+                  "categories": {
+                    "type": "string"
+                  },
+                  "thumbnail": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "pageCount": {
+                    "type": "integer"
+                  },
+                  "averageRating": {
+                    "type": "integer"
+                  },
+                  "amount": {
+                    "type": "number"
+                  },
+                  "currencyCode": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Getrecently viewed books Copy",
+        "parameters": [
+          {
+            "name": "user-id",
+            "in": "header",
+            "required": false,
+            "example": "123",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "example": "application/json",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "parameters": [],
+      "get": {
+        "summary": "Health check",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Book": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "publishedDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "description": {
+            "type": "string"
+          },
+          "genre": {
+            "type": "string"
+          },
+          "categories": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "string",
+            "format": "uri"
+          },
+          "pageCount": {
+            "type": "integer"
+          },
+          "averageRating": {
+            "type": "integer"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "currencyCode": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "_id": "681f9fab48212582f0d861e2",
+          "title": "Mysteries",
+          "authors": "Knut Hamsun",
+          "publishedDate": "2001-01-01",
+          "description": "The first complete English translation of the Nobel Prize-winner’s literary masterpiece A Penguin Classic Mysteries is the story of Johan Nilsen Nagel, a mysterious stranger who suddenly turns up in a small Norwegian town one summer—and just as suddenly disappears...",
+          "genre": "Fiction",
+          "categories": "Fiction",
+          "thumbnail": "http://books.google.com/books/content?id=MRoMUV2kLZEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+          "pageCount": 356,
+          "averageRating": 4,
+          "amount": 49.99,
+          "currencyCode": "BRL"
+        }
+      }
+    }
+  }
+}
+```
