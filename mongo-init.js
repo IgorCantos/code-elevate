@@ -83,7 +83,7 @@ db.books.insertMany([
   {
     title: "SHERLOCK HOLMES - THE VALLEY OF FEAR",
     author: "ARTHUR CONAN DOYLE",
-    publishedDate: "",
+    publishedDate: "Fiction",
     description:
       "SHERLOCK HOLMES – THE VALLEY OF FEAR, is the 4th and final novel written by Arthur Conan Doyle. This book is complete, unabridged and was originally published in 1915. This is one of Doyle’s most outstanding and well-known works of the adventures of the most famous crime-solving duo - Sherlock Holmes and John Watson This book is properly formatted for aesthetics and ease of reading. This book is great for teachers and students or for the casual reader. This book is the perfect addition to any classic literary library. At Pure Snow Publishing we have taken the time and care into formatting this book to make it the best possible reading experience. Key features of this book: - A biographical outline of the author - A custom list of related collections and novels written by the author (listed in order of initial publication) - Easy-to-read font size: 12 pt. - Indented first lines, 1.25 Line Spacing and Justified Paragraphs - Custom Table of Contents and Design elements for each chapter - The Copyright page has been placed at the end of the book, as to not impede the content and flow of the book. We have made this book available in 3 reading formats: Original Paperback, Large Print Paperback and Ebook. Enjoy!",
     genre: "Fiction",
@@ -403,7 +403,7 @@ db.books.insertMany([
       "Rosemary took a glass of champagne and died--was it suicide? The six guests begin to remember things and the killer strikes again.",
     genre: "Fiction",
     categories: "Detective and mystery stories",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 194,
     averageRating: 4,
     amount: 49.99,
@@ -491,7 +491,7 @@ db.books.insertMany([
     description:
       "The Picture of Dorian Gray is a Gothic and philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of Lippincott's Monthly Magazine.Fearing the story was indecent, the magazine's editor deleted roughly five hundred words before publication without Wilde's knowledge. Despite that censorship, The Picture of Dorian Gray offended the moral sensibilities of British book reviewers, some of whom said that Oscar Wilde merited prosecution for violating the laws guarding public morality. In response, Wilde aggressively defended his novel and art in correspondence with the British press, although he personally made excisions of some of the most controversial material when revising and lengthening the story for book publication the following year.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=xwSWzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 272,
@@ -642,7 +642,7 @@ db.books.insertMany([
     description:
       'Le Père Goriot ("Old Goriot" or "Father Goriot") is an 1835 novel by French novelist and playwright Honoré de Balzac (1799-1850), included in the Scènes de la vie privée section of his novel sequence La Comédie humaine. Set in Paris in 1819, it follows the intertwined lives of three characters: the elderly doting Goriot, a mysterious criminal-in-hiding named Vautrin and a naive law student named Eugène de Rastignac. Originally published in serial form during the winter of 1834-1835, Le Père Goriot is widely considered Balzac\'s most important novel. It marks the first serious use by the author of characters who had appeared in other books, a technique that distinguishes Balzac\'s fiction. The novel is also noted as an example of his realist style, using minute details to create character and subtext. The novel takes place during the Bourbon Restoration, which brought profound changes to French society; the struggle by individuals to secure a higher social status is a major theme in the book. The city of Paris also impresses itself on the characters - especially young Rastignac, who grew up in the provinces of southern France. Balzac analyzes, through Goriot and others, the nature of family and marriage, providing a pessimistic view of these institutions. The novel was released to mixed reviews. Some critics praised the author for his complex characters and attention to detail; others condemned him for his many depictions of corruption and greed. A favorite of Balzac\'s, the book quickly won widespread popularity and has often been adapted for film and the stage. It gave rise to the French expression "Rastignac", a social climber willing to use any means to better his situation. (wikipedia.org) About the author: Honoré de Balzac born Honoré Balzac; (20 May 1799 - 18 August 1850) was a French novelist and playwright. The novel sequence La Comédie humaine, which presents a panorama of post-Napoleonic French life, is generally viewed as his magnum opus. Owing to his keen observation of detail and unfiltered representation of society, Balzac is regarded as one of the founders of realism in European literature. He is renowned for his multi-faceted characters; even his lesser characters are complex, morally ambiguous and fully human. Inanimate objects are imbued with character as well; the city of Paris, a backdrop for much of his writing, takes on many human qualities. His writing influenced many famous writers, including the novelists Émile Zola, Charles Dickens, Marcel Proust, Gustave Flaubert, and Henry James, and filmmakers François Truffaut and Jacques Rivette. Many of Balzac\'s works have been made into films and continue to inspire other writers. James called him "really the father of us all." An enthusiastic reader and independent thinker as a child, Balzac had trouble adapting to the teaching style of his grammar school. His willful nature caused trouble throughout his life and frustrated his ambitions to succeed in the world of business. When he finished school, Balzac was apprenticed in a law office, but he turned his back on the study of law after wearying of its inhumanity and banal routine. Before and during his career as a writer, he attempted to be a publisher, printer, businessman, critic, and politician; he failed in all of these efforts. La Comédie Humaine reflects his real-life difficulties, and includes scenes from his own experience. Balzac suffered from health problems throughout his life, possibly owing to his intense writing schedule. His relationship with his family was often strained by financial and personal drama, and he lost more than one friend over critical reviews. In 1850, Balzac married Ewelina Hańska (née Contessa Rzewuska), a Polish aristocrat and his longtime love. He died in Paris six months later. (wikipedia.org)',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=A2Ni0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 152,
@@ -657,7 +657,7 @@ db.books.insertMany([
     description:
       'Robinson Crusoe is a novel by Daniel Defoe, first published on 25 April 1719. The first edition credited the work\'s protagonist Robinson Crusoe as its author, leading many readers to believe he was a real person and the book a travelogue of true incidents.Epistolary, confessional, and didactic in form, the book is presented as an autobiography of the title character (whose birth name is Robinson Kreutznaer)-a castaway who spends 28 years on a remote tropical desert island near Trinidad, encountering cannibals, captives, and mutineers, before ultimately being rescued. The story has been thought to be based on the life of Alexander Selkirk, a Scottish castaway who lived for four years on a Pacific island called "Más a Tierra", now part of Chile, which was renamed Robinson Crusoe Island in 1966',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=sIYezgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 360,
@@ -687,7 +687,7 @@ db.books.insertMany([
     description:
       "The Scripture of the Saviour of the World, Lord Buddha-Prince Siddartha styled on earth In Earth and Heavens and Hells Incomparable, All-honoured, Wisest, Best, most Pitiful; The Teacher of Nirvana and the Law.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=ESzysgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 98,
@@ -702,7 +702,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important and is part of the knowledge base of civilization as we know it. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. To ensure a quality reading experience, this work has been proofread and republished using a format that seamlessly blends the original graphical elements with text in an easy-to-read typeface. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=SFibvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 276,
@@ -717,7 +717,7 @@ db.books.insertMany([
     description:
       "The Picture of Dorian Gray is a Gothic and philosophical novel by Oscar Wilde, first published complete in the July 1890 issue of Lippincott's Monthly Magazine.Fearing the story was indecent, the magazine's editor deleted roughly five hundred words before publication without Wilde's knowledge. Despite that censorship, The Picture of Dorian Gray offended the moral sensibilities of British book reviewers, some of whom said that Oscar Wilde merited prosecution for violating the laws guarding public morality. In response, Wilde aggressively defended his novel and art in correspondence with the British press, although he personally made excisions of some of the most controversial material when revising and lengthening the story for book publication the following year.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=ZcjAzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 272,
@@ -733,7 +733,7 @@ db.books.insertMany([
       "On September 5, 1957, Jack Kerouac?s novel On The Road was published. Since then, few books have had as profound an impact on American culture. Pulsating with the rhythms of late-1940s/1950s underground America, jazz, sex, illicit drugs, and the mystery and promise of the open road, Kerouac?s classic novel of freedom and longing defined what it meant to be?Beat? and has inspired generations of writers, musicians, artists, poets and seekers who cite their discovery of the book as the event that?set them free.? Based on Kerouac?s adventures with Neal Cassady, On The Road tells the story of two friends whose four cross-country road trips are a quest for meaning and true experience. Expressing a mixture of sad-eyed naïveté and wild abandon, and imbued with Kerouac?s love of America, his compassion for humanity, and his sense of language as jazz, On The Road is the quintessential American vision of freedom and hope. It changed American literature and changed anyone who has ever picked it up.",
     genre: "Fiction",
     categories: "Fiction",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -746,7 +746,7 @@ db.books.insertMany([
     description:
       'The Idiot is a novel by the 19th-century Russian author Fyodor Dostoyevsky. It was first published serially in the journal The Russian Messenger in 1868-9. The title is an ironic reference to the central character of the novel, Prince Lyov Nikolaevich Myshkin, a young man whose goodness and open-hearted simplicity lead many of the more worldly characters he encounters to mistakenly assume that he lacks intelligence and insight. In the character of Prince Myshkin, Dostoevsky set himself the task of depicting "the positively good and beautiful man." The novel examines the consequences of placing such a unique individual at the centre of the conflicts, desires, passions and egoism of worldly society, both for the man himself and for those with whom he becomes involved. The result, according to philosopher A.C. Grayling, is "one of the most excoriating, compelling and remarkable books ever written; and without question one of the greatest."',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=dlWHjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 556,
@@ -776,7 +776,7 @@ db.books.insertMany([
     description:
       'The Art of War is an ancient Chinese military treatise dating from the Late Spring and Autumn Period (roughly 5th century BC). The work, which is attributed to the ancient Chinese military strategist Sun Tzu ("Master Sun", also spelled Sunzi), is composed of 13 chapters. Each one is devoted to an aspect of warfare and how it applies to military strategy and tactics. For almost 1,500 years it was the lead text in an anthology that would be formalised as the Seven Military Classics by Emperor Shenzong of Song in 1080. The Art of War remains the most influential strategy text in East Asian warfare[1] and has influenced both Eastern and Western military thinking, business tactics, legal strategy, lifestyles and beyond.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=Izm_zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 60,
@@ -806,7 +806,7 @@ db.books.insertMany([
     description:
       'First serialized in 1908, "Martin Eden" is Jack London\'s classic and tragic tale of its title character and his struggle to become a writer. Martin Eden is an idealistic and self-educated young man who struggles to overcome poverty and a lack of opportunities in a quest to become an educated and successful artist. He hopes to find acceptance in the world of the wealthy and refined, though he finds it hard to shake off his coarse working-class background. Eden falls in love with Ruth Morse, but he feels that he is not good enough to win her hand, as she comes from a bourgeois family. Eden hopes that she will wait for him while he seeks to establish himself as a successful writer and improve his social status so that he may one day feel worthy of his true love. The novel is heartbreaking, tragic, and rich with the themes of class struggle and prejudice. It is also hopeful in its faith in art to transform lives and has inspired countless young writers and artists to follow their dreams. "Martin Eden" remains one of Jack London\'s best-loved works. This edition is printed on premium acid-free paper.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=Xbv5zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 60,
@@ -896,7 +896,7 @@ db.books.insertMany([
     description:
       "Pygmalion is a play by George Bernard Shaw, named after a Greek mythological figure. It was first presented on stage to the public in 1913.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=3M7AzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 136,
@@ -971,7 +971,7 @@ db.books.insertMany([
     description:
       '3 May. Bistritz. -Left Munich at 8:35 P. M, on 1st May, arriving at Vienna early next morning; should have arrived at 6:46, but train was an hour late. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the little I could walk through the streets. I feared to go very far from the station, as we had arrived late and would start as near the correct time as possible.The impression I had was that we were leaving the West and entering the East; the most western of splendid bridges over the Danube, which is here of noble width and depth, took us among the traditions of Turkish rule.We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at the Hotel Royale. I had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but thirsty. (Mem. get recipe for Mina.) I asked the waiter, and he said it was called "paprika hendl," and that, as it was a national dish, I should be able to get it anywhere along the Carpathians.I found my smattering of German very useful here, indeed, I don\'t know how I should be able to get on without it.Having had some time at my disposal when in London, I had visited the British Museum, and made search among the books and maps in the library regarding Transylvania; it had struck me that some foreknowledge of the country could hardly fail to have some importance in dealing with a nobleman of that country.I find that the district he named is in the extreme east of the country, just on the borders of three states, Transylvania, Moldavia, and Bukovina, in the midst of the Carpathian mountains; one of the wildest and least known portions of Europe.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=BVdnzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 234,
@@ -986,7 +986,7 @@ db.books.insertMany([
     description:
       'An Ideal Husband is an 1895 stage play by Oscar Wilde that revolves around blackmail and political corruption, and touches on the themes of public and private honour. The action is set in London, in "the present", and takes place over the course of twenty-four hours.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=2QUJzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 132,
@@ -1032,7 +1032,7 @@ db.books.insertMany([
     description:
       "Oscar Wilde (16 October 1854 - 30 November 1900) was an extremely popular Irish writer and poet who wrote in different forms throughout his career and became one of London's most popular playwrights in the early 1890s. Today he is remembered for his epigrams, plays and the strange circumstances of his imprisonment, followed by his early death. At the turn of the 1890s, Wilde refined his ideas about the supremacy of art in a series of dialogues and essays, and incorporated themes of decadence, duplicity, and beauty into his only novel, The Picture of Dorian Gray (1890). The opportunity to construct aesthetic details precisely, and combine them with larger social themes, drew Wilde to write drama. He wrote Salome (1891) in French in Paris but it was refused a license. Unperturbed, Wilde produced four society comedies in the early 1890s, which made him one of the most successful playwrights of late Victorian London. Wilde reached the height of his fame and success with The Importance of Being Earnest (1895).",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=rFAljwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 52,
@@ -1063,7 +1063,7 @@ db.books.insertMany([
     description:
       'The Jungle Book (1894) is a collection of stories written by Rudyard Kipling.The tales in the book (and also those in The Second Jungle Book which followed in 1895, and which includes five further stories about Mowgli) are fables, using animals in an anthropomorphic manner to give moral lessons. The verses of The Law of the Jungle, for example, lay down rules for the safety of individuals, families and communities. Kipling put in them nearly everything he knew or "heard or dreamed about the Indian jungle.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=netutAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 140,
@@ -1078,7 +1078,7 @@ db.books.insertMany([
     description:
       'The Jungle Book (1894) is a collection of stories written by Rudyard Kipling.The tales in the book (and also those in The Second Jungle Book which followed in 1895, and which includes five further stories about Mowgli) are fables, using animals in an anthropomorphic manner to give moral lessons. The verses of The Law of the Jungle, for example, lay down rules for the safety of individuals, families and communities. Kipling put in them nearly everything he knew or "heard or dreamed about the Indian jungle."',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=5ulqzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 174,
@@ -1093,7 +1093,7 @@ db.books.insertMany([
     description:
       "Along with the plays of William Shakespeare and the works of Charles Dickens, Jane Austen's novels are among the most beloved books of Western literature. Pride and Prejudice (1813) was in Austen's lifetime her most popular novel, and it was the author's personal favorite. Adapted many times to the screen and stage, and the inspiration for numerous imitations, it remains today her most widely read book. Now, in this beautifully illustrated and annotated edition, distinguished scholar Patricia Meyer Spacks instructs the reader in a larger appreciation of the novel's enduring pleasures and provides analysis of Darcy, Elizabeth Bennet, Lady Catherine, and all the characters who inhabit the world of Pride and Prejudice.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=CYIKzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 464,
@@ -1135,7 +1135,7 @@ db.books.insertMany([
     title: "The Sign of the Four",
     author: "Sir Arthur Conan Doyle, Sir, Conan Doyle Arthur Conan Doyle",
     publishedDate: "2008-01",
-    description: "",
+    description: "Fiction",
     genre: "Fiction",
     categories: "Fiction",
     thumbnail:
@@ -1152,7 +1152,7 @@ db.books.insertMany([
     description:
       "Rare edition with unique illustrations. Hans Christian Andersen was a Danish author best known for writing children's stories including \"The Little Mermaid\" and \"The Ugly Duckling.\" But he didn't just write short stories, and his intended audience wasn't restricted to children. In addition to his fairy tales, Andersen wrote poems, plays, novels, travel books, essays, and more. He hungered for recognition at home (Denmark) and abroad-and he got it! Eventually. Today, his stories can be read in over one hundred languages. But no matter what language they're in, Andersen's tales have got something for everyone. In them, you'll find beauty, tragedy, nature, religion, artfulness, deception, betrayal, love, death, judgment, penance, and-occasionally-a happy ending. They're complex tales, but since Andersen himself was pretty complex, we like to think that art imitates life. Or something like that.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=v4qIvQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 38,
@@ -1167,7 +1167,7 @@ db.books.insertMany([
     description:
       'A nice edition with 60 illustrations from various artists. The Jungle Book (1894) is a collection of stories by the English author Rudyard Kipling. Most of the characters are animals such as Shere Khan the tiger and Baloo the bear, though a principal character is the boy or "man-cub" Mowgli, who is raised in the jungle by wolves. The stories are set in a forest in India; one place mentioned repeatedly is "Seonee" in the central state of Madhya Pradesh. A major theme in the book is abandonment followed by fostering, as in the life of Mowgli, echoing Kipling\'s own childhood.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=7BWWzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 196,
@@ -1182,7 +1182,7 @@ db.books.insertMany([
     description:
       "Dracula is an 1897 Gothic horror novel by Irish author Bram Stoker. It introduced the character of Count Dracula, and established many conventions of subsequent vampire fantasy.[1] The novel tells the story of Dracula's attempt to move from Transylvania to England so that he may find new blood and spread the undead curse, and of the battle between Dracula and a small group of men and a woman led by Professor Abraham Van Helsing.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=85o4zAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 492,
@@ -1197,7 +1197,7 @@ db.books.insertMany([
     description:
       'The Great Gatsby by Francis Scott Fitzgerald The Great Gatsby is a novel by the American author F. Scott Fitzgerald. First published on April 10, 1925, it is set in Long Island\'s North Shore and New York City during the summer of 1922. The novel chronicles an era that Fitzgerald himself dubbed the "Jazz Age." Following the shock and chaos of World War I, American society enjoyed unprecedented levels of prosperity during the "roaring" 1920s as the economy soared. At the same time, Prohibition, the ban on the sale and manufacture of alcohol as mandated by the Eighteenth Amendment, made millionaires out of bootleggers and led to an increase in organized crime. Although Fitzgerald, like Nick Carraway in his novel, idolized the riches and glamor of the age, he was uncomfortable with the unrestrained materialism and the lack of morality that went with it. We are delighted to publish this classic book as part of our extensive Classic Library collection. Many of the books in our collection have been out of print for decades, and therefore have not been accessible to the general public. The aim of our publishing program is to facilitate rapid access to this vast reservoir of literature, and our view is that this is a significant literary work, which deserves to be brought back into print after many decades. The contents of the vast majority of titles in the Classic Library have been scanned from the original works. To ensure a high quality product, each title has been meticulously hand curated by our staff. Our philosophy has been guided by a desire to provide the reader with a book that is as close as possible to ownership of the original work. We hope that you will enjoy this wonderful classic work, and that for you it becomes an enriching experience.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=9P9ZuQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 124,
@@ -1224,10 +1224,10 @@ db.books.insertMany([
     title: "Dubliners",
     author: "James Joyce",
     publishedDate: "2019-02-04",
-    description: "",
+    description: "Fiction",
     genre: "Fiction",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -1255,7 +1255,7 @@ db.books.insertMany([
     description:
       "To the Lighthouse (5 May 1927) is a novel by Virginia Woolf. A landmark novel of high modernism, the text, centering on the Ramsay family and their visits to the Isle of Skye in Scotland between 1910 and 1920, skillfully manipulates temporality and psychological exploration.To the Lighthouse follows and extends the tradition of modernist novelists like Marcel Proust and James Joyce, where the plot is secondary to philosophical introspection, and the prose can be...",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=hQlVxQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 402,
@@ -1270,7 +1270,7 @@ db.books.insertMany([
     description:
       "Around the Moon, also translated as Circling the Moon and All Around the Moon, is the sequel to Jules Verne's 1865 novel, From the Earth to the Moon. It's a science fiction tale which continues the trip to the moon that was only begun in the first novel.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=gyBlzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 398,
@@ -1285,7 +1285,7 @@ db.books.insertMany([
     description:
       "\"The Canterville Ghost\" is a parody featuring a dramatic spirit named Sir Simon and the United States minister (ambassador) to the Court of St. James's, Hiram B. Otis. Mr. Otis travels to England with his family and moves into a haunted country house. Lord Canterville, the previous owner of the house, warns Mr. Otis that the ghost of Sir Simon de Canterville has haunted it ever since he killed his wife, Eleonore, three centuries before. But Mr. Otis dismisses the ghost story as bunk and disregards Lord Canterville's warnings. When the Otises learn that the house is indeed haunted, they succeed in victimizing the ghost and in disregarding age-old British traditions. What emerges is a satire of American materialism, a lampoon of traditional British values, and an amusing twist on the traditional gothic horror tale.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=jFgKMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 72,
@@ -1300,7 +1300,7 @@ db.books.insertMany([
     description:
       "Hamsun was born on Aug. 4, 1860, in one of the sunny valleys of central Norway. From there his parents moved when he was only four to settle in the far northern district of Lofoden--that land of extremes, where the year, and not the day, is evenly divided between darkness and light; where winter is a long dreamless sleep, and summer a passionate dream without sleep; where land and sea meet and intermingle so gigantically that man is all but crushed between the two--or else raised to titanic measures by the spectacle of their struggle. The Northland, with its glaring lights and black shadows, its unearthly joys and abysmal despairs, is present and dominant in every line that Hamsun ever wrote. In that country his best tales and dramas are laid. By that country his heroes are stamped wherever they roam. Out of that country they draw their principal claims to probability. Only in that country do they seem quite at home. Today we know, however, that the pathological case represents nothing but an extension of perfectly normal tendencies.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=kp7SAQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 158,
@@ -1315,7 +1315,7 @@ db.books.insertMany([
     description:
       "This book is part of the TREDITION CLASSICS series. The creators of this series are united by passion for literature and driven by the intention of making all public domain books available in printed format again - worldwide. At tredition we believe that a great book never goes out of style. Several mostly non-profit literature projects provide content to tredition. To support their good work, tredition donates a portion of the proceeds from each sold copy. As a reader of a TREDITION CLASSICS book, you support our mission to save many of the amazing works of world literature from oblivion.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=qzSZuQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 198,
@@ -1343,9 +1343,9 @@ db.books.insertMany([
     author: "Agatha Christie",
     publishedDate: "2019-12-04",
     description:
-      "\"The Mysterious Affair at Styles is a detective novel by British writer Agatha Christie. It was written in the middle of the First World War, in 1916, and first published by John Lane in the United States in October 1920[1] and in the United Kingdom by The Bodley Head (John Lane's UK company) on 21 January 1921.[2]Styles was Christie's first published novel. It introduced Hercule Poirot, Inspector (later, Chief Inspector) Japp, and Arthur Hastings.[3] Poirot, a Belgian refugee of the Great War, is settling in England near the home of Emily Inglethorp, who helped him to his new life. His friend Hastings arrives as a guest at her home. When the woman is killed, Poirot uses his detective skills to solve the mystery.\"",
+      "\"The Mysterious Affair at Styles is a detective novel by British writer Agatha Christie. It was written in the middle of the First World War, in 1916, and first published by John Lane in the United States in October 1920[1] and in the United Kingdom by The Bodley Head (John Lane's UK company) on 21 January 1921.[2]Styles was Christie's first published novel. It introduced Hercule Poirot, Inspector (later, Chief Inspector) Japp, and Arthur Hastings.[3] Poirot, a Belgian refugee of the Great War, is settling in England near the home of Emily Inglethorp, who helped him to his new life. His friend Hastings arrives as a guest at her home. When the woman is killed, Poirot uses his detective skills to solve the mystery.\"Fiction",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=WKSzzAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 226,
@@ -1360,7 +1360,7 @@ db.books.insertMany([
     description:
       "The Mysterious Affair at Styles is the first novel by Agatha Christie introducing Hercule Poirot, inspector Japp, and Arthur Hastings. One of the best detective story of all times.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=jaUgjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 138,
@@ -1375,7 +1375,7 @@ db.books.insertMany([
     description:
       "First serialized in 1887 in London magazines, Sherlock Holmes remains the greatest detective of all time. He was an instant hit with the public with his incisive mind and fearless approach to the truth. At a time when forensic science was just beginning to emerge, Holmes became the master of arcane knowledge and the criminal mind. His stunning leaps of deduction were the bane of England's evildoers and the envy of Scotland Yard. Arthur Conan Doyle killed Holmes off in 1891 when he tired of writing the stories, but public demand forced him to revive his hero shortly thereafter, and he continued with further adventures until 1927. Doyle wrote four Sherlock Holmes novels, and his short stories have been collected into five anthologies. Published over an astounding forty years, from A Study in Scarlet in 1887, to his final short stories published between 1921 and 1927, Holmes continues to thrill today. His name still evokes a vision of the smoking pipe and deerstalker hat, and remains synonymous with clever deduction and the ability to ferret out the truth from a maze of conflicting evidence. Enjoy all of Sherlock Holme's exploits in WingSpan Classic books. The Adventures of Sherlock Holmes The Memoirs of Sherlock Holmes The Return of Sherlock Holmes A Study in Scarlet The Sign of The Four The Hound of the Baskervilles The Valley of Fear His Last Bow The Case-Book of Sherlock Holmes",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=x-1VtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 228,
@@ -1390,7 +1390,7 @@ db.books.insertMany([
     description:
       "\"The Canterville Ghost\" is a parody featuring a dramatic spirit named Sir Simon and the United States minister (ambassador) to the Court of St. James's, Hiram B. Otis. Mr. Otis travels to England with his family and moves into a haunted country house. Lord Canterville, the previous owner of the house, warns Mr. Otis that the ghost of Sir Simon de Canterville has haunted it ever since he killed his wife, Eleonore, three centuries before. But Mr. Otis dismisses the ghost story as bunk and disregards Lord Canterville's warnings. When the Otises learn that the house is indeed haunted, they succeed in victimizing the ghost and in disregarding age-old British traditions. What emerges is a satire of American materialism, a lampoon of traditional British values, and an amusing twist on the traditional gothic horror tale.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=sd2JtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 48,
@@ -1405,7 +1405,7 @@ db.books.insertMany([
     description:
       "Charles Dickens was a prolific and highly influential 19th century British author, who penned such acclaimed works as 'Oliver Twist,' 'A Christmas Carol,' 'David Copperfield' and 'Great Expectations.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=iKr7zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 580,
@@ -1420,7 +1420,7 @@ db.books.insertMany([
     description:
       "He did not wear his scarlet coat, For blood and wine are red, And blood and wine were on his hands When they found him with the dead, The poor dead woman whom he loved, And murdered in her bed. He walked amongst the Trial Men In a suit of shabby grey; A cricket cap was on his head, And his step seemed light and gay; But I never saw a man who looked So wistfully at the day.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=DiQhjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 62,
@@ -1450,7 +1450,7 @@ db.books.insertMany([
     description:
       "Pride And Prejudice, the story of Mrs. Bennet's attempts to marry off her five daughters is one of the best-loved and most enduring classics in English literature. Excitement fizzes through the Bennet household at Longbourn in Hertfordshire when young, eligible Mr. Charles Bingley rents the fine house nearby. He may have sisters, but he also has male friends, and one of these-the haughty, and even wealthier, Mr. Fitzwilliam Darcy-irks the vivacious Elizabeth Bennet, the second of the Bennet girls. She annoys him. Which is how we know they must one day marry. The romantic clash between the opinionated Elizabeth and Darcy is a splendid rendition of civilized sparring. As the characters dance a delicate quadrille of flirtation and intrigue, Jane Austen's radiantly caustic wit and keen observation sparkle.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=95QxzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 364,
@@ -1526,7 +1526,7 @@ db.books.insertMany([
     description:
       '"A Christmas Carol. In Prose. Being a Ghost Story of Christmas, commonly known as A Christmas Carol, is a novella by Charles Dickens, first published in London by Chapman & Hall in 1843 and illustrated by John Leech. A Christmas Carol recounts the story of Ebenezer Scrooge, an elderly miser who is visited by the ghost of his former business partner Jacob Marley and the spirits of Christmas Past, Present and Yet to Come. After their visits, Scrooge is transformed into a kinder, gentler man.Dickens wrote A Christmas Carol during a period when the British were exploring and re-evaluating past Christmas traditions, including carols and newer customs such as Christmas trees. He was influenced by the experiences of his own youth and by the Christmas stories of other author including Washington Irving and Douglas Jerrold. Dickens had written three Christmas stories prior to the novella, and was inspired following a visit to the Field Lane Ragged School, one of several establishments for London\'s street children. The treatment of the poor and the ability of a selfish man to redeem himself by transforming into a more sympathetic character are the key themes of the story. There is discussion among academics as to whether this was a fully secular story, or if it is a Christian allegory."',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=H0uczQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 116,
@@ -1538,9 +1538,9 @@ db.books.insertMany([
     title: "Quentin Durward",
     author: "Scott-W",
     publishedDate: "2013-02-25",
-    description: "",
+    description: "Fiction",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=YazfoQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 100,
@@ -1570,7 +1570,7 @@ db.books.insertMany([
     description:
       "Paradise Lost is an epic poem in blank verse by the 17th-century English poet John Milton. The first version, published in 1667, consists of ten books with over ten thousand lines of verse. A second edition followed in 1674, arranged into twelve books with minor revisions throughout.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=KTT7zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 330,
@@ -1657,9 +1657,9 @@ db.books.insertMany([
     title: "Treasure Island",
     author: "Robert Louis Stevenson",
     publishedDate: "2007-04",
-    description: "",
+    description: "Fiction",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=6XmnPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 250,
@@ -1689,7 +1689,7 @@ db.books.insertMany([
     description:
       "A Tale of Two Cities (1859) is a historical novel by Charles Dickens, set in London and Paris before and during the French Revolution. The novel tells the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris and his release to live in London with his daughter Lucie, whom he had never met. The story is set against the conditions that led up to the French Revolution and the Reign of Terror.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=AtovzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 488,
@@ -1704,7 +1704,7 @@ db.books.insertMany([
     description:
       'No child should be allowed to grow up without reading The Jungle Books. These stories crackle with as much life and intensity as ever. Rudyard Kipling pours fuel on childhood fantasies with his tales of Mowgli, lost in the jungles of India as a child and adopted into a family of wolves. Mowgli is brought up on a diet of Jungle Law, loyalty, and fresh meat from the kill. Regular adventures with his friends and enemies among the Jungle-People-cobras, panthers, bears, and tigers-hone this man-cub\'s strength and cleverness and whet every reader\'s imagination. Mowgli\'s story is interspersed with other tales of the jungle, such as "Rikki-Tikki-Tavi," lending depth and diversity to our understanding of Kipling\'s India. In much the same way Mowgli is carried away by the Bandar-log monkeys, young readers will be caught up by the stories, swinging from page to page, breathless, thrilled, and terrified.It was seven o\'clock of a very warm evening in the Seeonee hills when Father Wolf woke up from his day\'s rest, scratched himself, yawned, and spread out his paws one after the other to get rid of the sleepy feeling in the tips. Mother Wolf lay with her big gray nose dropped across her four tumbling, squealing cubs, and the moon shone into the mouth of the cave where they all lived. "Augrh!" said Father Wolf, "it is time to hunt again"; and he was going to spring downhill when a little shadow with a bushy tail crossed the threshold and whined: "Good luck go with you, O Chief of the Wolves; and good luck and strong white teeth go with the noble children, that they may never forget the hungry in this world."It was the jackal-Tabaqui, the Dish-licker-and the wolves of India despise Tabaqui because he runs about making mischief, and telling tales, and eating rags and pieces of leather from the village rubbish-heaps. They are afraid of him too, because Tabaqui, more than any one else in the jungle, is apt to go mad, and then he forgets that he was ever afraid of any one, and runs through the forest biting everything in his way. Even the tiger hides when little Tabaqui goes mad, for madness is the most disgraceful thing that can overtake a wild creature. We call it hydrophobia, but they call it dewanee-the madness-and run.',
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=PAF2zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 136,
@@ -1719,8 +1719,8 @@ db.books.insertMany([
     description:
       "Robinson Crusoe is a novel by Daniel Defoe, first published on 25 April 1719. The first edition credited the work's protagonist Robinson Crusoe as its author, leading many readers to believe he was a real person and the book a travelogue of true incidents.",
     genre: "Fiction",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 342,
     averageRating: 4,
     amount: 49.99,
@@ -1732,7 +1732,7 @@ db.books.insertMany([
     publishedDate: "2018-02-11",
     description: "A House of Pomegranates By Oscar Wilde",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=SjvKswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 60,
@@ -1747,7 +1747,7 @@ db.books.insertMany([
     description:
       "The Power of Movement in Plants by Charles Darwin Sir Francis Darwin.",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=korvsgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 466,
@@ -1777,7 +1777,7 @@ db.books.insertMany([
     description:
       "There is much about comfort in the story; yet the comfort is never enervating: it is saved from that by a tingle of something bitter and bracing in the weather. Lastly, the story exemplifies throughout the power of the third principle-the kinship between gaiety and the grotesque. Everybody is happy because nobody is dignified. We have a feeling somehow that Scrooge looked even uglier when he was kind than he had looked when he was cruel. The turkey that Scrooge bought was so fat, says Dickens, that it could never have stood upright. That top-heavy and monstrous bird is a good symbol of the top-heavy happiness of the stories.It is less profitable to criticise the other two tales in detail because they represent variations on the theme in two directions; and variations that were not, upon the whole, improvements. The Chimes is a monument of Dickens's honourable quality of pugnacity. He could not admire anything, even peace, without wanting to be warlike about it. That was all as it should be.GKC",
     genre: "Fiction",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=aDuVzAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 148,
@@ -2283,10 +2283,10 @@ db.books.insertMany([
     title: "Great Soviet Encyclopedia",
     author: "Jean Paradise, Aleksandr M. Prochorov",
     publishedDate: "1982-02-01",
-    description: "",
+    description: "Fiction",
     genre: "History",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 823,
     averageRating: 4,
     amount: 49.99,
@@ -2300,7 +2300,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important and is part of the knowledge base of civilization as we know it. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. To ensure a quality reading experience, this work has been proofread and republished using a format that seamlessly blends the original graphical elements with text in an easy-to-read typeface. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=WoeivQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 232,
@@ -2375,7 +2375,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important and is part of the knowledge base of civilization as we know it. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. To ensure a quality reading experience, this work has been proofread and republished using a format that seamlessly blends the original graphical elements with text in an easy-to-read typeface. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=L_djvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 184,
@@ -2600,7 +2600,7 @@ db.books.insertMany([
     description:
       "The Art of War is a Chinese military treatise that was written during the 6th century BC by Sun Tzu. Composed of 13 chapters, each of which is devoted to one aspect of warfare, it has long been praised as the definitive work on military strategies and tactics of its time.The Art of War is one of the oldest books on military strategy in the world. It is the first and one of the most successful works on strategy and has had a huge influence on Eastern and Western military thinking, business tactics, and beyond. Sun Tzu was the first to recognize the importance of positioning in strategy and that position is affected both by objective conditions in the physical environment and the subjective opinions of competitive actors in that environment. He taught that strategy was not planning in the sense of working through a to-do list, but rather that it requires quick and appropriate responses to changing conditions. Planning works in a controlled environment, but in a competitive environment,",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=aeUOzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 64,
@@ -2645,7 +2645,7 @@ db.books.insertMany([
     description:
       "This is a reproduction of the original artefact. Generally these books are created from careful scans of the original. This allows us to preserve the book accurately and present it in the way the author intended. Since the original versions are generally quite old, there may occasionally be certain imperfections within these reproductions. We're happy to make these classics available again for future generations to enjoy!",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=hCCpzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 362,
@@ -2720,7 +2720,7 @@ db.books.insertMany([
     description:
       "The Euthydemus, though apt to be regarded by us only as an elaborate jest, has also a very serious purpose. It may fairly claim to be the oldest treatise on logic; for that science originates in the misunderstandings which necessarily accompany the first efforts of speculation. Translated by B. Jowett. Notice: This Book is published by Historical Books Limited (www.publicdomain.org.uk) as a Public Domain Book, if you have any inquiries, requests or need any help you can just send an email to publications@publicdomain.org.uk This book is found as a public domain and free book based on various online catalogs, if you think there are any problems regard copyright issues please contact us immediately via DMCA@publicdomain.org.uk",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=mHCMDAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 86,
@@ -2735,7 +2735,7 @@ db.books.insertMany([
     description:
       "Tell me, O Muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home. Tell me, too, about all these things, oh daughter of Jove, from whatsoever source you may know them.So now all who escaped death in battle or by shipwreck had got safely home except Ulysses, and he, though he was longing to return to his wife and country, was detained by the goddess Calypso, who had got him into a large cave and wanted to marry him. But as years went by, there came a time when the gods settled that he should go back to Ithaca; even then, however, when he was among his own people, his troubles were not yet over; nevertheless all the gods had now begun to pity him except Neptune, who still persecuted him without ceasing and would not let him get home.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=Qsy9zQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 314,
@@ -2810,7 +2810,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work.This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=qCdrjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 88,
@@ -2870,7 +2870,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work.This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=Gau0DAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 152,
@@ -2929,7 +2929,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work.This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=qyVujwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 468,
@@ -2989,7 +2989,7 @@ db.books.insertMany([
     description:
       'This historic book may have numerous typos and missing text. Purchasers can usually download a free scanned copy of the original book (without typos) from the publisher. Not indexed. Not illustrated. 1914 edition. Excerpt: ... pitch of the voice deeper. This is also the reason why the races that are bred in the north are of vast height, and have fair complexions, straight red hair, grey eyes, and a great deal of blood, owing to the abundance of moisture and the coolness of the atmosphere. 4. On the contrary, those that are nearest to the southern half of the axis, and that lie directly under the sun\'s course, are of lower stature, with a swarthy complexion, hair curling, black eyes, strong legs, and but little blood on account of the force of the sun. Hence, too, this poverty of blood makes them over-timid to stand up against the sword, but great heat and fevers they can endure without timidity, because their frames are bred up in the raging heat. Hence, men that are born in the north are rendered over-timid and weak by fever, but their wealth of blood enables them to stand up against the sword without timid-ity. 5. The pitch of the voice is likewise different and varying in quality with different nations, for the following reasons. The terminating points east and west on the level of the earth, where the upper and lower parts of the heaven are divided, seem to lie in a naturally balanced circle which mathematicians call the Horizon. Keeping this idea definitely in mind, if we imagine a line drawn from the northern side of the circumference (N) to the side which lies above the southern half of the axis (S), and from here another line obliquely up to the pivot at the summit, beyond the stars composing the Great Bear (the pole star P), we shall doubtless see that we have in the heaven a triangular figure like that of the musical instrument which the Greeks call the "sambuca." 6. And so, under the space which is nearest to the pivot at the bottom, off the...',
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=PUKungEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 86,
@@ -3013,9 +3013,9 @@ db.books.insertMany([
   },
   {
     title: "The Anabasis",
-    author: "",
+    author: "Fiction",
     publishedDate: "2020-02-18",
-    description: "",
+    description: "Fiction",
     genre: "History",
     categories: "History",
     thumbnail:
@@ -3044,7 +3044,7 @@ db.books.insertMany([
     title: "TRAGEDY OF JULIUS CAESAR",
     author: "William 1564-1616 Shakespeare",
     publishedDate: "2016-08-28",
-    description: "",
+    description: "Fiction",
     genre: "History",
     categories: "History",
     thumbnail:
@@ -3058,7 +3058,7 @@ db.books.insertMany([
     title: "The Second World War",
     author: "Alan John Percivale Taylor",
     publishedDate: "1979",
-    description: "",
+    description: "Fiction",
     genre: "History",
     categories: "History",
     thumbnail:
@@ -3132,7 +3132,7 @@ db.books.insertMany([
     title: "The Hedgehog and the Fox",
     author: "Isaiah Berlin",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "History",
     categories: "History",
     thumbnail:
@@ -3241,7 +3241,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=rY0zjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 668,
@@ -3256,7 +3256,7 @@ db.books.insertMany([
     description:
       "Apr�s la disparition de sa m�re, morte en le mettant au monde, Olivier Twist est plac� et �lev� dans un orphelinat. Il devient vite le souffre-douleur du cruel bedeau Bumble qui pour s'en d�barrasser, le place comme apprenti chez un fabricant de cercueils. Maltrait�, Olivier s'enfuit � Londres o� il est enr�l� dans une bande d'enfants-voleurs dirig� par Fagin, un homme redoutable..",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=j5MpvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 460,
@@ -3286,7 +3286,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=CTgszwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 540,
@@ -3361,7 +3361,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=HHIijwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 448,
@@ -3406,7 +3406,7 @@ db.books.insertMany([
     description:
       'David Copperfield es la octava novela escrita por Charles Dickens. Fue publicada por entregas en 1849, y en forma de libro en 1850.note. Al igual que la mayoría de sus obras a excepción de cinco de ellas, esta novela fue publicada en capítulos mensuales. Muchos elementos de la novela hacen referencia a la propia vida de Dickens, siendo probablemente la más autobiográfica de todas sus obras. Así también, el mismo Dickens señaló en un prólogo de la novela "de todos mis libros, éste es el que más me gusta, y luego como muchos padres, tengo un hijo preferido, un hijo que es mi debilidad; este hijo se llama David Copperfield.',
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=3ywnvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 540,
@@ -3496,8 +3496,8 @@ db.books.insertMany([
     description:
       "Father Goriot by Honoré de Balzac is a rare manuscript, the original residing in some of the great libraries of the world. This book is a reproduction of that original, typed out and formatted to perfection, allowing new generations to enjoy the work. Publishers of the Valley's mission is to bring long out of print manuscripts back to life.",
     genre: "History",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 230,
     averageRating: 4,
     amount: 49.99,
@@ -3525,7 +3525,7 @@ db.books.insertMany([
     description:
       "Unlike some other reproductions of classic texts (1) We have not used OCR(Optical Character Recognition), as this leads to bad quality books with introduced typos. (2) In books where there are images such as portraits, maps, sketches etc We have endeavoured to keep the quality of these images, so they represent accurately the original artefact. Although occasionally there may be certain imperfections with these old texts, we feel they deserve to be made available for future generations to enjoy.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=8XIinwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 398,
@@ -3556,7 +3556,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work.This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "History",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=aZdljwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 878,
@@ -3584,7 +3584,7 @@ db.books.insertMany([
     author: "Max Weber",
     publishedDate: "2015-07-20",
     description:
-      "Excerpt from The Protestant Ethic and the Spirit of Capitalism Max Weber's essay, Die protestantische Ethik und der Geist des Kapitalismus, which is here translated, was first published in the Archiv fur Sozialwissenschaft und Sozialpolitik, Volumes XX and XXI, for 1904-5. It was reprinted in 1920 as the first study in the ambitious series Gesammelte Aufsatze zur Religionssoziologie, which was left unfinished by Weber's untimely death in that same year. For the new printing he made considerable changes, and appended both new material and replies to criticism in footnotes. The translation has, however, been made directly from this last edition. Though the volume of footnotes is excessively large, so as to form a serious detriment to the reader's enjoyment, it has not seemed advisable either to omit any of them or to attempt to incorporate them into the text. As it stands it shows most plainly how the problem has grown in Weber's own mind, and it would be a pity to destroy that for the sake of artistic perfection. A careful perusal of the notes is, however, especially recommended to the reader, since a great deal of important material is contained in them. The fact that they are printed separately from the main text should not be allowed to hinder their use. The translation is, as far as is possible, faithful to the text, rather than attempting to achieve any more than ordinary, clear English style. Nothing has been altered, and only a few comments to clarify obscure points and to refer the reader to related parts of Weber's work have been added. About the Publisher Forgotten Books publishes hundreds of thousands of rare and classic books. Find more at www.forgottenbooks.com This book is a reproduction of an important historical work. Forgotten Books uses state-of-the-art technology to digitally reconstruct the work, preserving the original format whilst repairing imperfections present in the aged copy. In rare cases, an imperfection in the original, such as a blemish or missing page, may be replicated in our edition. We do, however, repair the vast majority of imperfections successfully; any imperfections that remain are intentionally left to preserve the state of such historical works.\"",
+      "Excerpt from The Protestant Ethic and the Spirit of Capitalism Max Weber's essay, Die protestantische Ethik und der Geist des Kapitalismus, which is here translated, was first published in the Archiv fur Sozialwissenschaft und Sozialpolitik, Volumes XX and XXI, for 1904-5. It was reprinted in 1920 as the first study in the ambitious series Gesammelte Aufsatze zur Religionssoziologie, which was left unfinished by Weber's untimely death in that same year. For the new printing he made considerable changes, and appended both new material and replies to criticism in footnotes. The translation has, however, been made directly from this last edition. Though the volume of footnotes is excessively large, so as to form a serious detriment to the reader's enjoyment, it has not seemed advisable either to omit any of them or to attempt to incorporate them into the text. As it stands it shows most plainly how the problem has grown in Weber's own mind, and it would be a pity to destroy that for the sake of artistic perfection. A careful perusal of the notes is, however, especially recommended to the reader, since a great deal of important material is contained in them. The fact that they are printed separately from the main text should not be allowed to hinder their use. The translation is, as far as is possible, faithful to the text, rather than attempting to achieve any more than ordinary, clear English style. Nothing has been altered, and only a few comments to clarify obscure points and to refer the reader to related parts of Weber's work have been added. About the Publisher Forgotten Books publishes hundreds of thousands of rare and classic books. Find more at www.forgottenbooks.com This book is a reproduction of an important historical work. Forgotten Books uses state-of-the-art technology to digitally reconstruct the work, preserving the original format whilst repairing imperfections present in the aged copy. In rare cases, an imperfection in the original, such as a blemish or missing page, may be replicated in our edition. We do, however, repair the vast majority of imperfections successfully; any imperfections that remain are intentionally left to preserve the state of such historical works.\"Fiction",
     genre: "History",
     categories: "Religion",
     thumbnail:
@@ -3671,7 +3671,7 @@ db.books.insertMany([
   },
   {
     title: "The Encyclopedia of Animals",
-    author: "",
+    author: "Fiction",
     publishedDate: "2004",
     description:
       "This lavishly illustrated trade reference to mammals, birds, reptiles, amphibians, fishes, and invertebrates features hundreds of glorious photos, masterful illustrations, and informative maps.",
@@ -3881,7 +3881,7 @@ db.books.insertMany([
   },
   {
     title: "Encyclopedia of the World’s Biomes",
-    author: "",
+    author: "Fiction",
     publishedDate: "2020-06-26",
     description:
       "Encyclopedia of the World’s Biomes is a unique, five volume reference that provides a global synthesis of biomes, including the latest science. All of the book's chapters follow a common thematic order that spans biodiversity importance, principal anthropogenic stressors and trends, changing climatic conditions, and conservation strategies for maintaining biomes in an increasingly human-dominated world. This work is a one-stop shop that gives users access to up-to-date, informative articles that go deeper in content than any currently available publication. Offers students and researchers a one-stop shop for information currently only available in scattered or non-technical sources Authored and edited by top scientists in the field Concisely written to guide the reader though the topic Includes meaningful illustrations and suggests further reading for those needing more specific information",
@@ -4061,7 +4061,7 @@ db.books.insertMany([
   },
   {
     title: "Progress in Optics",
-    author: "",
+    author: "Fiction",
     publishedDate: "2013-08-08",
     description:
       "In the 50 years since the first volume of Progress in Optics was published, optics has become one of the most dynamic fields of science. The volumes in this series that have appeared up to now contain more than 300 review articles by distinguished research workers, which have become permanent records for many important developments, helping optical scientists and optical engineers stay abreast of their fields. - Comprehensive, in-depth reviews - Edited by the leading authority in the field",
@@ -4108,7 +4108,7 @@ db.books.insertMany([
     title: "Encyclopedia of Surface and Colloid Science",
     author: "P. Somasundaran",
     publishedDate: "2006",
-    description: "",
+    description: "Fiction",
     genre: "Science",
     categories: "Science",
     thumbnail:
@@ -4315,7 +4315,7 @@ db.books.insertMany([
   },
   {
     title: "The Evolution of Parasitism - A Phylogenetic Perspective",
-    author: "",
+    author: "Fiction",
     publishedDate: "2003-12-09",
     description:
       "Parasitology continues to benefit from taking an evolutionary approach to its study. Tree construction, character-mapping, tree-based evolutionary interpretation, and other developments in molecular and morphological phylogenetics have had a profound influence and have shed new light on the very nature of host-parasite relations and their coevolution. Life cycle complexity, parasite ecology and the origins and evolution of parasitism itself are all underpinned by an understanding of phylogeny. The Evolution of Parasitism - A Phylogenetic Perspective aims to bring together a range of articles that exemplifies the phylogenetic approach as applied to various disciplines within parasitology and as applied by parasitologists. Unified by the use of phylogenies, this book tackles a wide variety of parasite-specific biological problems across a diverse range of taxa. - Includes important contributions from leading minds in the field such as Serge Morand, Francisco Ayala and Mark Blaxter, among others - Second in the ISI Parasitology List in 2002 with an Impact Factor of 4.818 - Series encompasses over 35 years of parasitology coverage",
@@ -4827,7 +4827,7 @@ db.books.insertMany([
     title: "The Developing Human",
     author: "Keith L. Moore",
     publishedDate: "1982",
-    description: "",
+    description: "Fiction",
     genre: "Science",
     categories: "Medical",
     thumbnail:
@@ -5008,7 +5008,7 @@ db.books.insertMany([
     publishedDate: "2017-07",
     description: "Autour de la Lune",
     genre: "Science",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=J5k2swEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 204,
@@ -5159,7 +5159,7 @@ db.books.insertMany([
     description:
       "Mathematical Principles of Natural Philosophy: Philosophiae Naturalis Principia Mathematica by Isaac Newton and translated into English by Andrew Motte, added to Newton's System of The World. Philosophiæ Naturalis Principia Mathematica (Latin for Mathematical Principles of Natural Philosophy), often referred to as simply the Principia, is a work in three books by Isaac Newton, in Latin, first published 5 July 1687. After annotating and correcting his personal copy of the first edition, Newton published two further editions, in 1713 and 1726. The Principia states Newton's laws of motion, forming the foundation of classical mechanics; Newton's law of universal gravitation; and a derivation of Kepler's laws of planetary motion (which Kepler first obtained empirically). SINCE the ancients (as we are told by Pappus), made great account of the science of mechanics in the investigation of natural things : and the moderns, laying aside substantial forms and occult qualities, have endeavoured to subject the phenomena of nature to the laws of mathematics, I have in this treatise cultivated mathematics so far as it regards philosophy. The ancients considered mechanics in a twofold respect ; as rational, which proceeds accurately by demonstration ; and practical. To practical mechanics all the manual arts belong, from which mechanics took its name. But as artificers do not work with perfect accuracy, it comes to pass that mechanics is so distinguished from geometry, that what is perfectly accurate is called geometrical , what is less so, is called mechanical.",
     genre: "Science",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=CKxwuQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 374,
@@ -5205,7 +5205,7 @@ db.books.insertMany([
       "The diversity of plant species in China is extraordinary. With an area approximately that of the continental United States, China has nearly twice as many vascular plant species, about 30,000 or one-eighth of the world's total. The Flora of China describes and otherwise documents these species. The text volumes include descriptions, identification keys, essential synonymy, phenology, provincial distribution in China, brief statements on extra-Chinese distribution, comments regarding the circumscription of problematic taxa, and additional comments on the ethnobotanical uses and conservation status of certain plants.",
     genre: "Science",
     categories: "Botany",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -5230,7 +5230,7 @@ db.books.insertMany([
     title: "The Biology and Cultivation of Edible Mushrooms",
     author: "Shu-ting Chang, W. A. Hayes",
     publishedDate: "1978",
-    description: "",
+    description: "Fiction",
     genre: "Science",
     categories: "Gardening",
     thumbnail:
@@ -5274,7 +5274,7 @@ db.books.insertMany([
     title: "Holmes Principles of Physical Geology",
     author: "Arthur Holmes, Doris L. Holmes",
     publishedDate: "1978",
-    description: "",
+    description: "Fiction",
     genre: "Science",
     categories: "Science",
     thumbnail:
@@ -5366,7 +5366,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important, and is part of the knowledge base of civilization as we know it. This work was reproduced from the original artifact, and remains as true to the original work as possible. Therefore, you will see the original copyright references, library stamps (as most of these works have been housed in our most important libraries around the world), and other notations in the work. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work.As a reproduction of a historical artifact, this work may contain missing or blurred pages, poor pictures, errant marks, etc. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "Science",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=LxUsjgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 490,
@@ -5513,7 +5513,7 @@ db.books.insertMany([
     title: "Measuring Ego Development",
     author: "Jane Loevinger, Ruth Wessler",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -5811,7 +5811,7 @@ db.books.insertMany([
     title: "Living Consciously: the Science of Self",
     author: "John Morris Dorsey",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Self",
     thumbnail:
@@ -5976,7 +5976,7 @@ db.books.insertMany([
     title: "Ego Analysis in the Helping Professions",
     author: "Frances Upham",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6020,7 +6020,7 @@ db.books.insertMany([
     title: "Act Thin, Stay Thin",
     author: "Richard B. Stuart",
     publishedDate: "1978",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Health & Fitness",
     thumbnail:
@@ -6035,7 +6035,7 @@ db.books.insertMany([
       "A Study of the Relationship of the Self-concept to Adjustment in a Selected Group of College Women",
     author: "Frances Helen DeLisle",
     publishedDate: "1953",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Attitude (Psychology)",
     thumbnail:
@@ -6064,7 +6064,7 @@ db.books.insertMany([
     title: "The Magic Within",
     author: "Mary Lee Zawadski",
     publishedDate: "1990",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6093,7 +6093,7 @@ db.books.insertMany([
     title: "Inquiring about Myself",
     author: "Frances M. Epps",
     publishedDate: "1972",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Interpersonal relations",
     thumbnail:
@@ -6105,7 +6105,7 @@ db.books.insertMany([
   },
   {
     title: "About Me",
-    author: "",
+    author: "Fiction",
     publishedDate: "1969",
     description:
       'A book for the child who "looks for answers to his questions about his growing body, his budding mind, his sometimes puzzling emotions, his developing abilities."',
@@ -6154,7 +6154,7 @@ db.books.insertMany([
       "The Promotion of Ego Development Through Role Play in a Ten Year Old Boy",
     author: "Karma Schauer Castleberry",
     publishedDate: "1969",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Drama",
     thumbnail:
@@ -6183,7 +6183,7 @@ db.books.insertMany([
     title: "Breadth of Perspective, Culture Contact, and Self",
     author: "Leon Harold Warshay",
     publishedDate: "1959",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Apperception",
     thumbnail:
@@ -6212,7 +6212,7 @@ db.books.insertMany([
     title: "Psychotherapy, Adolescents, and Self Psychology",
     author: "Gustavo A. Lage, Harvey K. Nathan",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6226,7 +6226,7 @@ db.books.insertMany([
     title: "An Instrumented Self-awareness Program for College Students",
     author: "Mark William Hardwick",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "College teaching",
     thumbnail:
@@ -6286,7 +6286,7 @@ db.books.insertMany([
       "A Cross-cultural Comparison of Self-concepts and Value Orientations of Japanese and American Ninth Graders",
     author: "Kimi Hara",
     publishedDate: "1972",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Identity (Psychology)",
     thumbnail:
@@ -6315,7 +6315,7 @@ db.books.insertMany([
     title: "Progress in Self Psychology",
     author: "Arnold Goldberg",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -6345,7 +6345,7 @@ db.books.insertMany([
       "Locus of Control, Body Articulation and Sexual Differentiation in Women as Modified by Self-help and Sex Education Programs",
     author: "Patricia Eileen Thompson",
     publishedDate: "1977",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Body image",
     thumbnail:
@@ -6389,7 +6389,7 @@ db.books.insertMany([
     title: "Constellations of Life Satisfaction in Three Cohorts of Women",
     author: "Rosanne du Bois Brouwer",
     publishedDate: "1995",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -6433,7 +6433,7 @@ db.books.insertMany([
     title: "Jacob's Son",
     author: "Ben Field",
     publishedDate: "1971",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Brooklyn (New York, N.Y.)",
     thumbnail:
@@ -6447,7 +6447,7 @@ db.books.insertMany([
     title: "Beyond Individuality",
     author: "Clinton R. Meek",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Philosophy",
     thumbnail:
@@ -6477,7 +6477,7 @@ db.books.insertMany([
       "Coping and Defensive Ego Functioning in Persons Seeking and Not Seeking Psychotherapy",
     author: "Paul B. Jacobsen",
     publishedDate: "1980",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Adjustment (Psychology)",
     thumbnail:
@@ -6506,7 +6506,7 @@ db.books.insertMany([
     title: "In Search of the Self",
     author: "Libuse Lukas Miller",
     publishedDate: "1961",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Self",
     thumbnail:
@@ -6535,7 +6535,7 @@ db.books.insertMany([
     title: "The Privacy of the Self",
     author: "M. Masud R. Khan",
     publishedDate: "1974",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6549,7 +6549,7 @@ db.books.insertMany([
     title: "The Therapeutic Self",
     author: "John Goodrich Watkins",
     publishedDate: "1978",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6563,7 +6563,7 @@ db.books.insertMany([
     title: "Independence in Old Age",
     author: "David S. Gordon",
     publishedDate: "1988",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Gerontology",
     thumbnail:
@@ -6592,7 +6592,7 @@ db.books.insertMany([
     title: "In Search of the Self",
     author: "Libuse Lukas Miller",
     publishedDate: "1961",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Self",
     thumbnail:
@@ -6606,7 +6606,7 @@ db.books.insertMany([
     title: "Independence in Old Age",
     author: "David S. Gordon",
     publishedDate: "1988",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Gerontology",
     thumbnail:
@@ -6635,7 +6635,7 @@ db.books.insertMany([
     title: "Sex Role and Self Concept",
     author: "Alexandra Botwinik Fand",
     publishedDate: "1955",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Femininity",
     thumbnail:
@@ -6679,7 +6679,7 @@ db.books.insertMany([
     title: "Weaning and Human Development",
     author: "Gordon R. Forrer",
     publishedDate: "1969",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Family & Relationships",
     thumbnail:
@@ -6723,7 +6723,7 @@ db.books.insertMany([
     title: "In an African Direction",
     author: "Hendrikus Laan",
     publishedDate: "1999",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Africa",
     thumbnail:
@@ -6767,7 +6767,7 @@ db.books.insertMany([
     title: "Self and Family",
     author: "Jane Cary Peck",
     publishedDate: "1984",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Family & Relationships",
     thumbnail:
@@ -6782,7 +6782,7 @@ db.books.insertMany([
       "The Self-concept, Ideal-self, and Concept of Mother and Father of Male Students who Seek Help for Achievement Problems",
     author: "Jerry Anthony Treppa",
     publishedDate: "1966",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -6812,7 +6812,7 @@ db.books.insertMany([
       "Support, Innovation, and Autonomy: Tavistock Clinic Golden Jubilee Papers",
     author: "Tavistock Clinic, Tavistock Institute of Human Relations",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -6826,7 +6826,7 @@ db.books.insertMany([
     title: "Self-parenting 12-step Workbook",
     author: "Patricia A. O'Gorman, Philip Oliver-Diaz",
     publishedDate: "1990",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Family & Relationships",
     thumbnail:
@@ -6870,7 +6870,7 @@ db.books.insertMany([
     title: "Ego Functions in Schizophrenics, Neurotics, and Normals",
     author: "Leopold Bellak, Marvin Hurvich, Helen K. Gediman",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Medical",
     thumbnail:
@@ -6899,7 +6899,7 @@ db.books.insertMany([
     title: "Salvaging Self Esteem",
     author: "Mrs. Anne Tillery Renshaw",
     publishedDate: "1937",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology, Applied",
     thumbnail:
@@ -6911,7 +6911,7 @@ db.books.insertMany([
   },
   {
     title: "Weight Stages",
-    author: "",
+    author: "Fiction",
     publishedDate: "2000-02",
     description:
       "Trust Weight Watchers to help get you through life's stressful situations Every woman has experienced those times when gaining control over her weight can seem impossible. Fortunately, these stages--or diet danger zones--are avoidable. Now, Weight Watchers reveals the strategies that can help women of every age successfully navigate life's most treacherous weight-gain minefields. The experts at Weight Watchers address the bigger picture, providing easy techniques for losing or simply maintaining weight through some of life's most stressful stages, when women are more prone to weight gain. Included is information on: college years marriage pregnancy menopause relocation divorce quitting smoking Weight Watchers explores the universal issues that women grapple with each day and, more importantly, gives solutions for coping with them. There's even a bonus chapter, Secrets to Staying Slim at Any Stage of Life, that lays out practical eating and exercise plans to help guide you step-by-step through those trying times.",
@@ -6928,7 +6928,7 @@ db.books.insertMany([
     title: "Midlife Mothers in Transition",
     author: "Elizabeth Irene Price",
     publishedDate: "1994",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -6942,7 +6942,7 @@ db.books.insertMany([
     title: "Personhood and Agency",
     author: "Michael Jackson, Ivan Karp",
     publishedDate: "1990",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Africa",
     thumbnail:
@@ -6956,7 +6956,7 @@ db.books.insertMany([
     title: "You Yourself",
     author: "Anne Bryan McCall",
     publishedDate: "1936",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Conduct of life",
     thumbnail:
@@ -6970,7 +6970,7 @@ db.books.insertMany([
     title: "The Relational Self in Women",
     author: "Lisa Sherron Blank",
     publishedDate: "1988",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Interpersonal relations",
     thumbnail:
@@ -6999,7 +6999,7 @@ db.books.insertMany([
     title: "The Development of Self in Later Life",
     author: "Linda M. Breytspraak",
     publishedDate: "1984",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Social Science",
     thumbnail:
@@ -7013,7 +7013,7 @@ db.books.insertMany([
     title: "Dimensions of Life",
     author: "Gail H. Henderson",
     publishedDate: "1985",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Family & Relationships",
     thumbnail:
@@ -7057,7 +7057,7 @@ db.books.insertMany([
     title: "The Private Me",
     author: "June Noble, William Noble",
     publishedDate: "1980",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Psychology",
     thumbnail:
@@ -7071,7 +7071,7 @@ db.books.insertMany([
     title: "Culture and Self",
     author: "Mary Susan Thickstun",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ethnopsychology",
     thumbnail:
@@ -7085,7 +7085,7 @@ db.books.insertMany([
     title: "The Self as Process",
     author: "Stanley Rosenthal",
     publishedDate: "1983",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -7100,7 +7100,7 @@ db.books.insertMany([
       "A Study of Characteristics of Well-adjusted and Poorly-adjusted Children",
     author: "Joan Dattner Gans",
     publishedDate: "1962",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Child development",
     thumbnail:
@@ -7129,7 +7129,7 @@ db.books.insertMany([
     title: "Using Knowledge of Self",
     author: "Judith Keller Shaffer",
     publishedDate: "1974",
-    description: "",
+    description: "Fiction",
     genre: "Self-Help",
     categories: "Ego (Psychology)",
     thumbnail:
@@ -7172,7 +7172,7 @@ db.books.insertMany([
   {
     title: "三國志演義 : Romance of the three kingdoms",
     author: "Guanzhong Luo",
-    publishedDate: "",
+    publishedDate: "Fiction",
     description: "三國志演義 : Romance of the three kingdoms Guanzhong Luo",
     genre: "Art",
     categories: "Architecture",
@@ -7200,7 +7200,7 @@ db.books.insertMany([
   },
   {
     title: "The Handbook of Tibetan Buddhist Symbols",
-    author: "",
+    author: "Fiction",
     publishedDate: "2003",
     description:
       "Based on the author's previous publication The Encyclopedia of Tibetan Symbols and Motifs', this handbook contains an array of symbols and motifs, accompanied by succinct explanations. It provides treatment of the essential Tibetan religious figures, themes and motifs, both secular and religious. Robert Beer offers a compact, concise reference work based on his previous publication 'The Encyclopedia of Tibetan Symbols and Motifs'. This handbook contains an extensive array of symbols and motifs, accompanied by succinct explanations. It provides treatment of the most'",
@@ -7383,7 +7383,7 @@ db.books.insertMany([
     title: "The History of Ancient Art",
     author: "Johann Joachim Winckelmann",
     publishedDate: "1873",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -7579,7 +7579,7 @@ db.books.insertMany([
     title: "Art and Philosophy",
     author: "Joseph Margolis",
     publishedDate: "1980",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -7801,7 +7801,7 @@ db.books.insertMany([
   },
   {
     title: "Our Dogs, Our Selves",
-    author: "",
+    author: "Fiction",
     publishedDate: "2016-09-12",
     description:
       "The ubiquity of references to dogs in medieval and early modern texts and images must at some level reflect their actual presence in those worlds, yet scholarly consideration of this material is rare and scattered across diverse sources. This volume addresses that gap, bringing together fifteen essays that examine the appearance, meaning, and significance of dogs in painting, sculpture, manuscripts, literature, and legal records of the period, reaching beyond Europe to include cultural material from medieval Japan and Islam. While primarily art historical in focus, the author approach the subject from a range of disciplines and with varying methodology that ultimately reveals as much about dogs as about the societies in which they lived. Contributors are Kathleen Ashley, Jane Carroll, Emily Cockayne, John Block Friedman, Karen M. Gerhart, Laura D. Gelfand, Craig A. Gibson, Walter S. Gibson, Nathan Hofer, Jane C. Long, Judith W. Mann, Sophie Oosterwijk, Elizabeth Carson Pastan, Donna L. Sadler, Alexa Sand, and Janet Snyder.",
@@ -7833,7 +7833,7 @@ db.books.insertMany([
     title: "The Elgin Marbles",
     author: "Christopher Hitchens",
     publishedDate: "1987",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -7881,7 +7881,7 @@ db.books.insertMany([
       "The Mughals seized political power in north India in 1526 and became the most important artistically active Muslim dynasty on the subcontinent. In this richly illustrated work, Dr. Milo Beach shows how Mughal patronage of the arts was radically innovative for the Indian context and profoundly altered the character of painting in the Rajput Hindu areas of north India. He reveals the different styles and subjects of Mughal and Rajput painting and the interplay of the two traditions. Beach also explores the tolerance each showed toward outside influence and change, demonstrating a uniquely Indian attitude towards the arts.",
     genre: "Art",
     categories: "History",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -7924,7 +7924,7 @@ db.books.insertMany([
     description:
       'First serialized in 1908, "Martin Eden" is Jack London\'s classic and tragic tale of its title character and his struggle to become a writer. Martin Eden is an idealistic and self-educated young man who struggles to overcome poverty and a lack of opportunities in a quest to become an educated and successful artist. He hopes to find acceptance in the world of the wealthy and refined, though he finds it hard to shake off his coarse working-class background. Eden falls in love with Ruth Morse, but he feels that he is not good enough to win her hand, as she comes from a bourgeois family. Eden hopes that she will wait for him while he seeks to establish himself as a successful writer and improve his social status so that he may one day feel worthy of his true love. The novel is heartbreaking, tragic, and rich with the themes of class struggle and prejudice. It is also hopeful in its faith in art to transform lives and has inspired countless young writers and artists to follow their dreams. "Martin Eden" remains one of Jack London\'s best-loved works. This edition is printed on premium acid-free paper.',
     genre: "Art",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=bfgezgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 246,
@@ -8041,7 +8041,7 @@ db.books.insertMany([
     title: "The Art and Architecture of the Ancient Orient",
     author: "Henri Frankfort",
     publishedDate: "1969",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Architecture",
     thumbnail:
@@ -8132,7 +8132,7 @@ db.books.insertMany([
     author: "Henrik Ibsen, Edmund Gosse, William Archer",
     publishedDate: "2013-10",
     description:
-      "Hedda Gabler By Henrik Ibsen Hedda Gabler is a play published in 1890 by Norwegian playwright Henrik Ibsen. It premiered in 1891 in Germany to negative reviews, but has subsequently gained recognition as a classic of realism, nineteenth century theatre, and world drama. A 1902 production starring Minnie Maddern Fiske was a major sensation on Broadway and following its initial limited run was revived with the same actress the next year. Some critics consider the character of Hedda one of the great dramatic roles in theatre, and some portrayals have been very controversial, especially the Australian production where a male plays Hedda.[citation needed] Depending on the interpretation, Hedda may be portrayed as an idealistic heroine fighting society, a victim of circumstance, a prototypical feminist, or a manipulative villain. Hedda's married name is Hedda Tesman; Gabler is her maiden name. On the subject of the title, Ibsen wrote: \"My intention in giving it this name was to indicate that Hedda as a personality is to be regarded rather as her father's daughter than her husband's wife.\"",
+      "Hedda Gabler By Henrik Ibsen Hedda Gabler is a play published in 1890 by Norwegian playwright Henrik Ibsen. It premiered in 1891 in Germany to negative reviews, but has subsequently gained recognition as a classic of realism, nineteenth century theatre, and world drama. A 1902 production starring Minnie Maddern Fiske was a major sensation on Broadway and following its initial limited run was revived with the same actress the next year. Some critics consider the character of Hedda one of the great dramatic roles in theatre, and some portrayals have been very controversial, especially the Australian production where a male plays Hedda.[citation needed] Depending on the interpretation, Hedda may be portrayed as an idealistic heroine fighting society, a victim of circumstance, a prototypical feminist, or a manipulative villain. Hedda's married name is Hedda Tesman; Gabler is her maiden name. On the subject of the title, Ibsen wrote: \"My intention in giving it this name was to indicate that Hedda as a personality is to be regarded rather as her father's daughter than her husband's wife.\"Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -8239,7 +8239,7 @@ db.books.insertMany([
     description:
       'The Critique of Pure Reason By Immanuel Kant The Critique of Pure Reason (1781) is one of the most influential works in the history of philosophy. It is also referred to as Kant\'s "First Critique," being followed by the Critique of Practical Reason (1788) and the Critique of Judgment (1790). In the preface to the first edition Kant explains what he means by a critique of pure reason: "I do not mean by this a critique of books and systems, but of the faculty of reason in general, in respect of all knowledge after which it may strive independently of all experience." "There is no single philosopher of any note, even among those who are decidedly opposed to Kant, who has not acknowledged his pre-eminence among modern philosophers. The great systems of Fichte, Schelling, Hegel, Herbart, and Schopenhauer branched off from Kant, and now, after a century has passed away, people begin to see that those systems were indeed mighty branches, but that the leading shoot of philosophy was and is still-Kant. . . . "Whether consciously or unconsciously, all truly important philosophers have, since the publication of the Critique of Pure Reason, been more or less under the spell of Kant. . . . "In England and America, even more than in Germany, I believe that a study of Kant holds out the best hope of a philosophical rejuvenescence. In Germany a return to Kant has brought about a kind of Renaissance; in England and America Kant\'s philosophy, if once thoroughly understood, will constitute, I hope, a new birth."-Max Müller (translator) We are delighted to publish this classic book as part of our extensive Classic Library collection. Many of the books in our collection have been out of print for decades, and therefore have not been accessible to the general public. The aim of our publishing program is to facilitate rapid access to this vast reservoir of literature, and our view is that this is a significant literary work, which deserves to be brought back into print after many decades. The contents of the vast majority of titles in the Classic Library have been scanned from the original works. To ensure a high quality product, each title has been meticulously hand curated by our staff. Our philosophy has been guided by a desire to provide the reader with a book that is as close as possible to ownership of the original work. We hope that you will enjoy this wonderful classic work, and that for you it becomes an enriching experience.',
     genre: "Art",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=VXHAuQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 704,
@@ -8344,7 +8344,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important and is part of the knowledge base of civilization as we know it. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. To ensure a quality reading experience, this work has been proofread and republished using a format that seamlessly blends the original graphical elements with text in an easy-to-read typeface. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "Art",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=8DCxvgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 518,
@@ -8390,7 +8390,7 @@ db.books.insertMany([
     description:
       "First published in German in 1810, this detailed volume was translated from the German by Charles Lock Eastlake and, in six parts, examines every aspect of Goethe's theory of colours, including psychological colours, chemical colours, the moral effect of colour, minerals, plants, insects, mammals and a multitude of further subjects.",
     genre: "Art",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=HKzMygEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 428,
@@ -8672,7 +8672,7 @@ db.books.insertMany([
     title: "Studies in Seven Arts",
     author: "Arthur Symons",
     publishedDate: "1907",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -8689,7 +8689,7 @@ db.books.insertMany([
     description:
       'Dr. Coomaraswamy does well to show how they still exist in great measure in the East, and it may be that the East, in her wisdom, and with her profound conservative instinct, will not allow them to be destroyed. She has, as Sir Geo. Birdwood puts it, let the races and the peoples for 3,000 years come and pass by; she may have taken this from one and that from another, but the fundamental democratic order of her society has remained, and it appears improbable, on the face of it, that we English shall materially change it when so many others before us have left it undisturbed. To compass the destruction of commercialism and regulate and delimit the province of industrial machinery for the benefit of mankind, is now the work of the Western reformer. There has come over Western civilization, in the last 25 years, a green sickness, a disbelief, an unrest; it is not despondency, for in the finer minds it takes the form of an intense spiritual hopefulness; but it takes the form also of a profound disbelief in the value of the material conditions of modern progress, a longing to sort the wheat from the chaff, the serviceable from the useless, a desire to turn from mechanical industry and its wastefulness, and to look once more to the human hand, to be once again with Mother Earth. "It behoves us," said Heraclitus, in the time of the beginnings of Hellenic civilization, "it behoves us to follow the common reason of the world; yet, though there is a common reason in the world, the majority live as though they possessed a wisdom peculiar each unto himself alone." This is so profoundly modern that it might almost be a comment upon English or American industrialism, did we not know that it applied equally to the peculiar intellectual individualism of Hellas, which disintegrated and destroyed her culture. But the "common reason of the world," if the words of Heraclitus are to be taken at their face value, includes the reason of the East, and with it the social order that has stood there unshaken for 3,000 years, and hence stood there long before the days of Heraclitus himself. For our immediate purpose, too, the purpose of this book, the "common reason of the world "includes and defines the Indian craftsman and the Indian village community; it gives them a definite and necessary place not only in the Indian order of things, not only in the culture of the East but in the world. It shows them to be reasonable and right, and it shows them, what is still more important, to be the counterpart one of the other. Here once more we are learning from the East. The English craftsman and the English village are passing, or have passed away; and it is only in quite recent times that we have discovered that they, too, are the counterpart one of the other. Industrial machinery, blindly misdirected, has destroyed them both, and recent English land legislation has been trying, with allotment and small-holdings acts, to re-establish the broken village life. C. R. ASHBEE.',
     genre: "Art",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=2ZU3uAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 80,
@@ -8716,7 +8716,7 @@ db.books.insertMany([
     title: "Angkor",
     author: "Jan Myrdal",
     publishedDate: "1970",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -8775,7 +8775,7 @@ db.books.insertMany([
     title: "A History of Milan Under the Sforza",
     author: "Cecilia Mary Ady",
     publishedDate: "1992",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -8849,10 +8849,10 @@ db.books.insertMany([
     title: "Art and Architecture in Italy 1250 to 1400",
     author: "John White",
     publishedDate: "1987",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Architecture",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 688,
     averageRating: 4,
     amount: 49.99,
@@ -8937,7 +8937,7 @@ db.books.insertMany([
     title: "A Guide to Art Nouveau Style",
     author: "William Hardy",
     publishedDate: "1997-12-04",
-    description: "",
+    description: "Fiction",
     genre: "Art",
     categories: "Art",
     thumbnail:
@@ -8984,7 +8984,7 @@ db.books.insertMany([
     description:
       "Utopia tem como significado mais comum a ideia de civiliza��o ideal, imagin�ria, fant�stica. Pode referir-se a uma cidade ou a um mundo, sendo poss�vel tanto no futuro, quanto no presente, por�m em um paralelo. Pode tamb�m ser utilizado para definir um sonho ainda n�o realizado. Uma fantasia, uma esperan�a muito forte. Utopia � um projeto humanista de transforma��o social e representa aspectos capitais do humanismo renascentista.",
     genre: "Philosophy",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=c1BFswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 134,
@@ -10048,9 +10048,9 @@ db.books.insertMany([
     title: "THE ART OF WAR",
     author: "Sun Tzu",
     publishedDate: "2021-09-03",
-    description: "",
+    description: "Fiction",
     genre: "Philosophy",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=F-2jzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 28,
@@ -10107,7 +10107,7 @@ db.books.insertMany([
     title: "Art and Philosophy",
     author: "Joseph Margolis",
     publishedDate: "1980",
-    description: "",
+    description: "Fiction",
     genre: "Philosophy",
     categories: "Art",
     thumbnail:
@@ -10196,7 +10196,7 @@ db.books.insertMany([
     title: "The Development of Metaphysics in Persia",
     author: "Sir Muhammad Iqbal",
     publishedDate: "1964",
-    description: "",
+    description: "Fiction",
     genre: "Philosophy",
     categories: "Islamic philosophy",
     thumbnail:
@@ -10300,7 +10300,7 @@ db.books.insertMany([
     title: "Herr Eugen Dühring's Revolution in Science (anti-Dühring)",
     author: "Friedrich Engels",
     publishedDate: "1939",
-    description: "",
+    description: "Fiction",
     genre: "Philosophy",
     categories: "Dialectical materialism",
     thumbnail:
@@ -10332,7 +10332,7 @@ db.books.insertMany([
     description:
       "Mein Kampf by Adolf Hitler. All editions included. Caveat Emptor: There are reviews here that talks of the special character and other errors/mistakes but you should know that these reviews are posted for other editions of Mein Kampf and not for this Mein Kampf. Mein kampf is the only published work by German Fascist leader of 30's and 40's, a man who had served in the Imperial German Army (Deutsches Heer) in first world war and had closely perceived the battleground strategies, an unforgettable personality, Adolf Hitler. An Introduction: A messiah or hero of twentieth century who was however, largely unpopular of his Nazist and Fascist viewpoints in the western imperialist world, still was loved and respected around the other parts of the world for he was inciting and propagating for a new world order. He was a key force of first half of the twentieth century that made the people believe in struggle for their freedom and about the fallacy of western imperialists. In his journey or quest to conquer the world with his brave army and neatly and strongly laid vision, plan and propaganda he won 40 nations and the land through the German Reich to the Caucasus Mountains. Adolf Hilter was more than a Chancellor of the German Reich, he was a force of wisdom, positive vision and counteractive shield to the subjugated people of slave countries. About the Book: Many people do not know that the book 'Mein Kampf', this particular Edition was banned in the western world and it is the same book that rose to heights of International bestsellers once the ban was lifted. However, it is obvious that this book or a part thereof was an instant bestseller in the Deutschland (Germany) and rose to greater heights in no time. The 'Mein Kampf' of Adolf Hitler was written in two periods stretching from the days of imprisonment in the Bavarian fortress. It was 1923, when the greatest humiliation for the German blood or kin appeared in the form of French invasion of Germany. The invasion took place in the Ruhr district from where the French took control over many cities of the Rhineland. Adolf Hitler was arrested with many of his comrades in an active campaign against the French invaders. He was sentenced for a term of five years by the Munich's People Court and was sent to the Landsberg am Lech to serve his sentence. Mein Kampf is a live journey of the one of the greatest strategist and general of the history.",
     genre: "Philosophy",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=5BQOkAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 290,
@@ -10526,7 +10526,7 @@ db.books.insertMany([
     description:
       "The Art of War is an ancient Chinese military treatise dating from the Late Spring and Autumn Period. The work, which is attributed to the ancient Chinese military strategist Sun Tzu, is composed of 13 chapters. Each one is devoted to an aspect of warfare and how it applies to military strategy and tactics.",
     genre: "Philosophy",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=h0sTzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 64,
@@ -10541,7 +10541,7 @@ db.books.insertMany([
     description:
       "The Art of War is a Chinese military treatise that was written during the 6th century BC by Sun Tzu. Composed of 13 chapters, each of which is devoted to one aspect of warfare, it has long been praised as the definitive work on military strategies and tactics of its time.The Art of War is one of the oldest books on military strategy in the world. It is the first and one of the most successful works on strategy and has had a huge influence on Eastern and Western military thinking, business tactics, and beyond. Sun Tzu was the first to recognize the importance of positioning in strategy and that position is affected both by objective conditions in the physical environment and the subjective opinions of competitive actors in that environment. He taught that strategy was not planning in the sense of working through a to-do list, but rather that it requires quick and appropriate responses to changing conditions. Planning works in a controlled environment, but in a competitive environment,",
     genre: "Philosophy",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=aeUOzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 64,
@@ -10793,9 +10793,9 @@ db.books.insertMany([
     title: "The Rockefellers",
     author: "Peter Collier, David Horowitz",
     publishedDate: "1976",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=axWtCDSkZlcC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 858,
@@ -10807,7 +10807,7 @@ db.books.insertMany([
     title: "Dictionary of Greek and Roman Biography and Mythology: Earinus-Nyx",
     author: "William Smith",
     publishedDate: "1846",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -10821,7 +10821,7 @@ db.books.insertMany([
     title: "The Lives of the Noble Grecians and Romaines,",
     author: "Plutarch",
     publishedDate: "1579",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -10850,7 +10850,7 @@ db.books.insertMany([
     title: "Plutarch's Lives Translated from the Original Greek",
     author: "Plutarch, John Langhorne, William Langhorne",
     publishedDate: "1873",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -10864,7 +10864,7 @@ db.books.insertMany([
     title: "Plutarch's Lives",
     author: "Plutarch",
     publishedDate: "1804",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -10893,7 +10893,7 @@ db.books.insertMany([
     title: "Plutarch's Lives, tr. by J. and W. Langhorne",
     author: "Plutarch",
     publishedDate: "1813",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -10907,7 +10907,7 @@ db.books.insertMany([
     title: "Six Men",
     author: "Alistair Cooke",
     publishedDate: "1995",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography & Autobiography",
     thumbnail:
@@ -10981,7 +10981,7 @@ db.books.insertMany([
     title: "General Biography",
     author: "John Aikin",
     publishedDate: "1801",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11040,7 +11040,7 @@ db.books.insertMany([
     title: "Biography",
     author: "Charles Knight",
     publishedDate: "1868",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11054,7 +11054,7 @@ db.books.insertMany([
     title: "A Short Life of Napoleon Bonaparte",
     author: "Ida Minerva Tarbell",
     publishedDate: "1895",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography & Autobiography",
     thumbnail:
@@ -11263,7 +11263,7 @@ db.books.insertMany([
     title: "Plutarch's Lives",
     author: "Plutarch",
     publishedDate: "1905",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11308,7 +11308,7 @@ db.books.insertMany([
       "A Classical Dictionary of Greek and Roman Biography, Mythology and Geography",
     author: "William Smith",
     publishedDate: "1925",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11382,7 +11382,7 @@ db.books.insertMany([
     title: "Tchaikovsky",
     author: "John Warrack",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Music",
     thumbnail:
@@ -11412,7 +11412,7 @@ db.books.insertMany([
       "A Classical Dictionary of Greek and Roman Biography, Mythology and Geography",
     author: "William Smith",
     publishedDate: "1904",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11426,7 +11426,7 @@ db.books.insertMany([
     title: "A Classical Dictionary of Biography, Mythology, and Geography",
     author: "William Smith",
     publishedDate: "1863",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11468,7 +11468,7 @@ db.books.insertMany([
   },
   {
     title: "Who Were They?",
-    author: "",
+    author: "Fiction",
     publishedDate: "1986",
     description:
       "An illustrated question and answer book providing concise biographical sketches of famous people in history, in the areas of world events, medicine, space, exploration, the arts, and myths and legends.",
@@ -11485,7 +11485,7 @@ db.books.insertMany([
     title: "A New General Biographical Dictionary",
     author: "Hugh James Rose",
     publishedDate: "1857",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11499,10 +11499,10 @@ db.books.insertMany([
     title: "Dictionary of Greek and Roman Biography and Mythology",
     author: "Sir William Smith",
     publishedDate: "1859",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -11557,7 +11557,7 @@ db.books.insertMany([
     title: "Rudyard Kipling",
     author: "Charles Carrington",
     publishedDate: "1978",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Literary Criticism",
     thumbnail:
@@ -11601,7 +11601,7 @@ db.books.insertMany([
     title: "Sir Isaac Newton",
     author: "Edward Neville da Costa Andrade",
     publishedDate: "1954",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11675,10 +11675,10 @@ db.books.insertMany([
     title: "Dictionary of Greek and Roman Biography and Mythology: Earinus-Nyx",
     author: "William Smith",
     publishedDate: "1844",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -11691,7 +11691,7 @@ db.books.insertMany([
     description:
       "'I loved it. I thought it was fascinating - really, really interesting story that he's got to tell... I've known him for years and I learned an awful lot.' Marc Priestley​ Kimi Räikkönen is the Finnish superstar Formula One driver with a reputation for being fast on the track and silent off it - until now! In this superb and authorised portrait of Räikkönen, Kari Hotakainen gets to reveal the side of the man that few beyond his close family and friends have ever seen. Enigmatic and private, Ferrari's former world champion driver rarely opens up to outsiders, but he granted Hotakainen exclusive access to his world and to his way of thinking. It ensures that this will be a book that will delight all fans of motorsport, who have long revered the Finn. Including never-previously-seen photographs from his own collection, The Unknown Kimi Räikkönen takes the reader into the heart of the action at grands prix around the world, behind the scenes as race strategies are planned, and opens up the private side of his life that he normally guards so carefully. With all the cult appeal of I Am Zlatan Ibrahimovic, the raw excitement of Formula One and the insight of the best biographies, this is a book every sports fan will want to treasure.",
     genre: "Biography",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=PgAIvwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 336,
@@ -11718,7 +11718,7 @@ db.books.insertMany([
     title: "The Last Emperor",
     author: "Edward Behr",
     publishedDate: "1987",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -11747,7 +11747,7 @@ db.books.insertMany([
     title: "Biographical Essays",
     author: "Friedrich Max Müller",
     publishedDate: "1884",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "author",
     thumbnail:
@@ -11809,7 +11809,7 @@ db.books.insertMany([
     description:
       '"As an eyewitness recountal of the extraordinary lives and powers of modern Hindu saints, the book has an importance both timely and timeless....His unusual life document is certainly one of the most revealing...of the spiritual wealth of India ever to be published in the West."- W. Y. Evans-Wentz, M.A., D.Litt., D.Sc., renowned scholar and author of many books on Eastern religion"I am grateful to you for granting me some insight into this fascinating world."- Thomas Mann, Nobel laureate "Few books...have had greater impact on popular theology than Paramahansa Yogananda\'s Autobiography of a Yogi."- Phyllis A. Tickle, Author, God-Talk in America "In [Yogananda\'s] celebrated Autobiography of a Yogi, he offers a stunning account of the \'cosmic consciousness\' reached on the upper levels of yogic practice, and numerous interesting perspectives on human nature from the yogic and Vedantic points of view."- Robert S. Ellwood, Ph.D., Chairman, School of Religion, University of Southern California"Autobiography of a Yogi is justifiably celebrated as one of the most entertaining and enlightening spiritual books ever written."- Tom Butler-Bowdon, Author, 50 Spiritual Classics: Timeless Wisdom from 50 Great Books of Inner Discovery, Enlightenment & Purpose"One of the most charmingly simple and self-revealing of life-stories...a veritable treasure-house of learning. The great personalities one meets in these pages...return to memory as friends endowed with rich spiritual wisdom, and one of the greatest of these is the God-intoxicated author himself."- Dr. Anna von Helmholtz-Phelan, Professor of English, University of Minnesot',
     genre: "Biography",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=_CYvzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 324,
@@ -11821,7 +11821,7 @@ db.books.insertMany([
     title: "Representative Men",
     author: "Ralph Waldo Emerson",
     publishedDate: "1893",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -12060,7 +12060,7 @@ db.books.insertMany([
     title: "Animal Ecology",
     author: "Charles Sutherland Elton",
     publishedDate: "1927",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Science",
     thumbnail:
@@ -12074,7 +12074,7 @@ db.books.insertMany([
     title: "Studies of a Biographer",
     author: "Leslie Stephen",
     publishedDate: "1910",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "author, English",
     thumbnail:
@@ -12088,7 +12088,7 @@ db.books.insertMany([
     title: "Famous Men of the Middle Ages",
     author: "John Henry Haaren, Addison B. Poland",
     publishedDate: "1904",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -12176,7 +12176,7 @@ db.books.insertMany([
     title: "What is a Gospel?",
     author: "Charles H. Talbert",
     publishedDate: "1977",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Religion",
     thumbnail:
@@ -12190,7 +12190,7 @@ db.books.insertMany([
     title: "The General Biographical Dictionary",
     author: "Alexander Chalmers",
     publishedDate: "1812",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -12217,7 +12217,7 @@ db.books.insertMany([
   },
   {
     title: "Who's who in the Twentieth Century",
-    author: "",
+    author: "Fiction",
     publishedDate: "1993",
     description:
       "Provides reference to men and women who shape the history of the 20th century, and who contribute to world events from all walks of life.",
@@ -12234,7 +12234,7 @@ db.books.insertMany([
     title: "Dali",
     author: "Luis Romero, Salvador Dalí",
     publishedDate: "1979",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Art",
     thumbnail:
@@ -12294,10 +12294,10 @@ db.books.insertMany([
       "A New Classical Dictionary of Greek and Roman Biography, Mythology and Geography",
     author: "William Smith",
     publishedDate: "1883",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Classical dictionaries",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 1039,
     averageRating: 4,
     amount: 49.99,
@@ -12411,7 +12411,7 @@ db.books.insertMany([
     title: "Medieval People",
     author: "Eileen Power",
     publishedDate: "1924",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Fiction",
     thumbnail:
@@ -12469,7 +12469,7 @@ db.books.insertMany([
     title: "Dictionary of Indian Biography",
     author: "Charles Edward Buckland",
     publishedDate: "1906",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography & Autobiography",
     thumbnail:
@@ -12498,7 +12498,7 @@ db.books.insertMany([
     title: "Makers of Nineteenth Century Culture",
     author: "Justine Wintle",
     publishedDate: "2001",
-    description: "",
+    description: "Fiction",
     genre: "Biography",
     categories: "Biography",
     thumbnail:
@@ -12512,7 +12512,7 @@ db.books.insertMany([
     title: "Pinocchio",
     author: "Carlo Collodi",
     publishedDate: "2003",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Education",
     thumbnail:
@@ -12842,9 +12842,9 @@ db.books.insertMany([
     title: "Level 6",
     author: "George Orwell, Pearson Education, Limited",
     publishedDate: "2018-03",
-    description: "",
+    description: "Fiction",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=s83qtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 144,
@@ -13066,7 +13066,7 @@ db.books.insertMany([
     title: "Readings in the History of Education",
     author: "Ellwood Patterson Cubberley",
     publishedDate: "1920",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Education",
     thumbnail:
@@ -13275,7 +13275,7 @@ db.books.insertMany([
     title: "The Century of the Child",
     author: "Ellen Key",
     publishedDate: "1909",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Child development",
     thumbnail:
@@ -13334,7 +13334,7 @@ db.books.insertMany([
   {
     title: "The Error of Narcissus",
     author: "Louis Lavelle",
-    publishedDate: "",
+    publishedDate: "Fiction",
     description:
       'In "The Error of Narcissus," Louis Lavelle (1883-1951) presents a philosophical meditation on the myth of Narcissus. He argues that self-realization, far from being a self-centered admiration, requires not turning against oneself but acting and reaching out to others. In this book, Lavelle explores the concept of self. For Lavelle, the self is movement, becoming, overcoming anxiety, and freedom. Based on the hero from Ovid\'s story, who was fascinated by his own image in water, he shows in brief meditations that the self is threatened with death if it remains fixed on itself, on an object, and in the past. What is most secret in the self can only be understood in its relationship with others, in the reception of other subjectivities. Self-consciousness must then be found to liberate the soul and access the spiritual space. Louis Lavelle was for a long time unjustly forgotten. Today, rediscovered, the importance of his work seems perfectly suited to what we are living. Lavelle includes human sciences, psychoanalysis, and anthropology in an essay that reveals him as one of the great metaphysicians of the last century.',
     genre: "Education",
@@ -13365,7 +13365,7 @@ db.books.insertMany([
     title: "Shakespeare and the Idea of the Play",
     author: "Anne Barton",
     publishedDate: "1977-03-25",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Education",
     thumbnail:
@@ -13634,7 +13634,7 @@ db.books.insertMany([
     title: "The Education of Man",
     author: "Friedrich Fröbel",
     publishedDate: "1887",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Education",
     thumbnail:
@@ -13681,7 +13681,7 @@ db.books.insertMany([
     description:
       'Aboard the Nellie, anchored in the River Thames near Gravesend, England, Charles Marlow tells his fellow sailors about the events that led to his appointment as captain of a river steamboat for an ivory trading company. As a child, Marlow had been fascinated by "the blank spaces" on maps, particularly by the biggest, which by the time he had grown up was no longer blank but turned into "a place of darkness". Yet there remained a big river, "resembling an immense snake uncoiled, with its head in the sea, its body at rest curving afar over a vast country and its tail lost in the depths of the land". The image of this river on the map fascinated Marlow "as a snake would a bird". Feeling as though "instead of going to the centre of a continent I were about to set off for the centre of the earth", Marlow takes passage on a French steamer bound for the African coast and then into the interior. After more than thirty days the ship anchors off the seat of the government near the mouth of the big river. Marlow, still some two hundred miles to go, now takes passage on a little sea-going steamer captained by a Swede. He departs some thirty miles up the river where his Company\'s station is. Work on the railway is going on, involving removal of rocks with explosives. Marlow enters a narrow ravine to stroll in the shade under the trees, and finds himself in "the gloomy circle of some Inferno": the place is full of diseased Africans who worked on the railroad and now await their deaths, their sickened bodies already as thin as air. Marlow witnesses the scene "horror-struck".Heart of Darkness (1899) is a novella by Polish-British novelist Joseph Conrad, about a voyage up the Congo River into the Congo Free State, in the heart of Africa, by the story\'s narrator Marlow. Marlow tells his story to friends aboard a boat anchored on the River Thames, London, England. This setting provides the frame for Marlow\'s story of his obsession with the ivory trader Kurtz, which enables Conrad to create a parallel between London and Africa as places of darkness.',
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=hxTtswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 58,
@@ -13756,7 +13756,7 @@ db.books.insertMany([
     description:
       "Philosopher, statesman, scientist, jurist, lawyer, and prolific author - Francis Bacon was a true polymath and Renaissance man, and is regarded as one of the progenitors of the school of thought known as Empiricism, as well as the scientific method. In this volume, Bacon discusses a remarkably wide-ranging array of philosophical and scientific subjects, putting the mind-boggling breadth of his knowledge on full display.",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=ba0AtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 174,
@@ -13787,7 +13787,7 @@ db.books.insertMany([
       "The classic book that has inspired generations of teachers to foster each child's drive to learn. Copyright © Libri GmbH. All rights reserved.",
     genre: "Education",
     categories: "Child development",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 298,
     averageRating: 4,
     amount: 49.99,
@@ -13934,7 +13934,7 @@ db.books.insertMany([
     title: "Things to be Remembered in Daily Life",
     author: "John Timbs",
     publishedDate: "1863",
-    description: "",
+    description: "Fiction",
     genre: "Education",
     categories: "Conduct of life",
     thumbnail:
@@ -13997,7 +13997,7 @@ db.books.insertMany([
     description:
       "The author lists a few things that a person needs to do if they want to see their business succeed and stay longer.",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=9h6EzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 42,
@@ -14057,7 +14057,7 @@ db.books.insertMany([
     description:
       "This work has been selected by scholars as being culturally important and is part of the knowledge base of civilization as we know it. This work is in the public domain in the United States of America, and possibly other nations. Within the United States, you may freely copy and distribute this work, as no entity (individual or corporate) has a copyright on the body of the work. Scholars believe, and we concur, that this work is important enough to be preserved, reproduced, and made generally available to the public. To ensure a quality reading experience, this work has been proofread and republished using a format that seamlessly blends the original graphical elements with text in an easy-to-read typeface. We appreciate your support of the preservation process, and thank you for being an important part of keeping this knowledge alive and relevant.",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=AVhmvQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 452,
@@ -14114,9 +14114,9 @@ db.books.insertMany([
     title: "De Bello Gallico",
     author: "C. Iuli Caesaris",
     publishedDate: "2004-05-01",
-    description: "",
+    description: "Fiction",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=8FmlPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 112,
@@ -14187,7 +14187,7 @@ db.books.insertMany([
   },
   {
     title: "Shaping the Story",
-    author: "",
+    author: "Fiction",
     publishedDate: "2019-04-09",
     description:
       'Current career counselling needs a shift away from the practice of modern counselling approaches, and narrative therapy is likely to be particularly appropriate, since it is part of the culture and way of life of the majority of our clients. For the very first time, current approaches have been brought together in one publication. Eminent scholars, including Larry Cochran, Mark Savickas, and Norm Amundson, Paul Hartung and John Winslade, contributed to the publication. Personal narratives of some exceptionally eminent people, including Robert Sternberg are also included. The publication is concluded by Reuven Bar-On and Maurice Elias, who delineate the connection between storied counselling and social and emotional learning. This book provides a priceless resource for scholars, academics, researchers, psychologists, teachers and clients. It § critically analyses germane questions, such as "How vital and feasible is it to build on life stories in career counselling?" § examines the theoretical underpinnings and practical applications of hermeneutic-narrative, postmodern and constructivist approaches to career counselling § provides practical guidelines on the practice of narrative counselling in different contexts § presents ideas on how to engage clients actively § suggests ways of using life story counselling (including the Career-Story Interview) to produce new identities for career practice',
@@ -14298,7 +14298,7 @@ db.books.insertMany([
     description:
       "Man and Superman: Large Print by George Bernard Shaw When the brains of the average reader become tangled up in the mazes of Mr. Shaw's latest offering, \"Man and Superman,\" he will wonder, long before its close, whether he, or the author, is crazy. That is, if he takes the book seriously. If he does not, he will enjoy himself thoroughly, but will have failed to appreciate the spirit and intention of the work's creator. We are delighted to publish this classic book as part of our extensive Classic Library collection. Many of the books in our collection have been out of print for decades, and therefore have not been accessible to the general public. The aim of our publishing program is to facilitate rapid access to this vast reservoir of literature, and our view is that this is a significant literary work, which deserves to be brought back into print after many decades. The contents of the vast majority of titles in the Classic Library have been scanned from the original works. To ensure a high quality product, each title has been meticulously hand curated by our staff. Our philosophy has been guided by a desire to provide the reader with a book that is as close as possible to ownership of the original work. We hope that you will enjoy this wonderful classic work, and that for you it becomes an enriching experience.",
     genre: "Education",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=vtU3ugEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 214,
@@ -14431,7 +14431,7 @@ db.books.insertMany([
       "The Fyrst Boke of the Introduction of Knowledge Made by Andrew Borde, of Physycke Doctor",
     author: "Andrew Boorde",
     publishedDate: "1870",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Beard",
     thumbnail:
@@ -14460,7 +14460,7 @@ db.books.insertMany([
     title: "Essential Concepts for Healthy Living",
     author: "Sandra Alters, Wendy Schiff",
     publishedDate: "2003",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health & Fitness",
     thumbnail:
@@ -14608,7 +14608,7 @@ db.books.insertMany([
     title: "The Miracle of Enzyme",
     author: "Hiromi Shinya, Md",
     publishedDate: "2008",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Enzymes",
     thumbnail:
@@ -14622,10 +14622,10 @@ db.books.insertMany([
     title: "Le normal et le pathologique",
     author: "Georges Canguilhem",
     publishedDate: "1984",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Medicine",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 224,
     averageRating: 4,
     amount: 49.99,
@@ -14695,7 +14695,7 @@ db.books.insertMany([
     title: "Science and Health with Key to the Scriptures",
     author: "Mary Baker Eddy",
     publishedDate: "1894",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Bible",
     thumbnail:
@@ -14769,10 +14769,10 @@ db.books.insertMany([
     title: "Ie-Inv Hlth Bf W/Pro 04",
     author: "Dianne R. Hales",
     publishedDate: "2004",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 440,
     averageRating: 4,
     amount: 49.99,
@@ -14796,7 +14796,7 @@ db.books.insertMany([
     title: "Fitness and Wellness",
     author: "Werner W. K. Hoeger",
     publishedDate: "1990",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Family & Relationships",
     thumbnail:
@@ -14855,7 +14855,7 @@ db.books.insertMany([
     title: "The Wheel of Health",
     author: "Guy Theodore Wrench",
     publishedDate: "1938",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Diet",
     thumbnail:
@@ -14900,7 +14900,7 @@ db.books.insertMany([
       "Domestic Medicine, Or, A Valuable Treatise on the Prevention and Cure of Diseases by Regimen and Simple Medicines",
     author: "William Buchan",
     publishedDate: "1804",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Diet",
     thumbnail:
@@ -15008,7 +15008,7 @@ db.books.insertMany([
       "A comprehensive source of health and health care terminology definitions. Features large typeface, encyclopaedic entries for key terms, a detailed colour atlas of human anatomy, alternate spellings, more than 2200 full-colour illustrations, and a wealth of reference information in many appendices. Contains 3,000 new entries and 10,000 revised entries compared with the previous edition.",
     genre: "Health",
     categories: "Allied health personnel",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -15066,7 +15066,7 @@ db.books.insertMany([
     description:
       "For courses in personal health. A mindful approach to personal health Health: The Basics aligns well-researched health information with current real-world topics that have the greatest impact on students'' lives to keep them hooked on learning and living well. The 13th Edition integrates mindfulness research, tools, and practices throughout, enabling students to incorporate mindfulness practices to help cut through the static of everyday life, to be more focused and present, and to improve academic performance. Along with new content on sleep and health, as well as diversity and health equity, Health: The Basics builds on its strengths of using the most current, scientifically valid research, examining important issues and controversies about health today, and motivating students to become \"actively engaged in health\" at all levels. Students have access to videos, self-assessments, and online interactive activities and reading quizzes that address their diverse needs and learning styles while engaging them in the material. Also available with Mastering Health Mastering(tm) is the teaching and learning platform that empowers you to reach every student. By combining trusted author content with digital tools developed to engage students and emulate the office-hour experience, Mastering personalizes learning and often improves results for each student. With a variety of activities available, students can actively learn, understand, and retain even the most difficult personal health concepts. Note: You are purchasing a standalone product; Mastering Health does not come packaged with this content. Students, if interested in purchasing this title with Mastering Health, ask your instructor for the correct package ISBN and Course ID. Instructors, contact your Pearson representative for more information. If you would like to purchase both the physical text and Mastering Health, search for: 0134812824 / 9780134812823 Health: The Basics Plus Mastering Health with Pearson eText -- Access Card Package Package consists of: 0134709683 / 9780134709680 Health: The Basics 0134796527 / 9780134796529 Mastering Health with Pearson eText -- ValuePack Access Card -- for Health: The Basics",
     genre: "Health",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=endcswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 576,
@@ -15138,7 +15138,7 @@ db.books.insertMany([
     title: "Psychology of Physical Activity and Exercise",
     author: "Stuart Biddle, Nanette Mutrie",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health & Fitness",
     thumbnail:
@@ -15152,7 +15152,7 @@ db.books.insertMany([
     title: "The Seven Spiritual Laws of Yoga",
     author: "Deepak Chopra, David Simon",
     publishedDate: "2004",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15166,7 +15166,7 @@ db.books.insertMany([
     title: "Applying Concepts for Healthy Living",
     author: "Sandra Alters",
     publishedDate: "2006",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15195,7 +15195,7 @@ db.books.insertMany([
     title: "The Science of Well-Being",
     author: "Wallace Delois Wattles, Judith L. Powell",
     publishedDate: "1993",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Body, Mind & Spirit",
     thumbnail:
@@ -15239,10 +15239,10 @@ db.books.insertMany([
     title: "La perfecta salud",
     author: "Deepak Chopra",
     publishedDate: "1994",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -15370,7 +15370,7 @@ db.books.insertMany([
     title: "The Art of Preserving Health:",
     author: "John Armstrong",
     publishedDate: "1745",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "English poetry",
     thumbnail:
@@ -15384,7 +15384,7 @@ db.books.insertMany([
     title: "Lifetime Physical Fitness and Wellness",
     author: "Werner W. K. Hoeger",
     publishedDate: "1995",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Family & Relationships",
     thumbnail:
@@ -15534,10 +15534,10 @@ db.books.insertMany([
     title: "An Invitation to Health",
     author: "Dianne R. Hales",
     publishedDate: "2012",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 513,
     averageRating: 4,
     amount: 49.99,
@@ -15667,10 +15667,10 @@ db.books.insertMany([
     title: "Earl Mindell's Vitamin Bible",
     author: "Earl Mindell",
     publishedDate: "1981",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Medical",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 351,
     averageRating: 4,
     amount: 49.99,
@@ -15695,7 +15695,7 @@ db.books.insertMany([
     title: "The Efficient Life",
     author: "Luther Halsey Gulick",
     publishedDate: "1913",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15724,10 +15724,10 @@ db.books.insertMany([
     title: "An Invitation to Health",
     author: "Dianne R. Hales",
     publishedDate: "2006",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 152,
     averageRating: 4,
     amount: 49.99,
@@ -15737,7 +15737,7 @@ db.books.insertMany([
     title: "How to Add Ten Years to Your Life and to Double Its Satisfactions",
     author: "Samuel Silas Curry",
     publishedDate: "1915",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15751,7 +15751,7 @@ db.books.insertMany([
     title: "An Occult View of Health & Disease",
     author: "Geoffrey Hodson",
     publishedDate: "1925",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15783,8 +15783,8 @@ db.books.insertMany([
     description:
       "Collector s Edition Includes LAW OF SUCCESS AudiobookLAW OF SUCCESS is the most comprehensive guide to achieving success. This condensed version of Napoleon Hill s classic will help you achieve dreams and personal success you may never have thought possible. Discover the incredible amount of useful information brought together for you in this one magnificent CD.This book presents, in a greatly condensed form, the entire seventeen factors out of which the Law of Success philosophy was evolved. This philosophy represents all that the most successful men who ever lived have learned about the achievement of success in practically every sort of human endeavor. Its compilation has cost a fortune, to say nothing of the better part of a lifetime of effort upon the part of the author.",
     genre: "Health",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 204,
     averageRating: 4,
     amount: 49.99,
@@ -15839,7 +15839,7 @@ db.books.insertMany([
     title: "American Red Cross Text-book on Home Hygiene and Care of the Sick",
     author: "American National Red Cross, Jane A. Delano",
     publishedDate: "1922",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15856,7 +15856,7 @@ db.books.insertMany([
     description:
       "The immunity code presents an immune centric approach to aging and health, and how to slow it dramatically in easy, practical steps. The Immunity Code is simply a new paradigm and an entirely new way think about caring for the body. The new goal is learning to control key aspects of immunity, specifically immune cells called macrophages, to control health and aging. Using new science based techniques,, hacks if you will, to steer immunity to slow and reverse aging and drive peak health, you will gain a power everyone seeks and so few find.",
     genre: "Health",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=koCBzQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 152,
@@ -15913,7 +15913,7 @@ db.books.insertMany([
     title: "Preventive Medicine and Hygiene",
     author: "Milton Joseph Rosenau",
     publishedDate: "1913",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
     thumbnail:
@@ -15931,7 +15931,7 @@ db.books.insertMany([
       "Abstract: Pharmaceutical and nutritional information is considered for explaining to the public the confusing and sometimes dangerous interrelation of drugs and vitamins. Topics are arranged among 5 principal themes. The first covers basic facts of vitimins and other nutrients including how nutrients work, the composition of vitamin pills, the characteristics, function, daily requirements, toxicity, deficiency effects, and personal advice on 24 vitamins, from vitamin A to vitamn U. Essential minerals, misconceptions and truths of protein, lipids, carbohydrates, and enzymes are also covered. The second theme covers vitamin needs for various ages, work professions, and activities. The need for specific supplements for specific diseases and disorders is discussed. The third theme covers vitamins vs. drugs, such as caffeine, alcohol, prescriptions, salt and diets. The fourth theme discusses vitamins for physical and cosmetic health; and the fifth area covers vitamins for dogs and cat pets. A selected bibliography for further reading is appended. (wz).",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 351,
     averageRating: 4,
     amount: 49.99,
@@ -15999,13 +15999,13 @@ db.books.insertMany([
   },
   {
     title: "Encyclopedia of Family Health: Scarlet fever-Sore throat",
-    author: "",
+    author: "Fiction",
     publishedDate: "2005",
     description:
       "An eighteen-volume guide to family health which includes answers to commonly asked medical questions.",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 2581,
     averageRating: 4,
     amount: 49.99,
@@ -16030,7 +16030,7 @@ db.books.insertMany([
     title: "Civics and Health",
     author: "William Harvey Allen",
     publishedDate: "1909",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Children",
     thumbnail:
@@ -16059,10 +16059,10 @@ db.books.insertMany([
     title: "The Royal Society of Medicine Health Encyclopedia",
     author: "Robert Murdoch Youngson",
     publishedDate: "2001",
-    description: "",
+    description: "Fiction",
     genre: "Health",
     categories: "Health",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 798,
     averageRating: 4,
     amount: 49.99,
@@ -16087,7 +16087,7 @@ db.books.insertMany([
     title: "Man and Technics",
     author: "Oswald Spengler",
     publishedDate: "1976",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "History",
     thumbnail:
@@ -16162,7 +16162,7 @@ db.books.insertMany([
     title: "The Human Condition",
     author: "Hannah Arendt",
     publishedDate: "1958",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Economics",
     thumbnail:
@@ -16220,7 +16220,7 @@ db.books.insertMany([
     title: "Ullmann's Encyclopedia of Industrial Chemistry",
     author: "Fritz Ullmann",
     publishedDate: "1992",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Chemistry",
     thumbnail:
@@ -16250,7 +16250,7 @@ db.books.insertMany([
     author: "C. K. Maiti",
     publishedDate: "2008",
     description:
-      "Information technology has changed our society radically. Just as the integrated circuits have been the prime mover for electronics, high-speed transistors and semiconductor lasers based on heterostructures are now playing the same role in modern telecommunications. Professor Kroemer's conceptual work on heterostructures began in the early 1950s as he was looking for a way to improve transistor speed and performance. In the 1960s, he applied the same principles to the development of lasers and light-emitting diodes, showing that they could achieve continuous operation at room temperature OCo something thought impossible at that time. His deep fundamental scientific work has had a profound effect on technology and society, transforming and improving our lives.This reprint collection brings together Professor Kroemer's most important papers, presenting a comprehensive perspective of the field. It covers topics ranging from substrate materials, electronic properties, process technology, and devices, to circuits and applications. This reprint collection will help the reader identify the key stages in the development of heterostructure devices and lasers from early research through to its integration in current manufacturing. Devoted to R&D engineers and scientists who are actively involved in extending the nano- and microelectronics roadmap mainly via heterostructure engineering, this volume may also serve as a reference for postgraduate and research students.\"",
+      "Information technology has changed our society radically. Just as the integrated circuits have been the prime mover for electronics, high-speed transistors and semiconductor lasers based on heterostructures are now playing the same role in modern telecommunications. Professor Kroemer's conceptual work on heterostructures began in the early 1950s as he was looking for a way to improve transistor speed and performance. In the 1960s, he applied the same principles to the development of lasers and light-emitting diodes, showing that they could achieve continuous operation at room temperature OCo something thought impossible at that time. His deep fundamental scientific work has had a profound effect on technology and society, transforming and improving our lives.This reprint collection brings together Professor Kroemer's most important papers, presenting a comprehensive perspective of the field. It covers topics ranging from substrate materials, electronic properties, process technology, and devices, to circuits and applications. This reprint collection will help the reader identify the key stages in the development of heterostructure devices and lasers from early research through to its integration in current manufacturing. Devoted to R&D engineers and scientists who are actively involved in extending the nano- and microelectronics roadmap mainly via heterostructure engineering, this volume may also serve as a reference for postgraduate and research students.\"Fiction",
     genre: "Technology",
     categories: "Technology & Engineering",
     thumbnail:
@@ -16264,7 +16264,7 @@ db.books.insertMany([
     title: "Men, Machines, and Sacred Cows",
     author: "Prince Philip (consort of Elizabeth II, Queen of Great Britain)",
     publishedDate: "1984",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Reference",
     thumbnail:
@@ -16338,7 +16338,7 @@ db.books.insertMany([
     title: "The Unabomber Manifesto",
     author: "Theodore John Kaczynski",
     publishedDate: "2023",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Radicalism",
     thumbnail:
@@ -16352,7 +16352,7 @@ db.books.insertMany([
     title: "A Dictionary of General Knowledge",
     author: "George Crabb",
     publishedDate: "1830",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Children's encyclopedias and dictionaries",
     thumbnail:
@@ -16394,9 +16394,9 @@ db.books.insertMany([
   },
   {
     title: "NASA Technical Translation",
-    author: "",
+    author: "Fiction",
     publishedDate: "1959",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Aeronautics",
     thumbnail:
@@ -16502,7 +16502,7 @@ db.books.insertMany([
     title: "A Dictionary of Arts, Manufactures, and Mines",
     author: "Andrew Ure",
     publishedDate: "1853",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Industrial arts",
     thumbnail:
@@ -16531,7 +16531,7 @@ db.books.insertMany([
     title: "The Instinct of Workmanship",
     author: "Thorstein Veblen",
     publishedDate: "1922",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Industrial arts",
     thumbnail:
@@ -16560,7 +16560,7 @@ db.books.insertMany([
     title: "Virtual Reality",
     author: "Howard Rheingold",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Computers",
     thumbnail:
@@ -16574,10 +16574,10 @@ db.books.insertMany([
     title: "Homo Faber",
     author: "Max Frisch",
     publishedDate: "1974",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
-    categories: "",
-    thumbnail: "",
+    categories: "Fiction",
+    thumbnail: "Fiction",
     pageCount: 219,
     averageRating: 4,
     amount: 49.99,
@@ -16602,7 +16602,7 @@ db.books.insertMany([
     title: "Textbook of Communication and Education Technology for Nurses",
     author: "KP Neeraja",
     publishedDate: "2011-07",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Medical",
     thumbnail:
@@ -16689,9 +16689,9 @@ db.books.insertMany([
   },
   {
     title: "NBSIR.",
-    author: "",
+    author: "Fiction",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Research, Industrial",
     thumbnail:
@@ -16750,7 +16750,7 @@ db.books.insertMany([
     title: "Small is Beautiful",
     author: "Ernst Friedrich Schumacher",
     publishedDate: "1973",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Economic development",
     thumbnail:
@@ -16809,7 +16809,7 @@ db.books.insertMany([
     title: "Science and Civilisation in China",
     author: "Joseph Needham",
     publishedDate: "1974",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Alchemy",
     thumbnail:
@@ -16836,9 +16836,9 @@ db.books.insertMany([
   },
   {
     title: "Workshop Receipts ...",
-    author: "",
+    author: "Fiction",
     publishedDate: "1883",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Formulas, recipes, etc",
     thumbnail:
@@ -16868,7 +16868,7 @@ db.books.insertMany([
     author: "Peter Forbes",
     publishedDate: "2005",
     description:
-      "A cutting-edge science book in the style of Fermat s Last Theorem and Chaos from an exciting and accessible new voice in popular science writing. Bio-inspiration is a form of engineering but not in the conventional sense. Extending beyond our established and preconceived notions, scientists, architects and engineers are looking at imitating nature by manufacturing 'wet' materials such as spider silk or the surface of the gecko's foot. The amazing power of the gecko's foot has long been known it can climb a vertical glass wall and even walk upside down on the ceiling but no ideas could be harnessed from it because its mechanism could not be seen with the power of optical microscopes. Recently however the secret was solved by a team of scientists in Oregon who established that the mechanism really is dry, and that it does not involve suction, capillary action or anything else the lay person might imagine. Each foot has half a million bristles and each bristle ramifies into hundreds of finer spatula-shaped projections. The fine scale of the gecko's foot is beyond the capacity of conventional microengineering, but a team of nanotechnologists have already made a good initial approximation. The gecko's foot is just one of many examples of this new 'smart' science. We also discover, amongst other things, how George de Mestral's brush with the spiny fruits of the cocklebur inspired him to invent Velcro; how the shape of leaves opening from a bud has inspired the design of solar-powered satellites; and the parallels between cantilever bridges and the spines of large mammals such as the bison. The new 'smart' science of Bio-inspiration is going to produce a plethora of products over the next decades that will transform our lives, and force us to look at the world in a completely new way. It is science we will be reading about in our papers very soon; it is the science of tomorrow's world.\"",
+      "A cutting-edge science book in the style of Fermat s Last Theorem and Chaos from an exciting and accessible new voice in popular science writing. Bio-inspiration is a form of engineering but not in the conventional sense. Extending beyond our established and preconceived notions, scientists, architects and engineers are looking at imitating nature by manufacturing 'wet' materials such as spider silk or the surface of the gecko's foot. The amazing power of the gecko's foot has long been known it can climb a vertical glass wall and even walk upside down on the ceiling but no ideas could be harnessed from it because its mechanism could not be seen with the power of optical microscopes. Recently however the secret was solved by a team of scientists in Oregon who established that the mechanism really is dry, and that it does not involve suction, capillary action or anything else the lay person might imagine. Each foot has half a million bristles and each bristle ramifies into hundreds of finer spatula-shaped projections. The fine scale of the gecko's foot is beyond the capacity of conventional microengineering, but a team of nanotechnologists have already made a good initial approximation. The gecko's foot is just one of many examples of this new 'smart' science. We also discover, amongst other things, how George de Mestral's brush with the spiny fruits of the cocklebur inspired him to invent Velcro; how the shape of leaves opening from a bud has inspired the design of solar-powered satellites; and the parallels between cantilever bridges and the spines of large mammals such as the bison. The new 'smart' science of Bio-inspiration is going to produce a plethora of products over the next decades that will transform our lives, and force us to look at the world in a completely new way. It is science we will be reading about in our papers very soon; it is the science of tomorrow's world.\"Fiction",
     genre: "Technology",
     categories: "Science",
     thumbnail:
@@ -16911,7 +16911,7 @@ db.books.insertMany([
     title: "The Engineering Index",
     author: "John Butler Johnson",
     publishedDate: "1896",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Engineering",
     thumbnail:
@@ -17014,9 +17014,9 @@ db.books.insertMany([
   },
   {
     title: "Industrial Arts Index",
-    author: "",
+    author: "Fiction",
     publishedDate: "1929",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Engineering",
     thumbnail:
@@ -17135,7 +17135,7 @@ db.books.insertMany([
     title: "Encyclopedia of Separation Science",
     author: "Michael Cooke, C. F. Poole",
     publishedDate: "2000",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Chemistry",
     thumbnail:
@@ -17180,10 +17180,10 @@ db.books.insertMany([
       "The Oxford Encyclopedia of Philosophy, Science, and Technology in Islam",
     author: "Ibrahim Kalin",
     publishedDate: "2014-04-01",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Islamic philosophy",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 576,
     averageRating: 4,
     amount: 49.99,
@@ -17211,7 +17211,7 @@ db.books.insertMany([
     description:
       "MORTAL ENGINES launched Philip Reeve's brilliantly-imagined creation, the world of the Traction Era, where mobile cities fight for survival in a post-apocalyptic future. Now, in time for the film debut, the critically acclaimed MORTAL ENGINES quartet is repackaged with a fantastic and eye-catching cover featuring new artwork. In the second brilliant installment of Philip Reeve's award-winning quartet, Tom and Hester's airship is drifting over the vast Ice Wastes, crippled by the fanatical aviators of the Anti-Tractionists. The fast-moving ice city of Anchorage offers sanctuary. But it is no safe refuge. Devastated by plague and haunted by ghosts, Anchorage is heading for the Dead Continent of America...",
     genre: "Technology",
-    categories: "",
+    categories: "Fiction",
     thumbnail:
       "http://books.google.com/books/content?id=triAtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
     pageCount: 352,
@@ -17404,7 +17404,7 @@ db.books.insertMany([
     title: "Engineers of the Renaissance",
     author: "Bertrand Gille",
     publishedDate: "1966",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Technology & Engineering",
     thumbnail:
@@ -17418,10 +17418,10 @@ db.books.insertMany([
     title: "Technopoly",
     author: "Neil Postman",
     publishedDate: "1991",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Technology",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 202,
     averageRating: 4,
     amount: 49.99,
@@ -17476,7 +17476,7 @@ db.books.insertMany([
     title: "Technology in Comecon",
     author: "Jozef Wilczynski",
     publishedDate: "1974",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Political Science",
     thumbnail:
@@ -17489,9 +17489,9 @@ db.books.insertMany([
   {
     title:
       "The Repertory of Patent Inventions, and Other Discoveries and Improvements in Arts, Manufactures, and Agriculture",
-    author: "",
+    author: "Fiction",
     publishedDate: "1834",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Industrial arts",
     thumbnail:
@@ -17580,7 +17580,7 @@ db.books.insertMany([
     title: "T'ien-kung K'ai-wu",
     author: "Yingxing Song",
     publishedDate: "1966",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Agriculture",
     thumbnail:
@@ -17594,7 +17594,7 @@ db.books.insertMany([
     title: "New Metric Handbook",
     author: "Patricia Tutt, David Adler",
     publishedDate: "1979",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Architecture",
     thumbnail:
@@ -17697,7 +17697,7 @@ db.books.insertMany([
     title: "Applied Science for Metal Workers",
     author: "William Henry Dooley",
     publishedDate: "1919",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Metal-work",
     thumbnail:
@@ -17741,10 +17741,10 @@ db.books.insertMany([
     title: "McGraw-Hill Dictionary of Scientific and Technical Terms",
     author: "Sybil P. Parker",
     publishedDate: "1994",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Science",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 2242,
     averageRating: 4,
     amount: 49.99,
@@ -17788,7 +17788,7 @@ db.books.insertMany([
       "For many in the West, the emergence of Japan as an economic superpower has been as surprising as it has been sudden. After its defeat in World War II, Japan hardly appeared a candidate to lead industrialized nations in productivity and technological innovation, and the \"Japanese miracle\" is often explained as the result of U.S. aid and protection in the postwar years. In The Origins of Japanese Trade Supremacy, Christopher Howe locates the sources of Japan's current commercial and financial strength in events tnat occurred well before 1945. In this revisionist account, Howe traces the history of Japanese trade over four centuries to show that the Japanese mastery of trade with the outside world began as long ago as the sixteenth century, with Japan's first contact with European trading partners. Although profitable, this early contact was so destabilizing that the Japanese leadership soon restricted foreign trade mainly to Asian partners. From the early seventeenth to the middle of the nineteenth centuries, Japan developed in relative isolation. Though secluded from the scientific and economic revolutions in the West, Japan proved adept at finding novel solutions to its own problems, and its economy grew in size, diversity, and technological and institutional sophistication. By the nineteenth century, when contacts with the West were reestablished. Japan had developed a remarkable capacity to absorb foreign technologies and to adapt and create new institutions, while retaining significant elements of its traditional system of values. Most importantly, Japan's long-standing reliance on its own ingenuity to solve problems continued to flourish. This tradition, born of necessity, is the most important foundation for Japan's current position as a world economic power.",
     genre: "Technology",
     categories: "Foreign trade promotion",
-    thumbnail: "",
+    thumbnail: "Fiction",
     pageCount: 471,
     averageRating: 4,
     amount: 49.99,
@@ -17798,7 +17798,7 @@ db.books.insertMany([
     title: "Engineering and the Liberal Arts",
     author: "Samuel C. Florman",
     publishedDate: "1968",
-    description: "",
+    description: "Fiction",
     genre: "Technology",
     categories: "Education",
     thumbnail:

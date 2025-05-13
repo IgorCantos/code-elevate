@@ -1,5 +1,4 @@
-import React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AddShoppingCart, FavoriteBorder } from '@mui/icons-material/';
 import {

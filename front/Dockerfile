@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 COPY ./front/package*.json ./
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 RUN ls -al /usr/src/app
 
