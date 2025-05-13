@@ -45,16 +45,6 @@ export default function ErrorView({
         >
           {isLoading ? 'Carregando...' : <>{buttonText}</>}
         </Button>
-
-        <Box
-          component="img"
-          src="/assets/illustrations/illustration_404.svg"
-          sx={{
-            mx: 'auto',
-            pt: 3,
-            height: 260,
-          }}
-        />
       </Box>
     </Container>
   );
