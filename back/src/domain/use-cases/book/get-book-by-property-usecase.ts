@@ -1,10 +1,10 @@
-import { GetBookByPropertyService } from "@/application/services";
-import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import IGetBookByPropertyService from "@/domain/interfaces/services/get-books-by-property-interface ";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
 
 class GetBookByPropertyUseCase {
-  getBookByPropertyService: GetBookByPropertyService;
+  getBookByPropertyService: IGetBookByPropertyService;
 
-  constructor(getBookByPropertyService: GetBookByPropertyService) {
+  constructor(getBookByPropertyService: IGetBookByPropertyService) {
     this.getBookByPropertyService = getBookByPropertyService;
   }
 
@@ -18,7 +18,7 @@ class GetBookByPropertyUseCase {
     limit: number;
     authors?: string;
     genre?: string;
-  }): Promise<IGetAllBooksResponse | { message: string }> {
+  }): Promise<IGetPaginatedBooksResponse | { message: string }> {
     const defaultPage = 1;
     const defaultLimit = 15;
 

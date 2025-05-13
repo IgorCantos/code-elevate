@@ -1,7 +1,7 @@
 import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 import MongoClientSingleton from "../connection/mongo-connection";
-import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
 import { Filter, ObjectId, WithId } from "mongodb";
 
 class BookRepositoryMongo implements IBookRepository {
@@ -11,7 +11,7 @@ class BookRepositoryMongo implements IBookRepository {
   }: {
     page: number;
     limit: number;
-  }): Promise<IGetAllBooksResponse> {
+  }): Promise<IGetPaginatedBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
@@ -65,7 +65,7 @@ class BookRepositoryMongo implements IBookRepository {
     limit: number;
     authors?: string;
     genre?: string;
-  }): Promise<IGetAllBooksResponse> {
+  }): Promise<IGetPaginatedBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 

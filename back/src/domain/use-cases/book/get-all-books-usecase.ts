@@ -1,10 +1,10 @@
-import { GetAllBooksService } from "@/application/services";
-import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetAllBooksService } from "@/domain/interfaces";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
 
 class GetAllBooksUseCase {
-  getAllBooksService: GetAllBooksService;
+  getAllBooksService: IGetAllBooksService;
 
-  constructor(getAllBooksService: GetAllBooksService) {
+  constructor(getAllBooksService: IGetAllBooksService) {
     this.getAllBooksService = getAllBooksService;
   }
 
@@ -14,7 +14,7 @@ class GetAllBooksUseCase {
   }: {
     page: number;
     limit: number;
-  }): Promise<IGetAllBooksResponse | { message: string }> {
+  }): Promise<IGetPaginatedBooksResponse | { message: string }> {
     const defaultPage = 1;
     const defaultLimit = 15;
 
@@ -26,7 +26,7 @@ class GetAllBooksUseCase {
       limit: actualLimit,
     });
 
-    if (!response || response.data.length === 0) {
+    if (!response) {
       return {
         message: "No books found.",
       };

@@ -1,5 +1,5 @@
 import { IBookRepository } from "@/domain/repositories";
-import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
 
 class GetAllBooksService {
   booksRepository: IBookRepository;
@@ -14,7 +14,7 @@ class GetAllBooksService {
   }: {
     page: number;
     limit: number;
-  }): Promise<IGetAllBooksResponse> {
+  }): Promise<IGetPaginatedBooksResponse> {
     const booksList = await this.booksRepository.getAllBooks({ page, limit });
     return booksList;
   }
