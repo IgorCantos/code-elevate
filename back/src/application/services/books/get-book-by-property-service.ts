@@ -1,5 +1,5 @@
 import { IBookRepository } from "@/domain/repositories";
-import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
 
 class GetBookByPropertyService {
   booksRepository: IBookRepository;
@@ -18,7 +18,7 @@ class GetBookByPropertyService {
     limit: number;
     authors?: string;
     genre?: string;
-  }): Promise<IGetAllBooksResponse> {
+  }): Promise<IGetPaginatedBooksResponse> {
     const filter = {
       page,
       limit,

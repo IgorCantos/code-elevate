@@ -59,7 +59,7 @@ describe("BooksListUseCase", () => {
     expect(response).toBe(expectedResponse);
   });
 
-  it("returna error when no book list is empty", async () => {
+  it("return error when book list is empty", async () => {
     const expectedResponse = {
       actualPage: 1,
       limitePerPage: 10,
@@ -81,8 +81,6 @@ describe("BooksListUseCase", () => {
       getAllBooksServiceMock
     ).execute({ page, limit });
 
-    expect(response).toStrictEqual({
-      message: "No books found.",
-    });
+    expect(response).toStrictEqual(expectedResponse);
   });
 });

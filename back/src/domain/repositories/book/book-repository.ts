@@ -33,4 +33,4 @@ interface IBookRepository {
 }
 
 export default IBookRepository;
-export { IGetPaginatedBooksResponse as IGetAllBooksResponse };
+export { IGetPaginatedBooksResponse };

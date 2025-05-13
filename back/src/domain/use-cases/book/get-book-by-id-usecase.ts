@@ -1,10 +1,10 @@
-import { GetBookByIdService } from "@/application/services";
 import { Book } from "@/domain/entities";
+import IGetBookByIdService from "@/domain/interfaces/services/get-books-by-id-interface ";
 
 class GetBookByIdUseCase {
-  getBookByIdService: GetBookByIdService;
+  getBookByIdService: IGetBookByIdService;
 
-  constructor(getBookByIdService: GetBookByIdService) {
+  constructor(getBookByIdService: IGetBookByIdService) {
     this.getBookByIdService = getBookByIdService;
   }
 
