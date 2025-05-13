@@ -18,7 +18,7 @@ describe("BooksListService", () => {
 
     const mockBooksRepository: IBookRepository = {
       getAllBooks: () => Promise.resolve(expectedResponse),
-      getBookById: () => Promise.resolve(null),
+      getBookById: () => Promise.resolve([]),
       getBookByProperty: () => Promise.resolve(expectedResponse),
     };
 

@@ -31,11 +31,11 @@ class GetBookByGenreController {
     } catch (error: any) {
       console.error("Error fetching books list:", error);
 
-      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({
-        message:
-          "Something unexpected happened while retrieving the books list.",
-        error: error.message,
-      });
+      return res
+        .status(error.statusCode || HttpStatus.INTERNAL_SERVER_ERROR)
+        .send({
+          error: error.message,
+        });
     }
   }
 }

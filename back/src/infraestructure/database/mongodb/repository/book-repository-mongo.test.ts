@@ -74,7 +74,7 @@ describe("BookRepositoryMongo", () => {
       expect(result).toEqual(expect.any(Book));
     });
 
-    it("should return null if no book is found", async () => {
+    it("should return empty list if no book is found", async () => {
       mockDb.findOne.mockResolvedValue(null);
 
       const result = await bookRepository.getBookById({
@@ -83,7 +83,7 @@ describe("BookRepositoryMongo", () => {
 
       expect(mockDb.collection).toHaveBeenCalledWith("books");
       expect(mockDb.findOne).toHaveBeenCalledWith({ _id: expect.any(Object) });
-      expect(result).toBeNull();
+      expect(result).toStrictEqual([]);
     });
   });
 

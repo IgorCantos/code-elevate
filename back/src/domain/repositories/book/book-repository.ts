@@ -18,7 +18,7 @@ interface IBookRepository {
     page: number;
     limit: number;
   }): Promise<IGetPaginatedBooksResponse>;
-  getBookById({ id }: { id: string }): Promise<Book | null>;
+  getBookById({ id }: { id: string }): Promise<Book | []>;
   getBookByProperty({
     page,
     limit,

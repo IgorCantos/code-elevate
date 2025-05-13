@@ -1,4 +1,4 @@
-import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories";
 
 interface IGetAllBooksService {
   execute({
@@ -7,7 +7,7 @@ interface IGetAllBooksService {
   }: {
     page: number;
     limit: number;
-  }): Promise<IGetPaginatedBooksResponse | null>;
+  }): Promise<IGetPaginatedBooksResponse>;
 }
 
 export default IGetAllBooksService;

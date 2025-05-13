@@ -1,5 +1,7 @@
-import { IBookRepository } from "@/domain/repositories";
-import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
+import {
+  IBookRepository,
+  IGetPaginatedBooksResponse,
+} from "@/domain/repositories";
 
 class GetBookByPropertyService {
   booksRepository: IBookRepository;

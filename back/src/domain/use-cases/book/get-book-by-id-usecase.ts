@@ -1,5 +1,7 @@
 import { Book } from "@/domain/entities";
-import IGetBookByIdService from "@/domain/interfaces/services/get-books-by-id-interface ";
+import { HttpError } from "@/domain/exceptions";
+import { IGetBookByIdService } from "@/domain/interfaces";
+import HttpStatus from "@/infraestructure/utils/http-status";
 
 class GetBookByIdUseCase {
   getBookByIdService: IGetBookByIdService;
@@ -8,16 +10,14 @@ class GetBookByIdUseCase {
     this.getBookByIdService = getBookByIdService;
   }
 
-  async execute({ id }: { id: string }): Promise<Book | { message: string }> {
+  async execute({ id }: { id: string }): Promise<Book | Error> {
     const response = await this.getBookByIdService.execute({ id });
 
-    if (!response) {
-      return {
-        message: "No book found.",
-      };
+    if (Array.isArray(response) && response.length === 0) {
+      throw new HttpError("No books found.", HttpStatus.NOT_FOUND);
     }
 
-    return response;
+    return response as Book;
   }
 }
 
