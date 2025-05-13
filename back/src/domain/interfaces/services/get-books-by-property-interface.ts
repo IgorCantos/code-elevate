@@ -11,7 +11,7 @@ interface IGetBookByPropertyService {
     limit: number;
     author?: string;
     genre?: string;
-  }): Promise<IGetPaginatedBooksResponse | { message: string }>;
+  }): Promise<IGetPaginatedBooksResponse>;
 }
 
 export default IGetBookByPropertyService;

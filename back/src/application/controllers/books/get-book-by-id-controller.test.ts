@@ -50,7 +50,6 @@ describe("GetBookByIdController", () => {
       HttpStatus.INTERNAL_SERVER_ERROR
     );
     expect(mockReply.send).toHaveBeenCalledWith({
-      message: "Something unexpected happened while retrieving the books list.",
       error: mockError.message,
     });
   });

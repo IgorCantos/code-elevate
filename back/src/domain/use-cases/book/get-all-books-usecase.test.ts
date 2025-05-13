@@ -77,10 +77,10 @@ describe("BooksListUseCase", () => {
     const page = 1;
     const limit = 10;
 
-    const response = await new GetAllBooksUseCase(
-      getAllBooksServiceMock
-    ).execute({ page, limit });
+    const getAllBooksUseCase = new GetAllBooksUseCase(getAllBooksServiceMock);
 
-    expect(response).toStrictEqual(expectedResponse);
+    await expect(getAllBooksUseCase.execute({ page, limit })).rejects.toThrow(
+      "No books found."
+    );
   });
 });

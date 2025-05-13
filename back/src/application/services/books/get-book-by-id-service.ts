@@ -8,7 +8,7 @@ class GetBookByIdService {
     this.booksRepository = booksRepository;
   }
 
-  async execute({ id }: { id: string }): Promise<Book | null> {
+  async execute({ id }: { id: string }): Promise<Book | []> {
     const booksList = await this.booksRepository.getBookById({ id });
     return booksList;
   }

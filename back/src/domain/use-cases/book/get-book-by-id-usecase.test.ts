@@ -16,30 +16,28 @@ describe("BooksListUseCase", () => {
       data: [makeBookMock()],
     };
 
-    const getAllBooksServiceMock = {
+    const getBookByIdServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetBookByIdService;
 
     const response = await new GetBookByIdUseCase(
-      getAllBooksServiceMock
+      getBookByIdServiceMock
     ).execute({ id: bookId });
 
     expect(response).toBe(expectedResponse);
   });
 
   it("returna error when no book list is empty", async () => {
-    const expectedResponse = null;
+    const expectedResponse: [] = [];
 
-    const getAllBooksServiceMock = {
+    const getBookByIdServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
     } as unknown as GetBookByIdService;
 
-    const response = await new GetBookByIdUseCase(
-      getAllBooksServiceMock
-    ).execute({ id: bookId });
+    const getBookByIdUseCase = new GetBookByIdUseCase(getBookByIdServiceMock);
 
-    expect(response).toStrictEqual({
-      message: "No book found.",
-    });
+    await expect(getBookByIdUseCase.execute({ id: bookId })).rejects.toThrow(
+      "No books found."
+    );
   });
 });

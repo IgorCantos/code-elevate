@@ -1,5 +1,7 @@
+import { HttpError } from "@/domain/exceptions";
 import { IGetAllBooksService } from "@/domain/interfaces";
-import { IGetPaginatedBooksResponse } from "@/domain/repositories/book/book-repository";
+import { IGetPaginatedBooksResponse } from "@/domain/repositories";
+import HttpStatus from "@/infraestructure/utils/http-status";
 
 class GetAllBooksUseCase {
   getAllBooksService: IGetAllBooksService;
@@ -14,7 +16,7 @@ class GetAllBooksUseCase {
   }: {
     page: number;
     limit: number;
-  }): Promise<IGetPaginatedBooksResponse | { message: string }> {
+  }): Promise<IGetPaginatedBooksResponse | Error> {
     const defaultPage = 1;
     const defaultLimit = 15;
 
@@ -26,10 +28,8 @@ class GetAllBooksUseCase {
       limit: actualLimit,
     });
 
-    if (!response) {
-      return {
-        message: "No books found.",
-      };
+    if (!response.data.length) {
+      throw new HttpError("No books found.", HttpStatus.NOT_FOUND);
     }
 
     return response;

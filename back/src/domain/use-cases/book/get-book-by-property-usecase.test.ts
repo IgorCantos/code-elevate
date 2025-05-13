@@ -56,7 +56,15 @@ describe("BooksListUseCase", () => {
   });
 
   it("returna error when no book list is empty", async () => {
-    const expectedResponse = null;
+    const expectedResponse = {
+      actualPage: 1,
+      limitePerPage: 10,
+      totalDocuments: 50,
+      totalPages: 20,
+      hasNextPage: true,
+      hasPreviousPage: false,
+      data: [],
+    };
 
     const getAllBooksServiceMock = {
       execute: () => Promise.resolve(expectedResponse),
@@ -65,12 +73,12 @@ describe("BooksListUseCase", () => {
     const page = 1;
     const limit = 10;
 
-    const response = await new GetBookByPropertyUseCase(
+    const getBookByPropertyUseCase = new GetBookByPropertyUseCase(
       getAllBooksServiceMock
-    ).execute({ page, limit, genre: bookMock.genre });
+    );
 
-    expect(response).toStrictEqual({
-      message: "No book found.",
-    });
+    await expect(
+      getBookByPropertyUseCase.execute({ page, limit, genre: bookMock.genre })
+    ).rejects.toThrow("No books found.");
   });
 });
