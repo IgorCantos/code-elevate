@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
@@ -53,6 +54,7 @@ export default function RecentlyViewedBooks({ books }) {
                   cursor: 'pointer',
                 }}
                 onClick={() => navigate(`/books/${book._id}`, { state: book })}
+                data-testid={`book-thumbnail-${index}`}
               />
             </Card>
           </Box>
