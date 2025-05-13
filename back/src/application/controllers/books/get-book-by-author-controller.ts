@@ -14,7 +14,7 @@ class GetBookByAuthorController {
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const { author: authors } = req.params as {
+      const { author } = req.params as {
         author: string;
       };
       const page = req.headers["page"] as string;
@@ -23,7 +23,7 @@ class GetBookByAuthorController {
       const response = await this.getBookByPropertyUseCase.execute({
         page: Number(page),
         limit: Number(limit),
-        authors,
+        author,
       });
 
       return res.status(HttpStatus.SUCCESS).send(response);

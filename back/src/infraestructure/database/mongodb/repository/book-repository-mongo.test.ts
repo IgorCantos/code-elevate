@@ -131,15 +131,15 @@ describe("BookRepositoryMongo", () => {
       const result = await bookRepository.getBookByProperty({
         page,
         limit,
-        authors: author,
+        author,
       });
 
       expect(mockDb.collection).toHaveBeenCalledWith("books");
-      expect(mockDb.find).toHaveBeenCalledWith({ authors: author });
+      expect(mockDb.find).toHaveBeenCalledWith({ author });
       expect(mockDb.skip).toHaveBeenCalledWith(0);
       expect(mockDb.limit).toHaveBeenCalledWith(20);
       expect(mockDb.toArray).toHaveBeenCalled();
-      expect(mockDb.countDocuments).toHaveBeenCalledWith({ authors: author });
+      expect(mockDb.countDocuments).toHaveBeenCalledWith({ author });
 
       expect(result).toEqual({
         actualPage: 1,

@@ -58,12 +58,12 @@ class BookRepositoryMongo implements IBookRepository {
   async getBookByProperty({
     page,
     limit,
-    authors,
+    author,
     genre,
   }: {
     page: number;
     limit: number;
-    authors?: string;
+    author?: string;
     genre?: string;
   }): Promise<IGetPaginatedBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
@@ -72,7 +72,7 @@ class BookRepositoryMongo implements IBookRepository {
     const skip = (page - 1) * limit;
 
     const filter = {
-      ...(authors && { authors }),
+      ...(author && { author }),
       ...(genre && { genre }),
     };
 

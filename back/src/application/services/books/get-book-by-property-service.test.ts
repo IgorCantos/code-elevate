@@ -57,7 +57,7 @@ describe("GetBookByPropertyService", () => {
     const response = await service.execute({
       page,
       limit,
-      authors: bookMock.authors,
+      author: bookMock.author,
     });
 
     expect(response).toBe(paginatedBooksMocks);

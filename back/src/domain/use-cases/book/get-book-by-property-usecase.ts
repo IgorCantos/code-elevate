@@ -11,12 +11,12 @@ class GetBookByPropertyUseCase {
   async execute({
     page,
     limit,
-    authors,
+    author,
     genre,
   }: {
     page: number;
     limit: number;
-    authors?: string;
+    author?: string;
     genre?: string;
   }): Promise<IGetPaginatedBooksResponse | { message: string }> {
     const defaultPage = 1;
@@ -28,7 +28,7 @@ class GetBookByPropertyUseCase {
     const response = await this.getBookByPropertyService.execute({
       page: actualPage,
       limit: actualLimit,
-      authors,
+      author,
       genre,
     });
 
