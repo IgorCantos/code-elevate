@@ -22,6 +22,7 @@ import {
 } from 'src/services/books/books-service';
 import BookSkeletonList from './book-store-view-loading';
 import RecentlyViewedBooks from './recently-viewed-books';
+import ErrorView from '../error/error-view';
 
 const ITEMS_PER_PAGE = 12;
 
@@ -40,6 +41,7 @@ const CATEGORIES = [
 
 export default function BookStoreView() {
   const navigate = useNavigate();
+  const [error, setError] = useState(false);
 
   const [isLoading, setIsLoading] = useState(true);
   const [isFetchingRecentlyViewedBooks, setIsFetchingRecentlyViewedBooks] = useState(true);
@@ -57,12 +59,13 @@ export default function BookStoreView() {
 
   const fetchBooks = useCallback(async () => {
     try {
+      setError(false);
       setIsLoading(true);
       const data = await getAllBooks(page, ITEMS_PER_PAGE);
       const { data: books, totalDocuments, totalPages } = data;
       setBooksList({ books, totalDocuments, totalPages });
     } catch (err) {
-      // TODO fix error
+      setError(true);
     } finally {
       setIsLoading(false);
     }
@@ -70,12 +73,13 @@ export default function BookStoreView() {
 
   async function fetchRecentlyViewedBooks() {
     try {
+      setError(false);
       setIsFetchingRecentlyViewedBooks(true);
       const data = await getRecentlyViewedBooks();
 
       setRecentlyViewedBooks(data);
     } catch (err) {
-      // TODO fix error
+      setError(true);
     } finally {
       setIsFetchingRecentlyViewedBooks(false);
     }
@@ -84,13 +88,14 @@ export default function BookStoreView() {
   const fetchBooksByAuthor = useCallback(
     async (author) => {
       try {
+        setError(false);
         setIsLoading(true);
         const data = await getBooksByAuthor(authorPage, ITEMS_PER_PAGE, author);
         const { data: books, totalDocuments, totalPages } = data;
         setBooksList({ books, totalDocuments, totalPages });
         setAuthorSearch(author);
       } catch (err) {
-        // TODO fix error
+        setError(true);
       } finally {
         setIsLoading(false);
       }
@@ -101,13 +106,14 @@ export default function BookStoreView() {
   const fetchBooksByGenre = useCallback(
     async (genre) => {
       try {
+        setError(false);
         setIsLoading(true);
         const data = await getBooksByGenre(genrePage, ITEMS_PER_PAGE, genre);
         const { data: books, totalDocuments, totalPages } = data;
         setBooksList({ books, totalDocuments, totalPages });
         setGenreSearch(genre);
       } catch (err) {
-        // TODO fix error
+        setError(true);
       } finally {
         setIsLoading(false);
       }
@@ -161,184 +167,208 @@ export default function BookStoreView() {
 
   return (
     <Container sx={{ py: 4 }} maxWidth={false}>
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={2}>
-          <Box sx={{ border: '1px solid #eee', borderRadius: 2, p: 2 }}>
-            <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-              Gênero
-            </Typography>
-
-            {CATEGORIES.map((categorie) => (
-              <Box key={categorie}>
-                <Button
-                  variant="text"
-                  size="small"
-                  sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
-                  onClick={() => {
-                    setGenreSearch(categorie);
-                    setGenrePage(1);
-                    setAuthorSearch('');
-                  }}
-                >
-                  <Typography variant="subtitle1" sx={{ cursor: 'pointer' }} gutterBottom>
-                    {categorie}
-                  </Typography>
-                </Button>
-              </Box>
-            ))}
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={10}>
+      {error ? (
+        <ErrorView
+          title="Erro ao carregar livros"
+          subtitle="Ocorreu um erro ao carregar os livros. Por favor, tente novamente."
+          buttonText="Tentar novamente"
+          onButtonClick={() => {
+            setError(false);
+            fetchBooks();
+          }}
+        />
+      ) : (
+        <Grid container spacing={4}>
           {isLoading ? (
             <BookSkeletonList />
           ) : (
             <>
-              {!isFetchingRecentlyViewedBooks && recentlyViewedBooks?.length && (
-                <RecentlyViewedBooks books={recentlyViewedBooks} />
-              )}
+              <Grid item xs={12} md={2}>
+                <Box sx={{ border: '1px solid #eee', borderRadius: 2, p: 2 }}>
+                  <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                    Gênero
+                  </Typography>
 
-              <Box mb={2}>
-                <Typography variant="h6" fontWeight="bold" gutterBottom mb={3}>
-                  {(() => {
-                    if (authorSearch) return `Resultados para autor: ${authorSearch}`;
-                    if (genreSearch) return `Resultados para gênero: ${genreSearch}`;
-                    return 'Para você';
-                  })()}
-                </Typography>
-
-                {authorSearch && (
-                  <Chip
-                    label={authorSearch}
-                    onDelete={handleCleanAuthorSearch}
-                    color="primary"
-                    sx={{ mb: 2 }}
-                  />
-                )}
-
-                {genreSearch && (
-                  <Chip
-                    label={genreSearch}
-                    onDelete={handleCleanGenreSearch}
-                    color="primary"
-                    sx={{ mb: 2 }}
-                  />
-                )}
-              </Box>
-
-              <Grid container spacing={2} sx={{ border: '1px solid #eee', borderRadius: 2, p: 2 }}>
-                {paginatedBooks?.map((book, index) => (
-                  <Grid item xs={6} sm={4} md={3} key={index}>
-                    <Card
-                      sx={{
-                        border: '1px solid #F4F0F0',
-                        borderRadius: '20px',
-                        boxShadow: 'none',
-                        py: 3,
-                      }}
-                    >
-                      <Box px={3} textAlign="center">
-                        <CardMedia
-                          component="img"
-                          image={book.thumbnail}
-                          alt={book.title}
-                          sx={{
-                            maxWidth: 150,
-                            maxHeight: 210,
-                            mx: 'auto',
-                            borderRadius: '20px',
-                            mb: 2,
-                            cursor: 'pointer',
-                          }}
-                          onClick={() => navigate(`/books/${book._id}`, { state: book })}
-                        />
-                        <Typography
-                          variant="body2"
-                          fontWeight="bold"
-                          sx={{
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                            cursor: 'pointer',
-                          }}
-                          onClick={() => navigate(`/books/${book._id}`, { state: book })}
-                        >
-                          {book.title}
-                        </Typography>
-
-                        <Button
-                          variant="text"
-                          size="small"
-                          sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
-                          onClick={() => {
-                            setAuthorSearch(book.authors);
-                            setAuthorPage(1);
-                          }}
-                        >
-                          <Typography sx={{ cursor: 'pointer' }}>{book.authors}</Typography>
-                        </Button>
-
-                        <Box mt={1} onClick={() => navigate(`/books/${book._id}`, { state: book })}>
-                          <Rating value={book.averageRating} readOnly size="small" />
-
-                          <Typography variant="body1" fontWeight="bold">
-                            {new Intl.NumberFormat('pt-BR', {
-                              style: 'currency',
-                              currency: 'BRL',
-                            }).format(book.amount)}
-                          </Typography>
-                        </Box>
-                      </Box>
-
-                      <Box
-                        sx={{
-                          px: 3,
-                          mt: 1,
-                          display: 'flex',
-                          gap: 1,
+                  {CATEGORIES.map((categorie) => (
+                    <Box key={categorie}>
+                      <Button
+                        variant="text"
+                        size="small"
+                        sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
+                        onClick={() => {
+                          setGenreSearch(categorie);
+                          setGenrePage(1);
+                          setAuthorSearch('');
                         }}
                       >
-                        <Tooltip title="Adicionar aos favoritos" arrow>
-                          <Button
-                            variant="outlined"
-                            sx={{ minWidth: 4, px: 1, borderRadius: '30px', borderColor: 'red' }}
-                          >
-                            <FavoriteBorder sx={{ color: 'red' }} />
-                          </Button>
-                        </Tooltip>
-                        <Button
-                          variant="contained"
-                          startIcon={<AddShoppingCart />}
-                          fullWidth
-                          sx={{
-                            flex: 1,
-                            textTransform: 'none',
-                            borderRadius: '15px',
-                            backgroundColor: '#cc0000',
-                            '&:hover': {
-                              backgroundColor: '#900',
-                            },
-                          }}
-                        >
-                          <Typography variant="body2">Adicionar</Typography>
-                        </Button>
-                      </Box>
-                    </Card>
-                  </Grid>
-                ))}
+                        <Typography variant="subtitle1" sx={{ cursor: 'pointer' }} gutterBottom>
+                          {categorie}
+                        </Typography>
+                      </Button>
+                    </Box>
+                  ))}
+                </Box>
               </Grid>
 
-              <Box display="flex" justifyContent="center" mt={4}>
-                <Pagination
-                  count={totalPages || 1}
-                  page={authorSearch ? authorPage : page}
-                  onChange={handlePageChange}
-                />
-              </Box>
+              <Grid item xs={12} md={10}>
+                <>
+                  {!isFetchingRecentlyViewedBooks && recentlyViewedBooks.length > 0 && (
+                    <RecentlyViewedBooks books={recentlyViewedBooks} />
+                  )}
+
+                  <Box mb={2}>
+                    <Typography variant="h6" fontWeight="bold" gutterBottom mb={3}>
+                      {(() => {
+                        if (authorSearch) return `Resultados para autor: ${authorSearch}`;
+                        if (genreSearch) return `Resultados para gênero: ${genreSearch}`;
+                        return 'Para você';
+                      })()}
+                    </Typography>
+
+                    {authorSearch && (
+                      <Chip
+                        label={authorSearch}
+                        onDelete={handleCleanAuthorSearch}
+                        color="primary"
+                        sx={{ mb: 2 }}
+                      />
+                    )}
+
+                    {genreSearch && (
+                      <Chip
+                        label={genreSearch}
+                        onDelete={handleCleanGenreSearch}
+                        color="primary"
+                        sx={{ mb: 2 }}
+                      />
+                    )}
+                  </Box>
+                  <Grid
+                    container
+                    spacing={2}
+                    sx={{ border: '1px solid #eee', borderRadius: 2, p: 2 }}
+                  >
+                    {paginatedBooks?.map((book, index) => (
+                      <Grid item xs={6} sm={4} md={3} key={index}>
+                        <Card
+                          sx={{
+                            border: '1px solid #F4F0F0',
+                            borderRadius: '20px',
+                            boxShadow: 'none',
+                            py: 3,
+                          }}
+                        >
+                          <Box px={3} textAlign="center">
+                            <CardMedia
+                              component="img"
+                              image={book.thumbnail}
+                              alt={book.title}
+                              sx={{
+                                maxWidth: 150,
+                                maxHeight: 210,
+                                mx: 'auto',
+                                borderRadius: '20px',
+                                mb: 2,
+                                cursor: 'pointer',
+                              }}
+                              onClick={() => navigate(`/books/${book._id}`, { state: book })}
+                            />
+                            <Typography
+                              variant="body2"
+                              fontWeight="bold"
+                              sx={{
+                                whiteSpace: 'nowrap',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                cursor: 'pointer',
+                              }}
+                              onClick={() => navigate(`/books/${book._id}`, { state: book })}
+                            >
+                              {book.title}
+                            </Typography>
+
+                            <Button
+                              variant="text"
+                              size="small"
+                              sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
+                              onClick={() => {
+                                setAuthorSearch(book.authors);
+                                setAuthorPage(1);
+                              }}
+                            >
+                              <Typography sx={{ cursor: 'pointer' }}>{book.authors}</Typography>
+                            </Button>
+
+                            <Box
+                              mt={1}
+                              onClick={() => navigate(`/books/${book._id}`, { state: book })}
+                            >
+                              <Rating value={book.averageRating} readOnly size="small" />
+
+                              <Typography variant="body1" fontWeight="bold">
+                                {new Intl.NumberFormat('pt-BR', {
+                                  style: 'currency',
+                                  currency: 'BRL',
+                                }).format(book.amount)}
+                              </Typography>
+                            </Box>
+                          </Box>
+
+                          <Box
+                            sx={{
+                              px: 3,
+                              mt: 1,
+                              display: 'flex',
+                              gap: 1,
+                            }}
+                          >
+                            <Tooltip title="Adicionar aos favoritos" arrow>
+                              <Button
+                                variant="outlined"
+                                sx={{
+                                  minWidth: 4,
+                                  px: 1,
+                                  borderRadius: '30px',
+                                  borderColor: 'red',
+                                }}
+                              >
+                                <FavoriteBorder sx={{ color: 'red' }} />
+                              </Button>
+                            </Tooltip>
+                            <Button
+                              variant="contained"
+                              startIcon={<AddShoppingCart />}
+                              fullWidth
+                              sx={{
+                                flex: 1,
+                                textTransform: 'none',
+                                borderRadius: '15px',
+                                backgroundColor: '#cc0000',
+                                '&:hover': {
+                                  backgroundColor: '#900',
+                                },
+                              }}
+                            >
+                              <Typography variant="body2">Adicionar</Typography>
+                            </Button>
+                          </Box>
+                        </Card>
+                      </Grid>
+                    ))}
+                  </Grid>
+                  <Box display="flex" justifyContent="center" mt={4}>
+                    <Pagination
+                      count={totalPages || 1}
+                      page={authorSearch ? authorPage : page}
+                      onChange={handlePageChange}
+                    />
+                  </Box>
+                </>
+              </Grid>
             </>
           )}
         </Grid>
-      </Grid>
+      )}
     </Container>
   );
 }
