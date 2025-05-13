@@ -3,7 +3,7 @@
   "info": {
     "title": "Code elevate - Igor dos santos cabral",
     "version": "1.0.0",
-    "description": ""
+    "description": "Esta API permite o gerenciamento e consulta de livros para o projeto do Code Elevate. Com ela, é possível buscar livros, por autor, gênero ou ID, além de atualizar e visualizar os livros recentemente acessados por um usuário."
   },
   "servers": [
     {
@@ -35,20 +35,16 @@
             }
           }
         ],
-        "responses": {}
-      }
-    },
-    "/v1/books/:bookId": {
-      "get": {
-        "summary": "Get Book By Id",
-        "parameters": [],
         "responses": {
           "200": {
-            "description": "Book found",
+            "description": "List of books",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Book"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
                 }
               }
             }
@@ -56,11 +52,88 @@
         }
       }
     },
-    "/v1/books/genre/:genre": {
-      "parameters": [],
+    "/v1/books/{bookId}": {
+      "get": {
+        "summary": "Get Book By Id",
+        "parameters": [
+          {
+            "name": "bookId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No books found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "No books found."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 500
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/books/genre/{genre}": {
       "get": {
         "summary": "Get Book By Genre",
         "parameters": [
+          {
+            "name": "genre",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
           {
             "name": "page",
             "in": "header",
@@ -80,15 +153,77 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No books found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "No books found."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 500
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
-    "/v1/books/author/:author": {
+    "/v1/books/author/{author}": {
       "parameters": [],
       "get": {
         "summary": "Get Book By Author",
         "parameters": [
           {
+            "name": "author",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "page",
             "in": "header",
             "required": false,
@@ -107,30 +242,75 @@
             }
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No books found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 404
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "No books found."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "statusCode": {
+                      "type": "integer",
+                      "example": 500
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Internal server error"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
-    "/v1/users/123/recently-viewed": {
+    "/v1/users/{userId}/recently-viewed": {
       "parameters": [],
       "post": {
         "summary": "Update recently viewed books",
         "parameters": [
           {
-            "name": "user-id",
-            "in": "header",
-            "required": false,
+            "name": "userId",
+            "in": "path",
+            "required": true,
             "example": "123",
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": false,
-            "example": "application/json",
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -194,21 +374,12 @@
         "summary": "Getrecently viewed books Copy",
         "parameters": [
           {
-            "name": "user-id",
-            "in": "header",
-            "required": false,
+            "name": "userId",
+            "in": "path",
+            "required": true,
             "example": "123",
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "Content-Type",
-            "in": "header",
-            "required": false,
-            "example": "application/json",
-            "schema": {
-              "type": "string"
             }
           }
         ],
@@ -234,7 +405,24 @@
       "get": {
         "summary": "Health check",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "API is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "Ok"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },

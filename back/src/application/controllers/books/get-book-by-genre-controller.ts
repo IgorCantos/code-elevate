@@ -34,7 +34,7 @@ class GetBookByGenreController {
       return res
         .status(error.statusCode || HttpStatus.INTERNAL_SERVER_ERROR)
         .send({
-          error: error.message,
+          error: error.message || "Internal server error",
         });
     }
   }

@@ -3,6 +3,7 @@ import HttpStatus from "@/infraestructure/utils/http-status";
 import GetAllBooksController from "./get-all-books-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
 import { GetAllBooksUseCase } from "@/domain/use-cases";
+import { HttpError } from "@/domain/exceptions";
 
 describe("GetAllBooksController", () => {
   let getAllBooksUseCase: GetAllBooksUseCase;
@@ -41,8 +42,8 @@ describe("GetAllBooksController", () => {
     expect(mockReply.send).toHaveBeenCalledWith(mockResponse);
   });
 
-  it("return an error response when getAllBooksUseCase rejects", async () => {
-    const mockError = new Error("Database error");
+  it("return an error without message and status code response when getAllBooksUseCase rejects", async () => {
+    const mockError = new Error();
     (getAllBooksUseCase.execute as jest.Mock).mockRejectedValue(mockError);
 
     await booksController.execute(mockRequest, mockReply);
@@ -51,6 +52,19 @@ describe("GetAllBooksController", () => {
     expect(mockReply.status).toHaveBeenCalledWith(
       HttpStatus.INTERNAL_SERVER_ERROR
     );
+    expect(mockReply.send).toHaveBeenCalledWith({
+      error: "Internal server error",
+    });
+  });
+
+  it("return an error with message and status code  when getAllBooksUseCase rejects", async () => {
+    const mockError = new HttpError("Not found error", HttpStatus.NOT_FOUND);
+    (getAllBooksUseCase.execute as jest.Mock).mockRejectedValue(mockError);
+
+    await booksController.execute(mockRequest, mockReply);
+
+    expect(getAllBooksUseCase.execute).toHaveBeenCalledTimes(1);
+    expect(mockReply.status).toHaveBeenCalledWith(HttpStatus.NOT_FOUND);
     expect(mockReply.send).toHaveBeenCalledWith({
       error: mockError.message,
     });
