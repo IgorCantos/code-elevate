@@ -22,6 +22,11 @@ Tudo isso performance otimizada por cache e estrutura preparada para escalabilid
 4. O front-end pode se acessado através do link [http://localhost:3030/](http://localhost:3030/)
 5. O back-end pode se acessado através do link [http://localhost:8080/v1/books](http://localhost:8080/v1/books/)
 
+### 🛠️ Testes unitários
+
+![Testes unitários back-end](docs/teste-back.png)
+![Testes unitários front-end](docs/teste-front.png)
+
 ### 🛠️ Tecnologias Utilizadas
 
 #### Back-end
