@@ -1,4 +1,3 @@
-import { Book } from "@/domain/entities";
 import { IBookRepository } from "@/domain/repositories";
 import { IGetAllBooksResponse } from "@/domain/repositories/book/book-repository";
 
