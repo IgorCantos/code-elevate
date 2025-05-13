@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:8080'; // TODO fix this for docker
+const baseUrl = 'http://localhost:8080';
 
 export async function getAllBooks(page, itemsPerPage) {
   const response = await axios.get(`${baseUrl}/v1/books?page=${page}&limit=${itemsPerPage}`, {

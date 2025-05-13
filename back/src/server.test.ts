@@ -1,11 +1,9 @@
 import Fastify from "fastify";
-import cors from "@fastify/cors";
 import { startServer } from "./server";
-import { register } from "tsconfig-paths";
 
 jest.mock("fastify", () => {
   return {
-    __esModule: true, // para suportar import default
+    __esModule: true,
     default: jest.fn(() => ({
       register: jest.fn(),
       listen: jest.fn(),

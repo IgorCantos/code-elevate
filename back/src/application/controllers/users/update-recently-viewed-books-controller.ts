@@ -28,8 +28,6 @@ class UpdateRecentlyViewedBooksController {
     } catch (error: any) {
       console.error("Error updating the user recently viewed books:", error);
 
-      // TODO add exception handler
-
       return res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({
         message:
           "Something unexpected happened while update the user recently viewed books.",

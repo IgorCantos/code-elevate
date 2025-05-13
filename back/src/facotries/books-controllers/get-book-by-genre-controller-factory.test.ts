@@ -9,8 +9,8 @@ jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
 jest.mock("@/infraestructure/database/mongodb");
 
-describe.only("GetBookByGenreControllerFactory", () => {
-  it("should create an instance of GetBookByGenreControllerFactory", () => {
+describe("GetBookByGenreControllerFactory", () => {
+  it("should create an instance of GetBookByGenreController", () => {
     const factory = new GetBookByGenreControllerFactory();
     const controller = factory.create();
 
