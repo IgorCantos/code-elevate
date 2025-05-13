@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AddShoppingCart, FavoriteBorder } from '@mui/icons-material/';
@@ -195,6 +196,7 @@ export default function BookStoreView() {
                         variant="text"
                         size="small"
                         sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
+                        data-testid={`categories-button-${categorie}`}
                         onClick={() => {
                           setGenreSearch(categorie);
                           setGenrePage(1);
@@ -231,6 +233,7 @@ export default function BookStoreView() {
                         onDelete={handleCleanAuthorSearch}
                         color="primary"
                         sx={{ mb: 2 }}
+                        data-testid="clear-author-search"
                       />
                     )}
 
@@ -240,6 +243,7 @@ export default function BookStoreView() {
                         onDelete={handleCleanGenreSearch}
                         color="primary"
                         sx={{ mb: 2 }}
+                        data-testeid="clear-genre-search"
                       />
                     )}
                   </Box>
@@ -292,11 +296,12 @@ export default function BookStoreView() {
                               size="small"
                               sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}
                               onClick={() => {
-                                setAuthorSearch(book.authors);
+                                setAuthorSearch(book.author);
                                 setAuthorPage(1);
                               }}
+                              data-testid={`author-btn-${index}`}
                             >
-                              <Typography sx={{ cursor: 'pointer' }}>{book.authors}</Typography>
+                              <Typography sx={{ cursor: 'pointer' }}>{book.author}</Typography>
                             </Button>
 
                             <Box
