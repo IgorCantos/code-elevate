@@ -4,12 +4,12 @@ interface IGetBookByPropertyService {
   execute({
     page,
     limit,
-    authors,
+    author,
     genre,
   }: {
     page: number;
     limit: number;
-    authors?: string;
+    author?: string;
     genre?: string;
   }): Promise<IGetPaginatedBooksResponse | { message: string }>;
 }

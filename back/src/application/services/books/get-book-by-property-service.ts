@@ -11,18 +11,18 @@ class GetBookByPropertyService {
   async execute({
     page,
     limit,
-    authors,
+    author,
     genre,
   }: {
     page: number;
     limit: number;
-    authors?: string;
+    author?: string;
     genre?: string;
   }): Promise<IGetPaginatedBooksResponse> {
     const filter = {
       page,
       limit,
-      ...(authors && { authors }),
+      ...(author && { author }),
       ...(genre && { genre }),
     };
 

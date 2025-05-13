@@ -1,7 +1,7 @@
 class Book {
   _id: string;
   title: string;
-  authors: string;
+  author: string;
   publishedDate: string;
   description: string;
   genre: string;
@@ -15,7 +15,7 @@ class Book {
   constructor({
     _id,
     title,
-    authors,
+    author,
     publishedDate,
     description,
     genre,
@@ -28,7 +28,7 @@ class Book {
   }: Book) {
     this._id = _id;
     this.title = title;
-    this.authors = authors;
+    this.author = author;
     this.publishedDate = publishedDate;
     this.description = description;
     this.genre = genre;
@@ -47,8 +47,8 @@ class Book {
     if (!this.title) {
       throw new Error("Title is required");
     }
-    if (!this.authors) {
-      throw new Error("Authors are required");
+    if (!this.author) {
+      throw new Error("Author are required");
     }
     if (!this.publishedDate) {
       throw new Error("Published date is required");
