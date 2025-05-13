@@ -12,6 +12,9 @@ export default {
   ],
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov"],
-  modulePathIgnorePatterns: ["<rootDir>/src/infraestructure/config/aliases.ts"],
+  modulePathIgnorePatterns: [
+    "<rootDir>/src/infraestructure/config/aliases.ts",
+    "<rootDir>/dist/",
+  ],
   testPathIgnorePatterns: ["<rootDir>/dist/"],
 };

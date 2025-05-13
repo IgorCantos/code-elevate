@@ -4,7 +4,7 @@ import { faker } from "@faker-js/faker";
 const makeBookDataMock = () => ({
   _id: "1",
   title: "Test Book",
-  authors: faker.person.fullName(),
+  author: faker.person.fullName(),
   publishedDate: faker.date.past({ years: 20 }).toISOString().split("T")[0],
   description: "A test book description",
   genre: faker.commerce.department(),
