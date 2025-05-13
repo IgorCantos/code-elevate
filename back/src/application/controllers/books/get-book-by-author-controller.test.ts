@@ -33,7 +33,7 @@ describe("GetBookByAuthorController", () => {
     } as unknown as FastifyReply;
   });
 
-  it("return a successful response when getBookByIdUseCase resolves", async () => {
+  it("return a successful response when GetBookByAuthorController resolves", async () => {
     const mockResponse = [makeBookMock()];
     (getBookByPropertyUseCase.execute as jest.Mock).mockResolvedValue(
       mockResponse
@@ -46,7 +46,7 @@ describe("GetBookByAuthorController", () => {
     expect(mockReply.send).toHaveBeenCalledWith(mockResponse);
   });
 
-  it("return an error response when getBookByIdUseCase rejects", async () => {
+  it("return an error response when GetBookByAuthorController rejects", async () => {
     const mockError = new Error();
     (getBookByPropertyUseCase.execute as jest.Mock).mockRejectedValue(
       mockError

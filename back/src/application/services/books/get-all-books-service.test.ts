@@ -2,7 +2,7 @@ import { makeBookMock } from "@/__mocks__/book-mock";
 import GetAllBooksService from "./get-all-books-service";
 import { IBookRepository } from "@/domain/repositories";
 
-describe("BooksListService", () => {
+describe("GetAllBooksService", () => {
   it("succesfully retries a books list with pagination", async () => {
     const booksMock = [makeBookMock()];
 

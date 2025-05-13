@@ -1,4 +1,3 @@
-import { MongoClient } from "mongodb";
 import MongoClientSingleton from "../connection/mongo-connection";
 import BookRepositoryMongo from "./book-repository-mongo";
 import { Book } from "@/domain/entities";

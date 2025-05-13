@@ -2,7 +2,7 @@ import { makeBookMock } from "@/__mocks__/book-mock";
 import GetBookByIdUseCase from "./get-book-by-id-usecase";
 import { GetBookByIdService } from "@/application/services";
 
-describe("BooksListUseCase", () => {
+describe("GetBookByIdUseCase", () => {
   const bookId = "1234567890";
 
   it("return a book list with pagination", async () => {

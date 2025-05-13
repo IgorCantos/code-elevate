@@ -2,7 +2,7 @@ import { makeBookMock } from "@/__mocks__/book-mock";
 import { GetBookByPropertyService } from "@/application/services";
 import GetBookByPropertyUseCase from "./get-book-by-property-usecase";
 
-describe("BooksListUseCase", () => {
+describe("GetBookByPropertyUseCase", () => {
   const bookMock = makeBookMock();
 
   it("return a book list with pagination", async () => {

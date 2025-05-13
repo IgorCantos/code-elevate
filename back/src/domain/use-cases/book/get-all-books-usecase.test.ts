@@ -2,7 +2,7 @@ import { makeBookMock } from "@/__mocks__/book-mock";
 import GetAllBooksUseCase from "./get-all-books-usecase";
 import { GetAllBooksService } from "@/application/services";
 
-describe("BooksListUseCase", () => {
+describe("GetAllBooksUseCase", () => {
   it("return a book list with pagination", async () => {
     const expectedResponse = {
       actualPage: 1,

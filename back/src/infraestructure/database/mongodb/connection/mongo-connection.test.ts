@@ -1,4 +1,3 @@
-import { MongoClient, Db } from "mongodb";
 import MongoClientSingleton from "./mongo-connection";
 
 jest.mock("mongodb", () => {
