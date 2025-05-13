@@ -14,8 +14,7 @@ class GetAllBooksController {
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const page = req.headers["page"] as string;
-      const limit = req.headers["limit"] as string;
+      const { page, limit } = req.query as { page: string; limit: string };
 
       const response = await this.getAllBooksUseCase.execute({
         page: Number(page),

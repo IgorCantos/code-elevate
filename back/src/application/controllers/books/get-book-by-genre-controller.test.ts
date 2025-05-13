@@ -19,7 +19,7 @@ describe("GetBookByGenreController", () => {
     booksController = new GetBookByGenreController(getBookByPropertyUseCase);
 
     mockRequest = {
-      headers: {
+      query: {
         page: 1,
         limit: 10,
       },
@@ -63,7 +63,7 @@ describe("GetBookByGenreController", () => {
     });
   });
 
-  it("return an error with message and status code  when getBookByPropertyUseCase rejects", async () => {
+  it("return an error with message and status code when getBookByPropertyUseCase rejects", async () => {
     const mockError = new HttpError("Not found error", HttpStatus.NOT_FOUND);
     (getBookByPropertyUseCase.execute as jest.Mock).mockRejectedValue(
       mockError
