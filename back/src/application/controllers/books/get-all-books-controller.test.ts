@@ -19,9 +19,9 @@ describe("GetAllBooksController", () => {
     booksController = new GetAllBooksController(getAllBooksUseCase);
 
     mockRequest = {
-      headers: {
-        page: "1",
-        limit: "10",
+      query: {
+        page: 1,
+        limit: 10,
       },
     } as unknown as FastifyRequest;
 

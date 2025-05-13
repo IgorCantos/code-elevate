@@ -19,7 +19,7 @@ describe("GetBookByAuthorController", () => {
     booksController = new GetBookByAuthorController(getBookByPropertyUseCase);
 
     mockRequest = {
-      headers: {
+      query: {
         page: 1,
         limit: 10,
       },
