@@ -155,6 +155,6 @@ Optei por também criar um front-end para o case, para ter algo mais visual do q
 
 ### Considerações finais
 
-A parte mais desafiadora ao longo do projeto foi tratar a questão do tempo, porque só tive o fim de semana e a segunda-feira (que pedi compensação de horas) para concluir toda a parte técnica. Todos os outros dias tive que conciliar com o horário de trabalho e os deveres do dia a dia. E não, não se faz esse case em "4-8 horas" como é dito no enunciado 😂. Pelo menos não se quiser entregar algo de qualidade e mostrar comprometimento.
+Um dos pontos mais interessantes do projeto foi buscar uma base de dados que realmente se encaixasse no caso de uso. Como a proposta incluía uma interface visual, era importante que o dataset trouxesse também as capas dos livros — o que exigiu um pouco mais de pesquisa e refinamento. No fim, a escolha valeu a pena e contribuiu bastante para a experiência final da aplicação.
 
-Outro ponto foi conseguir um dataset excelente de livros que serviria para o meu caso de uso. Confesso que gastei umas horas até encontrar a solução ideal e ter os dados em mãos. Se não tivesse front qualquer um serviria, mas com front era necessário ter as capas dos livros e essa foi a maior questão a ser resolvida, e foi. No final se provou uma decisão muito boa.
+De modo geral, tentei focar em entregar algo bem estruturado, funcional e com atenção aos detalhes, equilibrando boas práticas técnicas com uma apresentação bem feita.
