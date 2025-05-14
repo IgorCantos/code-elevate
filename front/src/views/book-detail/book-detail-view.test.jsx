@@ -11,7 +11,7 @@ jest.mock('src/services/books/books-service', () => ({
 describe('BookDetailPage', () => {
   const mockBook = {
     title: 'Test Book',
-    authors: 'Test Author',
+    author: 'Test Author',
     thumbnail: 'test-thumbnail.jpg',
     amount: 100,
     currencyCode: 'BRL',
@@ -41,7 +41,7 @@ describe('BookDetailPage', () => {
     renderWithRouter(mockBook);
 
     expect(screen.getByText(mockBook.title)).toBeInTheDocument();
-    expect(screen.getByText(`Autor: ${mockBook.authors}`)).toBeInTheDocument();
+    expect(screen.getByText(`Autor: ${mockBook.author}`)).toBeInTheDocument();
     expect(screen.getByText('(4.5 estrelas)')).toBeInTheDocument();
     expect(screen.getByText('Test description')).toBeInTheDocument();
     expect(screen.getByText('Gênero: Fiction | Páginas: 300')).toBeInTheDocument();

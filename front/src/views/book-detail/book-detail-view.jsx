@@ -105,7 +105,7 @@ export default function BookDetailPage() {
             </Typography>
 
             <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-              Autor: {book.authors}
+              Autor: {book.author}
             </Typography>
 
             <Box display="flex" alignItems="center" mb={1}>
