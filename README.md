@@ -24,8 +24,10 @@ Tudo isso performance otimizada por cache e estrutura preparada para escalabilid
 
 ### 🛠️ Testes unitários
 
-![Testes unitários back-end](docs/teste-back.png)
-![Testes unitários front-end](docs/teste-front.png)
+<p align="center">
+  <img src="docs/teste-back.png" alt="Testes unitários back-end" width="300"/>
+  <img src="docs/teste-front.png" alt="Testes unitários front-end" width="300"/>
+</p>
 
 ### 🛠️ Tecnologias Utilizadas
 
