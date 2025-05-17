@@ -1,4 +1,8 @@
-# 📘 Code elevate - Igor dos santos cabral
+# 📘 Code Elevate - Plataforma de Livraria Digital
+
+### Autor: Igor dos Santos Cabral
+
+Este projeto é uma plataforma digital para uma livraria independente, com backend em Fastify + MongoDB e frontend em React. A solução permite buscas por livros, autores e gêneros, com cache via Redis e foco em escalabilidade.
 
 ## I. Arquitetura de Solução e Arquitetura Técnica
 
@@ -6,33 +10,61 @@
 
 Plataforma desenvolvida contendo solução **back-end** e **front-end**, projetada para atender uma livraria independente que deseja disponibilizar seu acervo digitalmente. A API permite:
 
-1.  buscar todos os livros presentes no acervo
-2.  busca livros por gênero
-3.  busca livros por autor
-4.  Visualização dos livros recentes visualizados
+1. buscar todos os livros presentes no acervo
 
-Tudo isso performance otimizada por cache e estrutura preparada para escalabilidade.
+2. busca livros por gênero
+
+3. busca livros por autor
+
+4. Visualização dos livros recentes visualizados
+
+A plataforma é otimizada com uso de cache para alta performance e foi projetada com foco em escalabilidade.
 
 ### 🚀 Como rodar o projeto
 
 1. Tenha [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/) instalados na sua máquina.
+
 2. Clone esse repositório `git clone git@github.com:IgorCantos/code-elevate.git`
+
 3. Na pasta **raiz** rode o comando `docker-compose up -d`
-   3.1. Os containeres `mongodb`, `redis`, `book-store-backend` e `book-store-frontend` serão buildados e inicializados
-4. O front-end pode se acessado através do link [http://localhost:3030/](http://localhost:3030/)
-5. O back-end pode se acessado através do link [http://localhost:8080/v1/books](http://localhost:8080/v1/books/)
+
+3.1. Os contêineres `mongodb`, `redis`, `book-store-backend` e `book-store-frontend` serão buildados e inicializados
+
+4. O front-end pode ser acessado através do link [http://localhost:3030/](http://localhost:3030/)
+
+5. O back-end pode ser acessado através do link [http://localhost:8080/v1/books](http://localhost:8080/v1/books/) - Visualizar Swagger para demais rotas na pasta /docs.
+
+### ✅ Testes end to end/Automatizados
+
+Os testes end to end foram feitos utilizando [Cypress](https://www.cypress.io/) e podem ser rodados via:
+
+1.  Entrar no diretório `/front-end`
+2.  via terminal rodar o comando `npm run cy:open`
+3.  Clicar em "E2E Testing"
+4.  Selecione o browser de sua preferência e clique o botão "Start E2E Testing in..."
+5.  Espere o navegador abrir e clique em "list-books.cy.js"
+6.  Os testes irão rodar automaticamente
 
 ### ✅ Testes unitários
 
 <table>
-  <tr>
-    <th>Testes unitários back-end</th>
-    <th>Testes unitários front-end</th>
-  </tr>
-  <tr>
-    <td><img src="docs/teste-back.png" alt="Cadastro" width="500"/></td>
-    <td><img src="docs/teste-front.png" alt="Login" width="500"/></td>
-  </tr>
+
+<tr>
+
+<th>Testes unitários back-end</th>
+
+<th>Testes unitários front-end</th>
+
+</tr>
+
+<tr>
+
+<td><img  src="docs/teste-back.png"  alt="Cadastro"  width="500"/></td>
+
+<td><img  src="docs/teste-front.png"  alt="Login"  width="500"/></td>
+
+</tr>
+
 </table>
 
 ### 🛠️ Tecnologias Utilizadas
@@ -40,23 +72,37 @@ Tudo isso performance otimizada por cache e estrutura preparada para escalabilid
 #### Back-end
 
 - **Linguagem:** [Typescript](https://www.typescriptlang.org/)
+
 - **Framework:** [Fastify 5](https://fastify.dev/)
+
 - **Banco de Dados:** [MongoDB](https://www.mongodb.com/)
+
 - **Cache:** [Redis](https://redis.io/)
+
 - **Documentação da API:** [Swagger](https://swagger.io/)(OpenApi 3.0)
+
 - **Build Tool:** [Typescript Compiler](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+
 - **Containerização:** [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/)
+
 - **Testes Unitários:** [Jest](https://jestjs.io/pt-BR/)
+
 - **Controle de Versão:** Git + GitHub
 
 #### Front-end
 
 - **Linguagem:** [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
 - **Framework:** [React](https://react.dev/)
+
 - **Documentação da API:** [Swagger](https://swagger.io/) (OpenApi 3.0)
+
 - **Build Tool:** [Vite](https://vite.dev/)
+
 - **Containerização:** [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/)
+
 - **Testes Unitários:** [Jest](https://jestjs.io/pt-BR/)
+
 - **Controle de Versão:** Git + GitHub
 
 ### 🧱 Decisões de Design
@@ -68,21 +114,28 @@ Tudo isso performance otimizada por cache e estrutura preparada para escalabilid
 Essa **inversão de dependência** permitiu:
 
 - Facilidade na substituição de tecnologias (ex: MongoDB → PostgreSQL)
+
 - Separação de responsabilidades
+
 - Testes unitários simples com mocks
+
 - Evolução e manutenção mais seguras
 
 **⚠️ IMPORTANTE : A estrutura foi organizada nas seguintes camadas:⚠️**
 
 - `infrastructure/`: implementa todos os detalhes técnicos de frameworks e dependências que a aplicação usa, como acesso a banco de dados, cache, etc.
+
 - `infrastructure/webserver/routes` expõe os endpoints REST e lida com requisições HTTP.
-- `factories/` responsável pela injeção de dependências do projeto. É um intermediário entre a `/routes` e a camada de `/controllers`, que já são criados com todas as dependências (serviços, repositórios e casos de uso) necessárias para seu funcionamento. **Todos os controllers e suas dependências são altamente dependentes de interfaces** e não implementam lógicas concretas.
+
+- `factories/` responsável pela injeção de dependências do projeto. É um intermediário entre a `/routes` e a camada de `/controllers`, que já são criados com todas as dependências necessárias (serviços, repositórios e casos de uso) para seu funcionamento. Todos os controllers e suas dependências são altamente dependentes de interfaces e não implementam lógicas concretas.
+
 - `application/`: responsável pela orquestração das requisições HTTP a nível dos controllers e orquestração dos serviços
+
 - `domain/`: contém as entidades e casos de uso da aplicação (que dependem de interfaces), contendo suas regras de negócio puras e interfaces de domínio.
 
 #### ⚠️ IMPORTANTE: Banco de dados já populado ⚠️
 
-Ao iniciar o projeto com Docker pela primeira vez, o container do MongoDB já será populado com **livros reais**. Isso garante que a API funcione imediatamente com dados reais — veja mais na próxima seção.
+Ao iniciar o projeto com Docker pela primeira vez, o container do MongoDB já será populado com **livros reais**. Isso garante que a API funcione de forma imediata com dados reais — veja mais na próxima seção.
 
 ---
 
@@ -92,29 +145,46 @@ Ao iniciar o projeto com Docker pela primeira vez, o container do MongoDB já se
 
 Testei várias fontes de dados, mas nenhum me deu o resultado que gostaria, até encontrar uma solução com o Google Books.
 
-- **✅ Google Books**: após algumas interações com a [API](https://www.googleapis.com/books/v1/volumes) descobri que não precisava de uma ApiKey e que ela não tinha um rate limiting para a quantidade de dados que eu precisava buscar. Também oferecia o link da imagem da capa do livro já hospedado no Google. Era tudo o que eu precisava. Criei um script (localizado na pasta /scripts na raiz aqui do projeto) que faz um loop na API buscando vários livros separados por gêneros pré-definidos por mim. Funcionou muito bem, consegui um dataset muito bom que usei no projeto. **O ponto negativo é que o Google Books só possui dados em inglês.**
+- **✅ Google Books**: após algumas interações com a [API](https://www.googleapis.com/books/v1/volumes) descobri que não precisava de uma API key e que ela não tinha um rate limiting para a quantidade de dados que eu precisava buscar. Também oferecia o link da imagem da capa do livro já hospedado no Google. Era tudo o que eu precisava. Criei um script (localizado na pasta `/scripts`, na raiz aqui do projeto) que faz um loop na API buscando vários livros separados por gêneros pré-definidos por mim. Funcionou muito bem, consegui um dataset muito bom que usei no projeto. **O ponto negativo é que o Google Books só possui dados em inglês.**
 
 - **❌ Kaggle:** muitos datasets com dados incompletos ou imagens quebradas
+
 - **❌ Amazon:** API com acesso restrito e limitada para grandes volumes
+
 - **❌ IA:** não era viável devido à ausência de imagens hospedadas
 
 ### 🧠 Entidade Livro (Modelo de Dados)
 
 ```javascript
+
 Book {
-"_id":  "681f9fab48212582f0d861e2",
-"title":  "Mysteries",
-"author":  "Knut Hamsun",
-"publishedDate":  "2001-01-01",
-"description":  "The first complete English translation of the Nobel Prize-winner’s literary masterpiece A Penguin Classic Mysteries is the story of Johan Nilsen Nagel, a mysterious stranger who suddenly turns up in a small Norwegian town one summer—and just as suddenly disappears. Nagel is a complete outsider, a sort of modern Christ treated in a spirit of near parody. He condemns the politics and thought of the age, brings comfort to the “insulted and injured,” and gains the love of two women suggestive of the biblical Mary and Martha. But there is a sinister side of him: in his vest he carries a vial of prussic acid... The novel creates a powerful sense of Nagel's stream of thought, as he increasingly withdraws into the torture chamber of his own subconscious psyche. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,800 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
-"genre":  "Fiction",
-"categorie":  "Fiction",
-"thumbnail":  "http://books.google.com/books/content?id=MRoMUV2kLZEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-"pageCount":  356,
-"averageRating":  4,
-"amount":  49.99,
-"currencyCode":  "BRL"
+
+"_id": "681f9fab48212582f0d861e2",
+
+"title": "Mysteries",
+
+"author": "Knut Hamsun",
+
+"publishedDate": "2001-01-01",
+
+"description": "The first complete English translation of the Nobel Prize-winner’s literary masterpiece A Penguin Classic Mysteries is the story of Johan Nilsen Nagel, a mysterious stranger who suddenly turns up in a small Norwegian town one summer—and just as suddenly disappears. Nagel is a complete outsider, a sort of modern Christ treated in a spirit of near parody. He condemns the politics and thought of the age, brings comfort to the “insulted and injured,” and gains the love of two women suggestive of the biblical Mary and Martha. But there is a sinister side of him: in his vest he carries a vial of prussic acid... The novel creates a powerful sense of Nagel's stream of thought, as he increasingly withdraws into the torture chamber of his own subconscious psyche. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,800 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
+
+"genre": "Fiction",
+
+"categorie": "Fiction",
+
+"thumbnail": "http://books.google.com/books/content?id=MRoMUV2kLZEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+
+"pageCount": 356,
+
+"averageRating": 4,
+
+"amount": 49.99,
+
+"currencyCode": "BRL"
+
 }
+
 ```
 
 ### 📦 APIs Implementadas
@@ -147,11 +217,16 @@ Optei por também criar um front-end para o case, para ter algo mais visual do q
 
 ### Melhorias
 
-1. Implementação do ElasticSearch para buscas otimizadas
-2. Testes de integração e End to End com [Cypress](https://www.cypress.io/)
-3. Autenticação ([Firebase](https://firebase.google.com/docs/auth?hl=pt-br) - grátis para projetos desse escopo)
-4. Carrinho de compras - Integração com [Stripe](https://stripe.com/br)
-5. Favoritar livros/autores
+1. Mecanismo de pesquisa
+2. Implementação do ElasticSearch para buscas otimizadas
+
+3. Testes de integração e End to End com [Cypress](https://www.cypress.io/)
+
+4. Autenticação ([Firebase](https://firebase.google.com/docs/auth?hl=pt-br) - grátis para projetos desse escopo)
+
+5. Carrinho de compras - Integração com [Stripe](https://stripe.com/br)
+
+6. Favoritar livros/autores
 
 ### Considerações finais
 

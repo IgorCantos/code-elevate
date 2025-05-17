@@ -307,7 +307,12 @@ export default function BookStoreView() {
                               mt={1}
                               onClick={() => navigate(`/books/${book._id}`, { state: book })}
                             >
-                              <Rating value={book.averageRating} readOnly size="small" />
+                              <Rating
+                                value={book.averageRating}
+                                readOnly
+                                size="small"
+                                data-testid={`rating-btn-${index}`}
+                              />
 
                               <Typography variant="body1" fontWeight="bold">
                                 {new Intl.NumberFormat('pt-BR', {
