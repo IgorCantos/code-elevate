@@ -19,7 +19,8 @@
     "vite:start": "vite",
     "vite:build": "vite build",
     "test": "jest --detectOpenHandles --forceExit --coverage --silent",
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -52,6 +53,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@vitejs/plugin-react-swc": "^3.4.0",
     "babel-jest": "^29.7.0",
+    "cypress": "^14.3.3",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.0.0",
