@@ -14,11 +14,16 @@ class GetAllBooksController {
     res: FastifyReply
   ): Promise<Promise<FastifyReply>> {
     try {
-      const { page, limit } = req.query as { page: string; limit: string };
+      const { page, limit, title } = req.query as {
+        page: string;
+        limit: string;
+        title: string;
+      };
 
       const response = await this.getAllBooksUseCase.execute({
         page: Number(page),
         limit: Number(limit),
+        title,
       });
       return res.status(HttpStatus.SUCCESS).send(response);
     } catch (error: any) {

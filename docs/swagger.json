@@ -33,6 +33,15 @@
             "schema": {
               "type": "integer"
             }
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "required": false,
+            "example": "Journey to the heart",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

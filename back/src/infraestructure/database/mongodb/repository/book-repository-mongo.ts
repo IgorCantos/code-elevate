@@ -10,18 +10,29 @@ class BookRepositoryMongo implements IBookRepository {
   async getAllBooks({
     page,
     limit,
+    title,
   }: {
     page: number;
     limit: number;
+    title: string;
   }): Promise<IGetPaginatedBooksResponse> {
     const mongoClient = await MongoClientSingleton.getInstance();
     const db = mongoClient.getDb();
 
     const skip = (page - 1) * limit;
 
+    const filter = {
+      ...(title && { title: { $regex: title, $options: "i" } }),
+    };
+
     const [dbResponse, totalDocuments] = await Promise.all([
-      db.collection<Book>("books").find().skip(skip).limit(limit).toArray(),
-      db.collection<Book>("books").countDocuments(),
+      db
+        .collection<Book>("books")
+        .find(filter)
+        .skip(skip)
+        .limit(limit)
+        .toArray(),
+      db.collection<Book>("books").countDocuments(filter),
     ]);
 
     const totalPages = Math.ceil(totalDocuments / limit);
