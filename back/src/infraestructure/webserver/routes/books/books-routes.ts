@@ -3,12 +3,15 @@ import {
   GetBookByGenreControllerFactory,
   GetBookByIdControllerFactory,
   GetBookByAuthorControllerFactory,
+  GetBestSellersBooksControllerFactory,
 } from "@/facotries";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyInstance } from "fastify";
 
 async function booksRoutes(fastify: FastifyInstance) {
   const getAllBooksController = new GetAllBooksControllerFactory().create();
+  const getBestSellersBooksController =
+    new GetBestSellersBooksControllerFactory().create();
   const getBookByIdController = new GetBookByIdControllerFactory().create();
   const getBookByGenreControllerFactory =
     new GetBookByGenreControllerFactory().create();
@@ -24,6 +27,10 @@ async function booksRoutes(fastify: FastifyInstance) {
    */
   fastify.get("/v1/books", (req, res) =>
     getAllBooksController.execute(req, res)
+  );
+
+  fastify.get("/v1/books/best-sellers", (req, res) =>
+    getBestSellersBooksController.execute(req, res)
   );
 
   fastify.get("/v1/books/:bookId", (req, res) =>

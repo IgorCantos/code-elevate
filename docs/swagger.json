@@ -52,6 +52,47 @@
         }
       }
     },
+    "/v1/books/best-sellers": {
+      "parameters": [],
+      "get": {
+        "summary": "Returns a sorted list of best sellers books",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "example": "1",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "example": "20",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Book"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/books/{bookId}": {
       "get": {
         "summary": "Get Book By Id",

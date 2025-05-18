@@ -19,6 +19,7 @@ describe("GetBookByPropertyUseCase", () => {
       getAllBooks: () => Promise.resolve(expectedResponse),
       getBookById: () => Promise.resolve(bookMock),
       getBookByProperty: () => Promise.resolve(expectedResponse),
+      getBestSellersBooks: () => Promise.resolve(expectedResponse),
     };
 
     const page = 1;
@@ -46,6 +47,7 @@ describe("GetBookByPropertyUseCase", () => {
       getAllBooks: () => Promise.resolve(expectedResponse),
       getBookById: () => Promise.resolve(bookMock),
       getBookByProperty: () => Promise.resolve(expectedResponse),
+      getBestSellersBooks: () => Promise.resolve(expectedResponse),
     };
 
     const page = null as unknown as number;
@@ -73,6 +75,7 @@ describe("GetBookByPropertyUseCase", () => {
       getAllBooks: () => Promise.resolve(expectedResponse),
       getBookById: () => Promise.resolve(bookMock),
       getBookByProperty: () => Promise.resolve(expectedResponse),
+      getBestSellersBooks: () => Promise.resolve(expectedResponse),
     };
 
     const page = 1;

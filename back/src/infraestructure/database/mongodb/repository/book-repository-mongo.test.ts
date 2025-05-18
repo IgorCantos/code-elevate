@@ -12,6 +12,7 @@ describe("BookRepositoryMongo", () => {
     mockDb = {
       collection: jest.fn().mockReturnThis(),
       find: jest.fn().mockReturnThis(),
+      sort: jest.fn().mockReturnThis(),
       skip: jest.fn().mockReturnThis(),
       limit: jest.fn().mockReturnThis(),
       toArray: jest.fn(),
@@ -146,6 +147,36 @@ describe("BookRepositoryMongo", () => {
         totalDocuments: 10,
         totalPages: 1,
         hasNextPage: false,
+        hasPreviousPage: false,
+        data: expect.any(Array),
+      });
+    });
+  });
+
+  describe("getBestSellersBooks", () => {
+    it("should return paginated books", async () => {
+      const mockBooks = [{ title: "Book 1" }, { title: "Book 2" }];
+      mockDb.toArray.mockResolvedValue(mockBooks);
+      mockDb.countDocuments.mockResolvedValue(40);
+
+      const page = 1;
+      const limit = 20;
+      const result = await bookRepository.getBestSellersBooks({ page, limit });
+
+      expect(mockDb.collection).toHaveBeenCalledWith("books");
+      expect(mockDb.find).toHaveBeenCalled();
+      expect(mockDb.sort).toHaveBeenCalled();
+      expect(mockDb.skip).toHaveBeenCalledWith(0);
+      expect(mockDb.limit).toHaveBeenCalledWith(20);
+      expect(mockDb.toArray).toHaveBeenCalled();
+      expect(mockDb.countDocuments).toHaveBeenCalled();
+
+      expect(result).toEqual({
+        actualPage: 1,
+        limitePerPage: 20,
+        totalDocuments: 40,
+        totalPages: 2,
+        hasNextPage: true,
         hasPreviousPage: false,
         data: expect.any(Array),
       });

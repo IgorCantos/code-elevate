@@ -104,6 +104,46 @@ class BookRepositoryMongo implements IBookRepository {
 
     return response;
   }
+
+  async getBestSellersBooks({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetPaginatedBooksResponse> {
+    const mongoClient = await MongoClientSingleton.getInstance();
+    const db = mongoClient.getDb();
+
+    const skip = (page - 1) * limit;
+
+    const [dbResponse, totalDocuments] = await Promise.all([
+      db
+        .collection<Book>("books")
+        .find({})
+        .sort({ averageRating: -1 })
+        .skip(skip)
+        .limit(limit)
+        .toArray(),
+      db.collection<Book>("books").countDocuments({}),
+    ]);
+
+    const totalPages = Math.ceil(totalDocuments / limit);
+    const hasNextPage = page < totalPages;
+    const booksList = dbResponse.map((book) => new Book(book));
+
+    const response = {
+      actualPage: page,
+      limitePerPage: limit,
+      totalDocuments,
+      totalPages,
+      hasNextPage,
+      hasPreviousPage: page > 1,
+      data: booksList,
+    };
+
+    return response;
+  }
 }
 
 export default BookRepositoryMongo;
