@@ -25,10 +25,12 @@ export default function AsynchronousSearch() {
         setLoading(true);
         try {
           const response = await getBooks(page, maxItemPerSearch, inputValue);
+
           const results = response.data.map((book) => ({
             ...book,
             group: 'Resultados da busca',
           }));
+
           setOptions(results);
         } catch (error) {
           console.error(error);
