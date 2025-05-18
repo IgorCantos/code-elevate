@@ -10,6 +10,13 @@ jest.mock("@/facotries", () => ({
       ),
     }),
   })),
+  GetBestSellersBooksControllerFactory: jest.fn().mockImplementation(() => ({
+    create: jest.fn().mockReturnValue({
+      execute: jest.fn((req, res) =>
+        res.status(HttpStatus.SUCCESS).send({ books: [] })
+      ),
+    }),
+  })),
   GetBookByIdControllerFactory: jest.fn().mockImplementation(() => ({
     create: jest.fn().mockReturnValue({
       execute: jest.fn((req, res) =>
@@ -63,6 +70,16 @@ describe("booksRoutes", () => {
     const response = await app.inject({
       method: "GET",
       url: "/v1/books",
+    });
+
+    expect(response.statusCode).toBe(HttpStatus.SUCCESS);
+    expect(response.json()).toEqual({ books: [] });
+  });
+
+  it("should return a list of best sellers books", async () => {
+    const response = await app.inject({
+      method: "GET",
+      url: "/v1/books/best-sellers",
     });
 
     expect(response.statusCode).toBe(HttpStatus.SUCCESS);

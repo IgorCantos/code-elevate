@@ -1,7 +1,7 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import GetAllBooksUseCase from "./get-all-books-usecase";
+import GetBestSellersBooksUseCase from "./get-best-sellers-books-usecase";
 
-describe("GetAllBooksUseCase", () => {
+describe("GetBestSellersBooksUseCase", () => {
   it("return a book list with pagination", async () => {
     const bookMock = makeBookMock();
     const expectedResponse = {
@@ -24,7 +24,9 @@ describe("GetAllBooksUseCase", () => {
     const page = 1;
     const limit = 10;
 
-    const response = await new GetAllBooksUseCase(booksRepositoryMock).execute({
+    const response = await new GetBestSellersBooksUseCase(
+      booksRepositoryMock
+    ).execute({
       page,
       limit,
     });
@@ -55,7 +57,9 @@ describe("GetAllBooksUseCase", () => {
     const page = null as unknown as number;
     const limit = null as unknown as number;
 
-    const response = await new GetAllBooksUseCase(booksRepositoryMock).execute({
+    const response = await new GetBestSellersBooksUseCase(
+      booksRepositoryMock
+    ).execute({
       page,
       limit,
     });
@@ -86,10 +90,12 @@ describe("GetAllBooksUseCase", () => {
     const page = 1;
     const limit = 10;
 
-    const getAllBooksUseCase = new GetAllBooksUseCase(booksRepositoryMock);
-
-    await expect(getAllBooksUseCase.execute({ page, limit })).rejects.toThrow(
-      "No books found."
+    const getBestSellersBooksUseCase = new GetBestSellersBooksUseCase(
+      booksRepositoryMock
     );
+
+    await expect(
+      getBestSellersBooksUseCase.execute({ page, limit })
+    ).rejects.toThrow("No books found.");
   });
 });

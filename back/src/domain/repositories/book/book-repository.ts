@@ -30,6 +30,13 @@ interface IBookRepository {
     authors?: string;
     genre?: string;
   }): Promise<IGetPaginatedBooksResponse>;
+  getBestSellersBooks({
+    page,
+    limit,
+  }: {
+    page: number;
+    limit: number;
+  }): Promise<IGetPaginatedBooksResponse>;
 }
 
 export default IBookRepository;
