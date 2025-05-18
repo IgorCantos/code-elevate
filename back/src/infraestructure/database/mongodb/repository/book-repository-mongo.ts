@@ -120,12 +120,12 @@ class BookRepositoryMongo implements IBookRepository {
     const [dbResponse, totalDocuments] = await Promise.all([
       db
         .collection<Book>("books")
-        .find({})
-        .sort({ averageRating: -1 })
+        .find()
+        .sort({ averageRating: -1, _id: 1 })
         .skip(skip)
         .limit(limit)
         .toArray(),
-      db.collection<Book>("books").countDocuments({}),
+      db.collection<Book>("books").countDocuments(),
     ]);
 
     const totalPages = Math.ceil(totalDocuments / limit);
