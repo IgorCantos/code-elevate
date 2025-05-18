@@ -4,7 +4,6 @@ import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
 import { GetRecentlyViewedBooksController } from "@/application/controllers";
 
 jest.mock("@/application/controllers");
-jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
 jest.mock("@/infraestructure/cache");
 jest.mock("ioredis");

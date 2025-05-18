@@ -4,7 +4,6 @@ import { UpdateRecentlyViewedBooksUseCase } from "@/domain/use-cases";
 import { RedisRepository } from "@/infraestructure/cache";
 
 jest.mock("@/application/controllers");
-jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
 jest.mock("@/infraestructure/cache");
 jest.mock("ioredis");

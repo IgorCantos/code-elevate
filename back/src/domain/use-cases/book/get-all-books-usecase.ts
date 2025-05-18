@@ -1,13 +1,15 @@
 import { HttpError } from "@/domain/exceptions";
-import { IGetAllBooksService } from "@/domain/interfaces";
-import { IGetPaginatedBooksResponse } from "@/domain/repositories";
+import {
+  IBookRepository,
+  IGetPaginatedBooksResponse,
+} from "@/domain/repositories";
 import HttpStatus from "@/infraestructure/utils/http-status";
 
 class GetAllBooksUseCase {
-  getAllBooksService: IGetAllBooksService;
+  booksRepository: IBookRepository;
 
-  constructor(getAllBooksService: IGetAllBooksService) {
-    this.getAllBooksService = getAllBooksService;
+  constructor(booksRepository: IBookRepository) {
+    this.booksRepository = booksRepository;
   }
 
   async execute({
@@ -23,7 +25,7 @@ class GetAllBooksUseCase {
     const actualPage = page || defaultPage;
     const actualLimit = limit || defaultLimit;
 
-    const response = await this.getAllBooksService.execute({
+    const response = await this.booksRepository.getAllBooks({
       page: actualPage,
       limit: actualLimit,
     });

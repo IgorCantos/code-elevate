@@ -1,11 +1,9 @@
 import { GetBookByAuthorController } from "@/application/controllers";
-import { GetBookByPropertyService } from "@/application/services";
 import { GetBookByPropertyUseCase } from "@/domain/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 import GetBookByAuthorControllerFactory from "./get-book-by-author-controller-factory";
 
 jest.mock("@/application/controllers");
-jest.mock("@/application/services");
 jest.mock("@/domain/use-cases");
 jest.mock("@/infraestructure/database/mongodb");
 
@@ -16,13 +14,8 @@ describe("GetBookByAuthorController", () => {
 
     expect(BookRepositoryMongo).toHaveBeenCalledTimes(1);
 
-    expect(GetBookByPropertyService).toHaveBeenCalledWith(
-      expect.any(BookRepositoryMongo)
-    );
-    expect(GetBookByPropertyService).toHaveBeenCalledTimes(1);
-
     expect(GetBookByPropertyUseCase).toHaveBeenCalledWith(
-      expect.any(GetBookByPropertyService)
+      expect.any(BookRepositoryMongo)
     );
     expect(GetBookByPropertyUseCase).toHaveBeenCalledTimes(1);
 
