@@ -15,9 +15,11 @@ class GetAllBooksUseCase {
   async execute({
     page,
     limit,
+    title,
   }: {
     page: number;
     limit: number;
+    title: string;
   }): Promise<IGetPaginatedBooksResponse | Error> {
     const defaultPage = 1;
     const defaultLimit = 15;
@@ -28,6 +30,7 @@ class GetAllBooksUseCase {
     const response = await this.booksRepository.getAllBooks({
       page: actualPage,
       limit: actualLimit,
+      title,
     });
 
     if (!response.data.length) {

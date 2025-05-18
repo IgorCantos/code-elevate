@@ -39,7 +39,8 @@ describe("BookRepositoryMongo", () => {
 
       const page = 1;
       const limit = 20;
-      const result = await bookRepository.getAllBooks({ page, limit });
+      const title = "";
+      const result = await bookRepository.getAllBooks({ page, limit, title });
 
       expect(mockDb.collection).toHaveBeenCalledWith("books");
       expect(mockDb.find).toHaveBeenCalled();

@@ -23,10 +23,12 @@ describe("GetAllBooksUseCase", () => {
 
     const page = 1;
     const limit = 10;
+    const title = "";
 
     const response = await new GetAllBooksUseCase(booksRepositoryMock).execute({
       page,
       limit,
+      title,
     });
 
     expect(response).toBe(expectedResponse);
@@ -54,10 +56,12 @@ describe("GetAllBooksUseCase", () => {
 
     const page = null as unknown as number;
     const limit = null as unknown as number;
+    const title = "";
 
     const response = await new GetAllBooksUseCase(booksRepositoryMock).execute({
       page,
       limit,
+      title,
     });
 
     expect(response).toBe(expectedResponse);
@@ -85,11 +89,12 @@ describe("GetAllBooksUseCase", () => {
 
     const page = 1;
     const limit = 10;
+    const title = "";
 
     const getAllBooksUseCase = new GetAllBooksUseCase(booksRepositoryMock);
 
-    await expect(getAllBooksUseCase.execute({ page, limit })).rejects.toThrow(
-      "No books found."
-    );
+    await expect(
+      getAllBooksUseCase.execute({ page, limit, title })
+    ).rejects.toThrow("No books found.");
   });
 });
