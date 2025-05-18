@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import AccountPopover from './account-popover';
+import AsynchronousSearch from './search-input';
 
 export default function Header() {
   const theme = useTheme();
@@ -26,14 +27,14 @@ export default function Header() {
           justifyContent: 'space-between',
         }}
       >
-        {/* Search aqui. Ver se dará pra fazer. */}
-
         <Box
           component="img"
           src="/assets/f1rst-books-logo.png"
           alt="F1rst Books Logo"
           sx={{ height: 40 }}
         />
+
+        <AsynchronousSearch />
 
         <Stack direction="row" alignItems="center" spacing={1}>
           <AccountPopover />

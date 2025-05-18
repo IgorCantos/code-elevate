@@ -2,6 +2,7 @@ import { Box, Button, Container, Grid, Rating, Typography, Paper } from '@mui/ma
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { postRecentlyViewedBook } from 'src/services/books/books-service';
+import { ArrowBackIos } from '@mui/icons-material/';
 
 export default function BookDetailPage() {
   const location = useLocation();
@@ -20,6 +21,31 @@ export default function BookDetailPage() {
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 6 }}>
+      <Grid>
+        <Grid item xs={12}>
+          <Box>
+            <Button
+              variant="text"
+              size="large"
+              startIcon={<ArrowBackIos />}
+              sx={{
+                mb: 2,
+                textTransform: 'none',
+                color: 'primary.main',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  textDecoration: 'underline',
+                },
+                p: 0,
+              }}
+              onClick={() => navigate('/')}
+            >
+              Voltar
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+
       <Grid container spacing={4}>
         <Grid item xs={12} md={4}>
           <Box display="flex" flexDirection="column" gap={3}>
@@ -77,15 +103,6 @@ export default function BookDetailPage() {
                 }}
               >
                 Comprar agora
-              </Button>
-
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{ borderRadius: '12px', textTransform: 'none' }}
-                onClick={() => navigate(-1)}
-              >
-                Voltar
               </Button>
             </Paper>
           </Box>
