@@ -7,7 +7,7 @@ import MongoClientSingleton from "../connection/mongo-connection";
 import { ObjectId, WithId } from "mongodb";
 
 class BookRepositoryMongo implements IBookRepository {
-  async getAllBooks({
+  async getBooks({
     page,
     limit,
     title,
