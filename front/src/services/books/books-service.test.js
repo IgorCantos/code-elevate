@@ -1,10 +1,11 @@
 import axios from 'axios';
 import {
-  getAllBooks,
+  getBooks,
   getRecentlyViewedBooks,
   postRecentlyViewedBook,
   getBooksByAuthor,
   getBooksByGenre,
+  getBestSellersBooks,
 } from './books-service';
 
 jest.mock('axios');
@@ -16,17 +17,34 @@ describe('Books Service', () => {
     jest.clearAllMocks();
   });
 
-  describe('getAllBooks', () => {
+  describe('getBooks', () => {
     it('fetch all books with pagination', async () => {
       const mockResponse = { data: { books: [], total: 0 } };
       axios.get.mockResolvedValue(mockResponse);
 
       const page = 1;
       const itemsPerPage = 10;
-      const result = await getAllBooks(page, itemsPerPage);
+      const result = await getBooks(page, itemsPerPage);
 
       expect(axios.get).toHaveBeenCalledWith(
         `${baseUrl}/v1/books?page=${page}&limit=${itemsPerPage}`,
+        { headers: { page, limit: itemsPerPage } }
+      );
+      expect(result).toEqual(mockResponse.data);
+    });
+  });
+
+  describe('getBestSellersBooks', () => {
+    it('fetch all books with pagination', async () => {
+      const mockResponse = { data: { books: [], total: 0 } };
+      axios.get.mockResolvedValue(mockResponse);
+
+      const page = 1;
+      const itemsPerPage = 10;
+      const result = await getBestSellersBooks(page, itemsPerPage);
+
+      expect(axios.get).toHaveBeenCalledWith(
+        `${baseUrl}/v1/books/best-sellers?page=${page}&limit=${itemsPerPage}`,
         { headers: { page, limit: itemsPerPage } }
       );
       expect(result).toEqual(mockResponse.data);

@@ -15,7 +15,7 @@ import {
   Typography,
 } from '@mui/material';
 import {
-  getAllBooks,
+  getBooks,
   getBooksByAuthor,
   getBooksByGenre,
   getRecentlyViewedBooks,
@@ -61,7 +61,7 @@ export default function BookStoreView() {
     try {
       setError(false);
       setIsLoading(true);
-      const data = await getAllBooks(page, ITEMS_PER_PAGE);
+      const data = await getBooks(page, ITEMS_PER_PAGE);
       const { data: books, totalDocuments, totalPages } = data;
       setBooksList({ books, totalDocuments, totalPages });
     } catch (err) {

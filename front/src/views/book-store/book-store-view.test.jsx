@@ -34,7 +34,7 @@ describe('BookStoreView', () => {
   beforeEach(() => {
     jest.clearAllMocks();
 
-    jest.spyOn(booksService, 'getAllBooks').mockResolvedValue({
+    jest.spyOn(booksService, 'getBooks').mockResolvedValue({
       data: mockBooks,
       totalDocuments: 3,
       totalPages: 1,
@@ -74,7 +74,7 @@ describe('BookStoreView', () => {
   });
 
   test('displays error view if book fetch fails', async () => {
-    booksService.getAllBooks.mockRejectedValueOnce(new Error('API Error'));
+    booksService.getBooks.mockRejectedValueOnce(new Error('API Error'));
     render(<BookStoreView />);
     await waitFor(() => {
       expect(screen.getByTestId('error-view')).toBeInTheDocument();
@@ -104,7 +104,7 @@ describe('BookStoreView', () => {
   });
 
   test('navigates to page 2 when pagination is clicked', async () => {
-    booksService.getAllBooks.mockResolvedValueOnce({
+    booksService.getBooks.mockResolvedValueOnce({
       data: Array.from({ length: 12 }, (_, i) => ({
         _id: `book-page1-${i}`,
         title: `Book Page 1 - ${i}`,
@@ -120,7 +120,7 @@ describe('BookStoreView', () => {
       expect(screen.getByText('Book Page 1 - 0')).toBeInTheDocument();
     });
 
-    booksService.getAllBooks.mockResolvedValueOnce({
+    booksService.getBooks.mockResolvedValueOnce({
       data: Array.from({ length: 12 }, (_, i) => ({
         _id: `book-page2-${i}`,
         title: `Book Page 2 - ${i}`,

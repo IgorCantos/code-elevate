@@ -1,14 +1,30 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import BookDetailPage from './book-detail-view';
 import { postRecentlyViewedBook } from 'src/services/books/books-service';
+import { useNavigate } from 'react-router-dom';
 
 jest.mock('src/services/books/books-service', () => ({
   postRecentlyViewedBook: jest.fn(),
 }));
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: jest.fn(),
+}));
+
 describe('BookDetailPage', () => {
+  const mockNavigate = jest.fn();
+
+  beforeEach(() => {
+    useNavigate.mockReturnValue(mockNavigate);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   const mockBook = {
     title: 'Test Book',
     author: 'Test Author',
@@ -57,8 +73,12 @@ describe('BookDetailPage', () => {
     expect(screen.getByRole('button', { name: 'Comprar agora' })).toBeInTheDocument();
   });
 
-  it('renders the "Voltar" button', () => {
+  it('Call home page when "Voltar" button is clicked', () => {
     renderWithRouter(mockBook);
-    expect(screen.getByRole('button', { name: 'Voltar' })).toBeInTheDocument();
+
+    const input = screen.getByRole('button', { name: 'Voltar' });
+
+    fireEvent.click(input);
+    expect(mockNavigate).toHaveBeenCalledWith('/');
   });
 });

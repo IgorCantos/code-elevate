@@ -2,13 +2,33 @@ import axios from 'axios';
 
 const baseUrl = 'http://localhost:8080';
 
-export async function getAllBooks(page, itemsPerPage) {
-  const response = await axios.get(`${baseUrl}/v1/books?page=${page}&limit=${itemsPerPage}`, {
+export async function getBooks(page, itemsPerPage, title) {
+  const params = new URLSearchParams({
+    page: page.toString(),
+    limit: itemsPerPage.toString(),
+    ...(title ? { title } : {}),
+  });
+
+  const response = await axios.get(`${baseUrl}/v1/books?${params.toString()}`, {
     headers: {
       page,
       limit: itemsPerPage,
     },
   });
+
+  return response.data;
+}
+
+export async function getBestSellersBooks(page, itemsPerPage) {
+  const response = await axios.get(
+    `${baseUrl}/v1/books/best-sellers?page=${page}&limit=${itemsPerPage}`,
+    {
+      headers: {
+        page,
+        limit: itemsPerPage,
+      },
+    }
+  );
   return response.data;
 }
 
