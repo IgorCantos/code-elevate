@@ -1,5 +1,4 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import { GetBookByPropertyService } from "@/application/services";
 import GetBookByPropertyUseCase from "./get-book-by-property-usecase";
 
 describe("GetBookByPropertyUseCase", () => {
@@ -16,15 +15,17 @@ describe("GetBookByPropertyUseCase", () => {
       data: [bookMock],
     };
 
-    const getAllBooksServiceMock = {
-      execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetBookByPropertyService;
+    const booksRepositoryMock = {
+      getAllBooks: () => Promise.resolve(expectedResponse),
+      getBookById: () => Promise.resolve(bookMock),
+      getBookByProperty: () => Promise.resolve(expectedResponse),
+    };
 
     const page = 1;
     const limit = 10;
 
     const response = await new GetBookByPropertyUseCase(
-      getAllBooksServiceMock
+      booksRepositoryMock
     ).execute({ page, limit, genre: bookMock.genre });
 
     expect(response).toBe(expectedResponse);
@@ -41,15 +42,17 @@ describe("GetBookByPropertyUseCase", () => {
       data: [bookMock],
     };
 
-    const getAllBooksServiceMock = {
-      execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetBookByPropertyService;
+    const booksRepositoryMock = {
+      getAllBooks: () => Promise.resolve(expectedResponse),
+      getBookById: () => Promise.resolve(bookMock),
+      getBookByProperty: () => Promise.resolve(expectedResponse),
+    };
 
     const page = null as unknown as number;
     const limit = null as unknown as number;
 
     const response = await new GetBookByPropertyUseCase(
-      getAllBooksServiceMock
+      booksRepositoryMock
     ).execute({ page, limit, genre: bookMock.genre });
 
     expect(response).toBe(expectedResponse);
@@ -66,15 +69,17 @@ describe("GetBookByPropertyUseCase", () => {
       data: [],
     };
 
-    const getAllBooksServiceMock = {
-      execute: () => Promise.resolve(expectedResponse),
-    } as unknown as GetBookByPropertyService;
+    const booksRepositoryMock = {
+      getAllBooks: () => Promise.resolve(expectedResponse),
+      getBookById: () => Promise.resolve(bookMock),
+      getBookByProperty: () => Promise.resolve(expectedResponse),
+    };
 
     const page = 1;
     const limit = 10;
 
     const getBookByPropertyUseCase = new GetBookByPropertyUseCase(
-      getAllBooksServiceMock
+      booksRepositoryMock
     );
 
     await expect(

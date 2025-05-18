@@ -1,13 +1,11 @@
 import { GetBookByGenreController } from "@/application/controllers";
-import { GetBookByPropertyService } from "@/application/services";
 import { GetBookByPropertyUseCase } from "@/domain/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 
 class GetBookByGenreControllerFactory {
   create(): GetBookByGenreController {
     const repository = new BookRepositoryMongo();
-    const service = new GetBookByPropertyService(repository);
-    const useCase = new GetBookByPropertyUseCase(service);
+    const useCase = new GetBookByPropertyUseCase(repository);
     const controller = new GetBookByGenreController(useCase);
 
     return controller;
