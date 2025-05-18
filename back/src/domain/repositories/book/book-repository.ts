@@ -11,7 +11,7 @@ interface IGetPaginatedBooksResponse {
 }
 
 interface IBookRepository {
-  getAllBooks({
+  getBooks({
     page,
     limit,
     title,

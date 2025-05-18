@@ -27,7 +27,7 @@ class GetAllBooksUseCase {
     const actualPage = page || defaultPage;
     const actualLimit = limit || defaultLimit;
 
-    const response = await this.booksRepository.getAllBooks({
+    const response = await this.booksRepository.getBooks({
       page: actualPage,
       limit: actualLimit,
       title,
