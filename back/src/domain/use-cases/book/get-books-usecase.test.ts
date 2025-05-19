@@ -1,5 +1,5 @@
 import { makeBookMock } from "@/__mocks__/book-mock";
-import GetAllBooksUseCase from "./get-all-books-usecase";
+import GetAllBooksUseCase from "./get-books-usecase";
 
 describe("GetAllBooksUseCase", () => {
   it("return a book list with pagination", async () => {

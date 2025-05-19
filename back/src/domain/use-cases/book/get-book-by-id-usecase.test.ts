@@ -19,7 +19,7 @@ describe("GetBookByIdUseCase", () => {
     };
 
     const booksRepositoryMock = {
-      getAllBooks: () => Promise.resolve(expectedResponse),
+      getBooks: () => Promise.resolve(expectedResponse),
       getBookById: () => Promise.resolve(bookMock),
       getBookByProperty: () => Promise.resolve(expectedResponse),
       getBestSellersBooks: () => Promise.resolve(expectedResponse),
@@ -47,7 +47,7 @@ describe("GetBookByIdUseCase", () => {
     };
 
     const booksRepositoryMock = {
-      getAllBooks: () => Promise.resolve(mockedPagintedResponse),
+      getBooks: () => Promise.resolve(mockedPagintedResponse),
       getBookById: () => Promise.resolve(getBookByIdMock),
       getBookByProperty: () => Promise.resolve(mockedPagintedResponse),
       getBestSellersBooks: () => Promise.resolve(mockedPagintedResponse),
