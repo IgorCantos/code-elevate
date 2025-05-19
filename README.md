@@ -4,7 +4,7 @@
 
 Este projeto é uma plataforma digital para uma livraria independente, com backend em Fastify + MongoDB e frontend em React. A solução permite buscas por livros, autores e gêneros, com cache via Redis e foco em escalabilidade.
 
-<img  src="docs/homepage.png"  alt="Homepage"  width="500"/>
+<img  src="docs/homepage.png"  alt="Homepage"  width="600"/>
 
 ## I. Arquitetura de Solução e Arquitetura Técnica
 
@@ -13,12 +13,11 @@ Este projeto é uma plataforma digital para uma livraria independente, com backe
 Plataforma desenvolvida contendo solução **back-end** e **front-end**, projetada para atender uma livraria independente que deseja disponibilizar seu acervo digitalmente. A API permite:
 
 1. buscar todos os livros presentes no acervo
-
-2. busca livros por gênero
-
-3. busca livros por autor
-
-4. Visualização dos livros recentes visualizados
+2. busca livros por título
+3. busca livros por gênero
+4. busca livros por autor
+5. Visualização dos livros recentes visualizados
+6. Visualização dos livros best sellers
 
 A plataforma é otimizada com uso de cache para alta performance e foi projetada com foco em escalabilidade.
 
@@ -66,9 +65,9 @@ Os testes end to end foram feitos utilizando [Cypress](https://www.cypress.io/) 
 
 <tr>
 
-<td><img  src="docs/teste-back.png"  alt="Cadastro"  width="500"/></td>
+<td><img  src="docs/testes-back.png"  alt="Cadastro"  width="500"/></td>
 
-<td><img  src="docs/teste-front.png"  alt="Login"  width="500"/></td>
+<td><img  src="docs/testes-front.png"  alt="Login"  width="500"/></td>
 
 </tr>
 
