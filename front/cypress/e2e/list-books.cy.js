@@ -102,6 +102,10 @@ describe('List all books without pagination', () => {
 });
 
 describe('List all books with pagination', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3030');
+  });
+
   const page1Books = {
     data: Array.from({ length: 12 }, (_, i) => ({
       id: `book-${i + 1}`,
@@ -145,8 +149,6 @@ describe('List all books with pagination', () => {
       body: page2Books,
     });
 
-    cy.visit('http://localhost:3030');
-
     for (let i = 1; i <= 12; i++) {
       cy.contains(new RegExp(`^Livro ${i}$`)).should('exist');
     }
@@ -168,9 +170,11 @@ describe('List all books with pagination', () => {
 });
 
 describe('Recently viewed books', () => {
-  it('Do not show recently view books component if there none', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3030');
+  });
 
+  it('Do not show recently view books component if there none', () => {
     cy.intercept('GET', '/v1/users/123/recently-viewed', {
       statusCode: 200,
       body: [],
@@ -282,9 +286,11 @@ describe('Recently viewed books', () => {
 });
 
 describe('Search books by genre', () => {
-  it('Show filtered books when searching by genre', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3030');
+  });
 
+  it('Show filtered books when searching by genre', () => {
     cy.intercept('GET', '/v1/users/123/recently-viewed', {
       statusCode: 200,
       body: [],
@@ -313,9 +319,11 @@ describe('Search books by genre', () => {
 });
 
 describe('Search books by author', () => {
-  it('Show filtered books when searching by genre', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3030');
+  });
 
+  it('Show filtered books when searching by genre', () => {
     cy.intercept('GET', '/v1/users/123/recently-viewed', {
       statusCode: 200,
       body: [],
@@ -342,5 +350,49 @@ describe('Search books by author', () => {
     for (let i = 0; i < 4; i++) {
       cy.get(`[data-testid="author-btn-${i}"]`).should('exist');
     }
+  });
+});
+
+describe('Asynchronous Search Input', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3030');
+  });
+
+  it('loads best sellers on autocomplete open', () => {
+    cy.intercept('GET', '**/books/best-sellers**').as('getBestSellers');
+
+    cy.wait('@getBestSellers');
+
+    cy.get('input[placeholder="Pesquisar livros..."]').click();
+    cy.contains('⭐ Top 20 livros', { timeout: 5000 }).should('exist');
+    cy.get('li').contains(/./).should('exist');
+  });
+
+  it('searches and displays results', () => {
+    cy.get('input[placeholder="Pesquisar livros..."]').type('Journey');
+    cy.contains('Resultados da busca', { timeout: 5000 }).should('exist');
+    cy.get('li')
+      .contains(/Journey/i)
+      .should('exist');
+  });
+
+  it('clears results when input is empty', () => {
+    cy.get('input[placeholder="Pesquisar livros..."]').type('Journey');
+    cy.contains('Resultados da busca', { timeout: 5000 }).should('exist');
+    cy.get('input[placeholder="Pesquisar livros..."]').clear();
+    cy.wait(500);
+    cy.get('li')
+      .contains(/Journey/i)
+      .should('not.exist');
+  });
+
+  it('navigates to book page on selection', () => {
+    cy.get('input[placeholder="Pesquisar livros..."]').type('Journey');
+    cy.contains('Resultados da busca', { timeout: 5000 }).should('exist');
+    cy.get('li')
+      .contains(/Journey/i)
+      .first()
+      .click();
+    cy.location('pathname').should('match', /\/books\/\w+/);
   });
 });
