@@ -4,6 +4,8 @@
 
 Este projeto é uma plataforma digital para uma livraria independente, com backend em Fastify + MongoDB e frontend em React. A solução permite buscas por livros, autores e gêneros, com cache via Redis e foco em escalabilidade.
 
+<img  src="docs/homepage.png"  alt="Homepage"  width="600"/>
+
 ## I. Arquitetura de Solução e Arquitetura Técnica
 
 ### 🧩 Descrição da Solução
@@ -11,12 +13,11 @@ Este projeto é uma plataforma digital para uma livraria independente, com backe
 Plataforma desenvolvida contendo solução **back-end** e **front-end**, projetada para atender uma livraria independente que deseja disponibilizar seu acervo digitalmente. A API permite:
 
 1. buscar todos os livros presentes no acervo
-
-2. busca livros por gênero
-
-3. busca livros por autor
-
-4. Visualização dos livros recentes visualizados
+2. busca livros por título
+3. busca livros por gênero
+4. busca livros por autor
+5. Visualização dos livros recentes visualizados
+6. Visualização dos livros best sellers
 
 A plataforma é otimizada com uso de cache para alta performance e foi projetada com foco em escalabilidade.
 
@@ -38,12 +39,17 @@ A plataforma é otimizada com uso de cache para alta performance e foi projetada
 
 Os testes end to end foram feitos utilizando [Cypress](https://www.cypress.io/) e podem ser rodados via:
 
-1.  Entrar no diretório `/front-end`
-2.  via terminal rodar o comando `npm run cy:open`
-3.  Clicar em "E2E Testing"
-4.  Selecione o browser de sua preferência e clique o botão "Start E2E Testing in..."
-5.  Espere o navegador abrir e clique em "list-books.cy.js"
-6.  Os testes irão rodar automaticamente
+1. Entrar no diretório `/front-end`
+
+2. via terminal rodar o comando `npm run cy:open`
+
+3. Clicar em "E2E Testing"
+
+4. Selecione o browser de sua preferência e clique o botão "Start E2E Testing in..."
+
+5. Espere o navegador abrir e clique em "list-books.cy.js"
+
+6. Os testes irão rodar automaticamente
 
 ### ✅ Testes unitários
 
@@ -59,9 +65,9 @@ Os testes end to end foram feitos utilizando [Cypress](https://www.cypress.io/) 
 
 <tr>
 
-<td><img  src="docs/teste-back.png"  alt="Cadastro"  width="500"/></td>
+<td><img  src="docs/testes-back.png"  alt="Cadastro"  width="500"/></td>
 
-<td><img  src="docs/teste-front.png"  alt="Login"  width="500"/></td>
+<td><img  src="docs/testes-front.png"  alt="Login"  width="500"/></td>
 
 </tr>
 
@@ -127,7 +133,7 @@ Essa **inversão de dependência** permitiu:
 
 - `infrastructure/webserver/routes` expõe os endpoints REST e lida com requisições HTTP.
 
-- `factories/` responsável pela injeção de dependências do projeto. É um intermediário entre a `/routes` e a camada de `/controllers`, que já são criados com todas as dependências necessárias (serviços, repositórios e casos de uso) para seu funcionamento. Todos os controllers e suas dependências são altamente dependentes de interfaces e não implementam lógicas concretas.
+- `factories/` responsável pela injeção de dependências do projeto. É um intermediário entre a `/routes` e a camada de `/controllers`, que já são criados com todas as dependências necessárias (repositórios e casos de uso) para seu funcionamento.
 
 - `application/`: responsável pela orquestração das requisições HTTP a nível dos controllers e orquestração dos serviços
 
@@ -156,35 +162,20 @@ Testei várias fontes de dados, mas nenhum me deu o resultado que gostaria, até
 ### 🧠 Entidade Livro (Modelo de Dados)
 
 ```javascript
-
 Book {
-
 "_id": "681f9fab48212582f0d861e2",
-
 "title": "Mysteries",
-
 "author": "Knut Hamsun",
-
 "publishedDate": "2001-01-01",
-
 "description": "The first complete English translation of the Nobel Prize-winner’s literary masterpiece A Penguin Classic Mysteries is the story of Johan Nilsen Nagel, a mysterious stranger who suddenly turns up in a small Norwegian town one summer—and just as suddenly disappears. Nagel is a complete outsider, a sort of modern Christ treated in a spirit of near parody. He condemns the politics and thought of the age, brings comfort to the “insulted and injured,” and gains the love of two women suggestive of the biblical Mary and Martha. But there is a sinister side of him: in his vest he carries a vial of prussic acid... The novel creates a powerful sense of Nagel's stream of thought, as he increasingly withdraws into the torture chamber of his own subconscious psyche. For more than seventy years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,800 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators.",
-
 "genre": "Fiction",
-
 "categorie": "Fiction",
-
 "thumbnail": "http://books.google.com/books/content?id=MRoMUV2kLZEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-
 "pageCount": 356,
-
 "averageRating": 4,
-
 "amount": 49.99,
-
 "currencyCode": "BRL"
-
 }
-
 ```
 
 ### 📦 APIs Implementadas
@@ -194,7 +185,8 @@ Book {
 | Endpoint                                 | Descrição                                                                                        |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | `GET /health`                            | Health check da aplicação                                                                        |
-| `GET /v1/books`                          | Retorna todos os livros (com paginação)                                                          |
+| `GET /v1/books`                          | Retorna todos os livros (com paginação) e pode filtrar por título                                |
+| `GET /v1/books/best-sellers`             | Retorna todos os livros best sellers, baseando na avaliação (com paginação)                      |
 | `GET /v1/books/:bookId`                  | Busca livro por ID (com paginação)                                                               |
 | `GET /v1/books/genre/:genre}`            | Busca livros por gênero (com paginação)                                                          |
 | `GET /v1/books/author/:author`           | Busca livros por autor (com paginação)                                                           |
@@ -217,16 +209,11 @@ Optei por também criar um front-end para o case, para ter algo mais visual do q
 
 ### Melhorias
 
-1. Mecanismo de pesquisa
-2. Implementação do ElasticSearch para buscas otimizadas
+1. Autenticação ([Firebase](https://firebase.google.com/docs/auth?hl=pt-br) - grátis para projetos desse escopo)
 
-3. Testes de integração e End to End com [Cypress](https://www.cypress.io/)
+2. Carrinho de compras - Integração com [Stripe](https://stripe.com/br)
 
-4. Autenticação ([Firebase](https://firebase.google.com/docs/auth?hl=pt-br) - grátis para projetos desse escopo)
-
-5. Carrinho de compras - Integração com [Stripe](https://stripe.com/br)
-
-6. Favoritar livros/autores
+3. Favoritar livros/autores
 
 ### Considerações finais
 
