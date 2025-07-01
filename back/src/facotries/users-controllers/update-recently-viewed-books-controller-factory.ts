@@ -1,5 +1,5 @@
 import { UpdateRecentlyViewedBooksController } from "@/application/controllers";
-import { UpdateRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { UpdateRecentlyViewedBooksUseCase } from "@/application/use-cases";
 import { RedisRepository } from "@/infraestructure/cache";
 
 class UpdateRecentlyViewedBooksControllerFactory {

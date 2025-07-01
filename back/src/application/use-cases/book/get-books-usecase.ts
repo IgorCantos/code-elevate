@@ -1,11 +1,11 @@
-import { HttpError } from "@/domain/exceptions";
+import { HttpError } from "@/application/exceptions";
 import {
   IBookRepository,
   IGetPaginatedBooksResponse,
 } from "@/domain/repositories";
 import HttpStatus from "@/infraestructure/utils/http-status";
 
-class GetBookByPropertyUseCase {
+class GetAllBooksUseCase {
   booksRepository: IBookRepository;
 
   constructor(booksRepository: IBookRepository) {
@@ -15,25 +15,23 @@ class GetBookByPropertyUseCase {
   async execute({
     page,
     limit,
-    author,
-    genre,
+    title,
   }: {
     page: number;
     limit: number;
-    author?: string;
-    genre?: string;
+    title: string;
   }): Promise<IGetPaginatedBooksResponse | Error> {
     const defaultPage = 1;
     const defaultLimit = 15;
 
-    const filter = {
-      page: page || defaultPage,
-      limit: limit || defaultLimit,
-      ...(author && { author }),
-      ...(genre && { genre }),
-    };
+    const actualPage = page || defaultPage;
+    const actualLimit = limit || defaultLimit;
 
-    const response = await this.booksRepository.getBookByProperty(filter);
+    const response = await this.booksRepository.getBooks({
+      page: actualPage,
+      limit: actualLimit,
+      title,
+    });
 
     if (!response.data.length) {
       throw new HttpError("No books found.", HttpStatus.NOT_FOUND);
@@ -43,4 +41,4 @@ class GetBookByPropertyUseCase {
   }
 }
 
-export default GetBookByPropertyUseCase;
+export default GetAllBooksUseCase;

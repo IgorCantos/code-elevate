@@ -1,4 +1,4 @@
-import GetBestSellersBooksUseCase from "@/domain/use-cases/book/get-best-sellers-books-usecase";
+import GetBestSellersBooksUseCase from "@/application/use-cases/book/get-best-sellers-books-usecase";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyReply, FastifyRequest } from "fastify";
 

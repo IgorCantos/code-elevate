@@ -1,7 +1,7 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import UpdateRecentlyViewedBooksController from "./update-recently-viewed-books-controller";
-import { UpdateRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { UpdateRecentlyViewedBooksUseCase } from "@/application/use-cases";
 
 describe("UpdateRecentlyViewedBooksController", () => {
   let updateRecentlyViewedBooksUseCase: UpdateRecentlyViewedBooksUseCase;

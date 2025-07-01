@@ -1,6 +1,6 @@
 import GetRecentlyViewedBooksControllerFactory from "./get-recently-viewed-books-controller-factory";
 import { RedisRepository } from "@/infraestructure/cache";
-import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { GetRecentlyViewedBooksUseCase } from "@/application/use-cases";
 import { GetRecentlyViewedBooksController } from "@/application/controllers";
 
 jest.mock("@/application/controllers");

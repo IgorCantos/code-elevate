@@ -1,5 +1,5 @@
 import { Book } from "@/domain/entities";
-import { HttpError } from "@/domain/exceptions";
+import { HttpError } from "@/application/exceptions";
 import { IBookRepository } from "@/domain/repositories";
 import HttpStatus from "@/infraestructure/utils/http-status";
 

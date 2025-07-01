@@ -1,5 +1,5 @@
 import { GetAllBooksController } from "@/application/controllers";
-import { GetAllBooksUseCase } from "@/domain/use-cases";
+import { GetAllBooksUseCase } from "@/application/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 
 class GetAllBooksControllerFactory {

@@ -2,7 +2,7 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { makeBookMock } from "@/__mocks__/book-mock";
 import GetRecentlyViewedBooksController from "./get-recently-viewed-books-controller";
-import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { GetRecentlyViewedBooksUseCase } from "@/application/use-cases";
 
 describe("GetRecentlyViewedBooksController", () => {
   let getRecentlyViewedBooksUseCase: GetRecentlyViewedBooksUseCase;

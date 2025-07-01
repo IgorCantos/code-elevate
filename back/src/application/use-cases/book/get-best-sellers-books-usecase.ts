@@ -1,4 +1,4 @@
-import { HttpError } from "@/domain/exceptions";
+import { HttpError } from "@/application/exceptions";
 import {
   IBookRepository,
   IGetPaginatedBooksResponse,

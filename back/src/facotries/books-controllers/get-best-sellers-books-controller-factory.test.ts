@@ -1,5 +1,5 @@
 import { GetBestSellersBooksController } from "@/application/controllers";
-import { GetBestSellersBooksUseCase } from "@/domain/use-cases";
+import { GetBestSellersBooksUseCase } from "@/application/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 import GetBestSellersBooksControllerFactory from "./get-best-sellers-books-controller-factory";
 

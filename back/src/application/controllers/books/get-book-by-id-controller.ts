@@ -1,4 +1,4 @@
-import { GetBookByIdUseCase } from "@/domain/use-cases";
+import { GetBookByIdUseCase } from "@/application/use-cases";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyReply, FastifyRequest } from "fastify";
 

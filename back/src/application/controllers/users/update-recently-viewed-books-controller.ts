@@ -1,4 +1,4 @@
-import { UpdateRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { UpdateRecentlyViewedBooksUseCase } from "@/application/use-cases";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import { FastifyReply, FastifyRequest } from "fastify";
 

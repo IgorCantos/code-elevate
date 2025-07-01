@@ -1,5 +1,5 @@
 import { GetRecentlyViewedBooksController } from "@/application/controllers";
-import { GetRecentlyViewedBooksUseCase } from "@/domain/use-cases";
+import { GetRecentlyViewedBooksUseCase } from "@/application/use-cases";
 import { RedisRepository } from "@/infraestructure/cache";
 
 class GetRecentlyViewedBooksControllerFactory {

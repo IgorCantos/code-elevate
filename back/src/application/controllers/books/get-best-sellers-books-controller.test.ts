@@ -2,8 +2,8 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import GetBestSellersBooksController from "./get-best-sellers-books-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
-import { GetBestSellersBooksUseCase } from "@/domain/use-cases";
-import { HttpError } from "@/domain/exceptions";
+import { GetBestSellersBooksUseCase } from "@/application/use-cases";
+import { HttpError } from "@/application/exceptions";
 
 describe("GetBestSellersBooksController", () => {
   let getBestSellersBooksUseCase: GetBestSellersBooksUseCase;

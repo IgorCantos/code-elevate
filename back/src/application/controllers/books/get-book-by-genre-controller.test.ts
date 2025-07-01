@@ -2,8 +2,8 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import HttpStatus from "@/infraestructure/utils/http-status";
 import GetBookByGenreController from "./get-book-by-genre-controller";
 import { makeBookMock } from "@/__mocks__/book-mock";
-import { GetBookByPropertyUseCase } from "@/domain/use-cases";
-import { HttpError } from "@/domain/exceptions";
+import { GetBookByPropertyUseCase } from "@/application/use-cases";
+import { HttpError } from "@/application/exceptions";
 
 describe("GetBookByGenreController", () => {
   let getBookByPropertyUseCase: GetBookByPropertyUseCase;

@@ -1,6 +1,6 @@
 import GetAllBooksControllerFactory from "./get-all-books-controller-factory";
 import { GetAllBooksController } from "@/application/controllers";
-import { GetAllBooksUseCase } from "@/domain/use-cases";
+import { GetAllBooksUseCase } from "@/application/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 
 jest.mock("@/application/controllers");

@@ -1,5 +1,5 @@
 import { GetBookByAuthorController } from "@/application/controllers";
-import { GetBookByPropertyUseCase } from "@/domain/use-cases";
+import { GetBookByPropertyUseCase } from "@/application/use-cases";
 import { BookRepositoryMongo } from "@/infraestructure/database/mongodb";
 
 class GetBookByAuthorControllerFactory {
